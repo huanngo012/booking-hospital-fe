@@ -1,0 +1,132 @@
+import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
+import { useTranslation } from 'react-i18next'
+
+import { BENEFIT_DOWNLOAD_LEFT, BENEFIT_DOWNLOAD_RIGHT } from '~/utils/constant'
+import { theme } from '~/themes/Theme'
+import { DISPLAY } from '~/utils/responsive'
+
+const DownloadSection = () => {
+  const { t } = useTranslation()
+  const isTablet = useMediaQuery(theme.breakpoints.up('tablet'))
+
+  return (
+    <Box component={'section'} className='download_section'>
+      <Box className='container'>
+        <Stack alignItems={'center'} gap={'28px'}>
+          <Stack alignItems={'center'} gap={'16px'} className='animate animate--fade-in'>
+            <Typography variant={isTablet ? 'h4' : 'h6'}>
+              {t('home.download_section.title')}{' '}
+              <Typography component='span' variant={isTablet ? 'h4' : 'h6'} color='var(--primary)'>
+                MEDPRO
+              </Typography>
+            </Typography>
+            <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} gap={'16px'}>
+              <Box component='img' width={'100px'} src='/svgs/app_store.svg' alt='app_store' />
+              <Box component='img' width={'100px'} src='/svgs/ch_play.svg' alt='ch_play' />
+            </Stack>
+          </Stack>
+          <Stack
+            display={DISPLAY.DESKTOP_ONLY}
+            flexDirection={'row'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            width={'100%'}
+            position={'relative'}
+          >
+            <Stack
+              alignItems={'center'}
+              justifyContent={'space-around'}
+              gap={'56px'}
+              flex={'4'}
+              position={'relative'}
+              right={'4%'}
+              className='animate animate--fade-left'
+            >
+              {BENEFIT_DOWNLOAD_LEFT.map((item, index) => (
+                <Stack
+                  key={index}
+                  flexDirection={'row'}
+                  justifyContent={'flex-end'}
+                  gap={'12px'}
+                  width={'100%'}
+                  paddingRight={index % 2 === 0 ? '30px' : '90px'}
+                >
+                  <Box sx={{ textAlign: 'right' }}>
+                    <Typography variant='label2' color='var(--secondary)'>
+                      {t(item.title)}
+                    </Typography>
+                    <Typography
+                      variant='body2'
+                      color='var(--text-secondary)'
+                      dangerouslySetInnerHTML={{
+                        __html: t(item.description)
+                      }}
+                    ></Typography>
+                  </Box>
+                  <Box component='img' src={item.image} alt='' width={'60px'} />
+                </Stack>
+              ))}
+            </Stack>
+            <Box
+              component='img'
+              src='/images/ellipse.webp'
+              alt=''
+              sx={{
+                position: 'absolute',
+                width: '40%',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%,-50%)'
+              }}
+              className='animate animate--fade-in'
+            />
+            <Box
+              component='img'
+              src='/images/mobile_app.webp'
+              alt=''
+              position={'relative'}
+              flex={'3'}
+              className='animate animate--fade-in'
+            />
+            <Stack
+              alignItems={'center'}
+              justifyContent={'space-around'}
+              gap={'56px'}
+              flex={'4'}
+              position={'relative'}
+              left={'4%'}
+              className='animate animate--fade-right'
+            >
+              {BENEFIT_DOWNLOAD_RIGHT.map((item, index) => (
+                <Stack
+                  key={index}
+                  flexDirection={'row'}
+                  justifyContent={'flex-start'}
+                  gap={'12px'}
+                  width={'100%'}
+                  paddingLeft={index % 2 === 0 ? '30px' : '90px'}
+                >
+                  <Box component='img' src={item.image} alt='' width={'60px'} />
+                  <Box sx={{ textAlign: 'left' }}>
+                    <Typography variant='label2' color='var(--secondary)'>
+                      {t(item.title)}
+                    </Typography>
+                    <Typography
+                      variant='body2'
+                      color='var(--text-secondary)'
+                      dangerouslySetInnerHTML={{
+                        __html: t(item.description)
+                      }}
+                    ></Typography>
+                  </Box>
+                </Stack>
+              ))}
+            </Stack>
+          </Stack>
+        </Stack>
+      </Box>
+    </Box>
+  )
+}
+
+export default DownloadSection

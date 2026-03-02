@@ -1,0 +1,362 @@
+{
+  "title": "Booking hospital",
+  "id": "ID",
+  "patient": "Patient",
+  "add": "Add",
+  "select": "Select",
+  "update": "Update",
+  "detail": "Detail",
+  "delete": "Delete",
+  "cancel": "Cancel",
+  "back": "Back",
+  "add-new": "Add new",
+  "success": "Success",
+  "failed": "Failed",
+  "save": "Save",
+  "confirm": "Confirm",
+  "update-infomation": "Update Infomation",
+  "description": "Description",
+  "description-placeholder": "Enter description",
+  "data-not-found": "Data not found",
+  "please-add-data": "Please add more data",
+  "doctor-appointment-schedule": "Schedule",
+  "patient-appointment-schedule": "Booking",
+  "img": "Image",
+  "search": "Search",
+  "all locations": "All locations",
+  "new": "new",
+  "see details": "See details",
+  "logout": "Log out",
+  "of-total-label-table": "of",
+  "please-enter-full-information": "Please enter full information",
+  "province-city": "Province / City",
+  "province-city-placeholder": "Select Province / City",
+  "district-town": "District/Town",
+  "district-town-placeholder": "Select District / Town",
+  "ward": "Sub-district/Village",
+  "ward-placeholder": "Select Sub-district / Village",
+  "download_app": "Download app",
+  "popup": {
+    "delete": "Delete",
+    "cancel": "Cancel"
+  },
+  "delete-title": "Delete",
+  "delete-confirm": "Are you sure delete?",
+  "login": {
+    "log-in": "Log In",
+    "email": "Email",
+    "email-placeholder": "Enter your email",
+    "password": "Password",
+    "password-placeholder": "Enter your password",
+    "remember-me": "Remember me",
+    "forgot-password?": "Forgot Password?",
+    "don't-have-an-account-yet?": "Don't have an account yet?",
+    "sign-up": "Sign Up",
+    "welcome-to-tma-innovation": "Welcome to TMA Innovation"
+  },
+  "user": {
+    "list": "List User",
+    "user": "User",
+    "fullname": "Full name",
+    "email": "Email",
+    "password": "Password",
+    "phone": "Phone",
+    "address": "Address",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "role": "Role",
+    "status": "Status",
+    "block": "Blocked",
+    "active": "Active",
+    "add-user": "Add new user",
+    "avatar": "Avatar",
+    "reset-password": "Reset password",
+    "new-password": "New password",
+    "old password": "Old password",
+    "new-password-placeholder": "Enter new password",
+    "change-status-account": "Change status account",
+    "lock-account-title": "Lock account?",
+    "lock-account-message": "Are you sure you want to lock this account?",
+    "lock-account-sub-message1": "After click “Confirm”, they will no longer have access to their account or access to any related data.",
+    "lock-account-sub-message2": "Press the \"Confirm\" button to proceed or press the \"Cancel\" button to keep the account unlocked.",
+    "unlock-account-title": "Unlock account?",
+    "unlock-account-message": "Are you sure you want to unlock this account?",
+    "unlock-account-sub-message1": "After click “Confirm”, they will regain access to their account or access any related data.",
+    "unlock-account-sub-message2": "Press the \"Confirm\" button to proceed or press the \"Cancel\" button to keep the account locked.",
+    "lock-account": "Lock account?",
+    "lock-account-confirm-statement": "Are you sure you want to lock this account?",
+    "lock-account-perspective-statement": "After confirming, they will no longer have access to their account or any related data.",
+    "lock-account-instruction-statement": "Press the \"Confirm\" button to proceed or press the \"Cancel\" button to keep the account unlocked.",
+    "unlock-account": "Unlock account?",
+    "unlock-account-confirm-statement": "Are you sure you want to unlock this account?",
+    "unlock-account-perspective-statement": "After confirming, they will regain access to their account or access any related data.",
+    "unlock-account-instruction-statement": "Press the \"Confirm\" button to proceed or press the \"Cancel\" button to keep the account locked.",
+    "account": "Account",
+    "no-account": "Don't have an account?",
+    "have-account": "Do you already have an account?",
+    "please enter a new password for your account.": " Please enter a new password for your account.",
+    "account information": "Account information",
+    "update password": "Update password"
+  },
+  "doctor": {
+    "list": "List Doctor",
+    "doctor": "Doctor",
+    "name": "Name Doctor",
+    "name-placeholder": "Enter name Doctor",
+    "roomID": "Name Room",
+    "roomID-placeholder": "Enter name Room",
+    "position": "Position",
+    "position-placeholder": "Enter position",
+    "add-doctor": "Add new doctor"
+  },
+  "specialty": {
+    "list": "List specialty",
+    "list-placeholder": "Select list specialty",
+
+    "specialty": "Specialty",
+    "name": "Name specialty",
+    "name-placeholder": "Enter name specialty",
+    "add-specialty": "Add new specialty",
+    "img-specialty": "Image specialty"
+  },
+  "hospital": {
+    "list": "List Hospital",
+    "hospital": "Hospital",
+    "name": "Name hospital",
+    "name-placeholder": "Enter name hospital",
+    "address": "Address Hospital",
+    "add-hospital": "Add new hospital",
+    "non-hospital-specialties": "Non-hospital specialties",
+    "hospital-specialties": "Hospital specialties",
+    "host": "Host",
+    "host-placeholder": "Select host",
+    "add-specialty": "Add specialties",
+    "delete-specialty": "Delete specialties",
+    "all hospital": "All hospitals",
+    "prominent hospitals": "Prominent hospitals"
+  },
+  "schedule": {
+    "schedule": "Schedule",
+    "list": "List Schedule",
+    "date": "Date",
+    "time": "Time",
+    "number": "Number",
+    "number-placeholder": "Enter number",
+    "cost-placeholder": "Enter cost",
+    "add-schedule": "Add new schedule",
+    "appointment_assistance": "Appointment assistance",
+    "appointment_phone": "1900 2115"
+  },
+  "booking": {
+    "booking": "Booking",
+    "list": "List booking",
+    "name-patient": "Name Patient",
+    "description-img": "Description Images",
+    "payment": "Payment",
+    "unpaid": "Unpaid",
+    "paid": "Paid",
+    "cancelled": "Cancelled",
+    "pending": "Pending",
+    "confirmed": "Confirmed",
+    "examined": "Examined",
+    "leaved": "Leaved",
+    "book_now": "Book now"
+  },
+
+  "not-found": {
+    "not-exist": "Sorry, the page you are looking for does not exist",
+    "return": "Return"
+  },
+  "notification": {
+    "notification": "Notification",
+    "notification-read": "You've read all notifications",
+    "click-tab-read": "You can review old notifications in the read section."
+  },
+  "healthcare_facilities": {
+    "healthcare_facilities": "Healthcare facilities",
+    "all": "All",
+    "public hospital": "Public hospital",
+    "private hospital": "Private hospital",
+    "medical clinic": "Medical clinic",
+    "consultation room": "Consultation room",
+    "medical test": "Medical test",
+    "appointment": "Book an appointment now",
+    "select date": "Select date:",
+    "no appointment": "The doctor is currently unavailable for appointments",
+    "review": "Review",
+    "comment": "Comment",
+    "rv now": "Review now!",
+    "rv and cmt": "Review & Comment",
+    "rv of hospital": "What's your review of this hospital?",
+    "have rv": "You have reviewed this hospital",
+    "view map": "View map",
+    "doctor not found": "Doctors not found"
+  },
+  "all specialties": {
+    "all specialties": "All specialties"
+  },
+  "news": {
+    "news": "News",
+    "medical news": "Medical news",
+    "service news": "Service news",
+    "see_more": "See more",
+    "general medicine": "General medicine"
+  },
+  "about_page": {
+    "breadcrumb": "About us",
+    "title": "Introduction",
+    "description": "This app allows patients and their families to complete the online appointment registration process with hospitals anytime, anywhere, without the need to visit the hospital in person.",
+    "items": [
+      {
+        "title": "Register and select date,",
+        "description": "appointment time"
+      },
+      {
+        "title": "Non-cash",
+        "description": "payment of fees"
+      },
+      {
+        "title": "Appointment management",
+        "description": "and follow-up visits"
+      },
+      {
+        "title": "Patient information",
+        "description": "and data management"
+      }
+    ],
+    "prominent": "Prominent hospitals"
+  },
+  "guidelines": {
+    "guidelines": "Guidelines",
+    "app installation": "App installation",
+    "schedule an appointment": "Schedule an appointment",
+    "refund process": "Refund process",
+    "frequently asked questions": "Frequently asked questions"
+  },
+  "home": {
+    "home": "Home",
+    "technology platform": "Technology platform",
+    "connecting": "Connecting people with Healthcare Facilities - Services",
+    "quick-oline-remote": "Quick appointment booking - Online queue number - Remote health consultation",
+    "search for healthcare facilities": "Search for healthcare facilities",
+    "search for specialties": "Search for specialties",
+    "search for doctors": "Search for doctors",
+    "des_2": "provides online medical examination and healthcare appointment booking services at leading hospitals in Vietnam such as Ho Chi Minh City University of Medicine and Pharmacy Hospital, Cho Ray Hospital and Children's Hospital, helping users choose services and doctors according to their needs.",
+    "statistics": "Statistics",
+    "visits": "Visits",
+    "monthly visits": "Monthly visits",
+    "daily visits": "Daily visits",
+    "des-3": "Make an appointment with more than",
+    "des-4": "hospitals nationwide",
+    "intro_section": {
+      "title": "Connecting people with Healthcare Facilities - Services",
+      "sub_title": "Technology platform",
+      "description": "Quick appointment booking - Online queue number - Remote health consultation",
+      "services": [
+        "Make an appointment at the facility",
+        "Make an appointment with a doctor",
+        "Remote medical consultation",
+        "Schedule a medical test",
+        "Business examination",
+        "Health check-up package",
+        "Schedule vaccination appointment",
+        "Pay hospital fees"
+      ]
+    },
+    "blog_section": {
+      "title": "Quick appointment",
+      "description": "provides online medical examination and healthcare appointment booking services at leading hospitals in Vietnam such as Ho Chi Minh City University of Medicine and Pharmacy Hospital, Cho Ray Hospital and Children's Hospital, helping users choose services and doctors according to their needs.",
+      "button": "See more"
+    },
+    "statistic_section": {
+      "title": "Statistics",
+      "items": ["Visits", "Hospital", "Healthcare facilities", "Doctor", "Monthly visits", "Daily visits"]
+    },
+    "hero_section": {
+      "title": "Quick appointment - Get online queue number",
+      "description": "Patients proactively select quick appointment information (date, time and medical facility). Patients will receive an online queue number right on the software.",
+      "button": "Book now"
+    },
+    "download_section": {
+      "title": "Download the Quick Appointment app",
+      "items": [
+        {
+          "title": "Get a quick online check-up number",
+          "description": "Register for quick examination / re-examination by date. <br />Register for examination by specialist.<br /> Re-examination according to appointment"
+        },
+        {
+          "title": "Telehealth consultation",
+          "description": "Telehealth consultation, video calls with medical professionals"
+        },
+        {
+          "title": "Look up paraclinical results",
+          "description": "Look up clinical test results online easily and conveniently"
+        },
+        {
+          "title": "Pay hospital fees",
+          "description": "Various online payment systems.Support popular e-wallets today"
+        },
+        {
+          "title": "Home health care",
+          "description": "Professional home health care services (nursing, testing) to meet common home health care needs"
+        },
+        {
+          "title": "Network of Collaborative Facilities",
+          "description": "Network connecting with hospitals, clinics, and practices nationwide"
+        }
+      ]
+    }
+  },
+  "languages": {
+    "vi": "Vietnamese",
+    "en": "English"
+  },
+  "menu_footer": {
+    "address": "97 Tran Quang Dieu Street, Ward 14, District 3, Ho Chi Minh City, Vietnam",
+    "link_web": "https://pkh.vn",
+    "email": "cskh@medpro.vn",
+    "phone": "(028) 710 78098 ",
+    "menu_1": {
+      "title": "Medical services",
+      "sub_menu": [
+        "Make an appointment at facility",
+        "Make an appointment with a doctor",
+        "Remote medical consultation",
+        "Schedule a medical test",
+        "Home health care",
+        "Pay hospital fees"
+      ]
+    },
+    "menu_2": {
+      "title": "Healthcare facilities",
+      "sub_menu": ["Public hospital", "Private hospital", "Medical clinic", "Consultation room", "Medical test"]
+    },
+    "menu_3": {
+      "title": "Guidelines",
+      "sub_menu": ["App installation", "Schedule an appointment", "Refund process", "Frequently asked questions"]
+    },
+    "menu_4": {
+      "title": "News",
+      "sub_menu": ["Service news", "Medical news", "General medicine"]
+    },
+    "menu_5": {
+      "title": "About our organization",
+      "sub_menu": ["Introduction", "Terms of service", "Privacy policy", "Usage regulations"]
+    }
+  },
+  "blogs": {
+    "blog_1": {
+      "title": "Because your time is priceless",
+      "description": "Patients actively choose appointment information (date and time of appointment)"
+    },
+    "blog_2": {
+      "title": "Promoting health for every home",
+      "description": "Patients will receive online examination vouchers right on the software."
+    },
+    "blog_3": {
+      "title": "Extending reach to bridge every distance",
+      "description": "Users select and make payments on the software"
+    }
+  }
+}

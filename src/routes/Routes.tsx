@@ -1,6 +1,4 @@
-import { Outlet } from 'react-router-dom'
-import { AboutPage, HomePage, HospitalPage } from '~/pages'
-// import HospitalDetailPage from '~/pages/detail-hospital/HospitalDetailPage'
+import { AboutPage, HomePage, HospitalPage, NewsPage, NotFoundPage } from '~/pages'
 import { paths } from '~/utils/constant'
 
 const privateRoutes = [
@@ -34,26 +32,17 @@ const publicRoutes = [
   //     component: HospitalDetailPage,
   //     layout: true
   //   },
-  //   {
-  //     path: paths.NEWS,
-  //     component: NewsPage,
-  //     layout: true
-  //   },
+  {
+    path: paths.NEWS,
+    component: NewsPage,
+    layout: true
+  },
   {
     path: paths.ABOUT,
     component: AboutPage,
     layout: true
-  }
-  //   { path: paths.NOT_FOUND, component: NotFoundPage, layout: false }
+  },
+  { path: paths.NOT_FOUND, component: NotFoundPage, layout: true }
 ]
 
-// const IsLogin = () => {
-//   const { current } = useSelector((state: any) => state.auth)
-//   return current?.role === 4 ? <Outlet /> : <Navigate to={paths.LOGIN} />
-// }
-
-const IsLogin = () => {
-  return <Outlet />
-}
-
-export { publicRoutes, privateRoutes, IsLogin }
+export { publicRoutes, privateRoutes }

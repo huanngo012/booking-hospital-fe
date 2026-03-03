@@ -31,9 +31,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
           desktop: '135px'
         }}
       ></Box>
-      <Box component={'main'} paddingBottom={'30px'}>
-        {children}
-      </Box>
+      <Box component={'main'}>{children}</Box>
       <Footer />
 
       {showScrollButton && (
@@ -47,6 +45,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
             mobile: '28px',
             desktop: '56px'
           }}
+          width={40}
           sx={{
             fill: 'var(--primary)',
             cursor: 'pointer'

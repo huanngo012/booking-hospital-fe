@@ -12,8 +12,10 @@ import { DISPLAY } from '~/utils/responsive'
 const Header = () => {
   const { t } = useTranslation()
   const location = useLocation()
-  const path = location.pathname.split('/')[1]
-  const tab = path ? `/${path}` : '/'
+
+  const tab =
+    MENUS.find((menu) => (menu.path === '/' ? location.pathname === '/' : location.pathname.startsWith(menu.path)))
+      ?.path || false
 
   const isLoggedIn = false
 
@@ -83,7 +85,7 @@ const Header = () => {
 
             <Stack direction={'row'} alignItems={'center'} width={'100%'} paddingLeft={'12px'}>
               <Stack display={DISPLAY.DESKTOP_ONLY} direction={'row'} flexShrink={'0'} gap={'12px'} minWidth={'180px'}>
-                <Box component='img' src={'/svgs/contact.svg'} alt='' />
+                <Box component='img' src={'/svgs/contact.svg'} alt='' width={40} />
                 <Stack>
                   <Typography variant='label2'>{t('schedule.appointment_assistance')}</Typography>
                   <Typography variant='h5' color='var(--orange-400)'>

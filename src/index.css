@@ -17,6 +17,12 @@ body {
   padding-inline: 16px;
   width: 100%;
 }
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 @media (min-width: 700px) {
   .container {
     padding-inline: 32px;
@@ -68,6 +74,14 @@ body {
   display: -webkit-box;
   line-clamp: 2;
   -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.truncate_3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 .overlay {
@@ -154,4 +168,10 @@ body {
 }
 .swiper-button-disabled {
   display: none;
+}
+.swiper_marquee {
+  --swiper-wrapper-transition-timing-function: linear;
+}
+.swiper_marquee .swiper-slide {
+  width: auto;
 }

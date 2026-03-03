@@ -586,7 +586,7 @@ export const MENUS = [
   },
   {
     id: 5,
-    title: 'news.news',
+    title: 'news_page.breadcrumb',
     path: paths.NEWS
   },
   {

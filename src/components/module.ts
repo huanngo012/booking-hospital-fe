@@ -74,3 +74,14 @@ export interface BreadcrumbItem {
 export interface BreadcrumbCustomProps {
   data: BreadcrumbItem[]
 }
+export interface ArticleProps {
+  image: string
+  url: string
+  title: string
+  description: string
+  blog: string
+}
+export interface ArticleCardProps {
+  article: ArticleProps
+  style?: '01' | '02' | '03'
+}

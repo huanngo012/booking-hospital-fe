@@ -457,7 +457,7 @@ export const theme = createTheme({
       styleOverrides: {
         a: {
           textDecoration: 'none',
-          color: 'var(--secondary)',
+          color: 'var(--text-primary)',
           transition: 'color 0.2s ease',
 
           '&:hover': {

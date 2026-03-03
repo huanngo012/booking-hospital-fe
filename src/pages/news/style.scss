@@ -1,0 +1,25 @@
+.news_page {
+  background: var(--white);
+  padding-bottom: 30px;
+  .title {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(83.63deg, var(--primary) 33.34%, #00e0ff 113.91%);
+      z-index: 1;
+    }
+    h5 {
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+      padding-right: 16px;
+      background: var(--white);
+      color: var(--primary);
+    }
+  }
+}

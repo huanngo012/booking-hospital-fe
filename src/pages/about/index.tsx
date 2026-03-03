@@ -14,7 +14,7 @@ const AboutPage = () => {
   const isDesktop = useMediaQuery(theme.breakpoints.up('desktop'))
 
   return (
-    <Box>
+    <Box className='about_page'>
       <Box className='container'>
         {<BreadscrumbCustom data={[{ title: t('about_page.breadcrumb') }]} />}
         <Grid container spacing={2}>
@@ -96,22 +96,16 @@ const AboutPage = () => {
           </Typography>
           <Box marginTop={'20px'}>
             <Swiper
-              slidesPerView={2}
-              spaceBetween={20}
+              className='swiper_marquee'
+              slidesPerView={'auto'}
+              spaceBetween={40}
               modules={[Autoplay]}
-              autoplay
-              breakpoints={{
-                500: {
-                  slidesPerView: 3
-                },
-                700: {
-                  slidesPerView: 4,
-                  spaceBetween: 40
-                },
-                1200: {
-                  slidesPerView: 7
-                }
+              autoplay={{
+                delay: 1
               }}
+              loop
+              speed={3000}
+              allowTouchMove={false}
             >
               {PROMINENT_HOSPITALS.map((item, index) => (
                 <SwiperSlide key={index}>

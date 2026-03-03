@@ -164,9 +164,9 @@
     "book_now": "Đặt lịch ngay"
   },
 
-  "not-found": {
-    "not-exist": "Xin lỗi có vẻ trang bạn muốn tìm không tồn tại",
-    "return": "Quay về"
+  "not_found_page": {
+    "title": "Trang bạn tìm kiếm không đúng hoặc không tồn tại !",
+    "button": "Trở về trang chủ"
   },
   "notification": {
     "notification": "Thông báo",
@@ -196,12 +196,10 @@
   "all specialties": {
     "all specialties": "Tất cả chuyên khoa"
   },
-  "news": {
-    "news": "Tin tức",
-    "medical news": "Tin y tế",
-    "service news": "Tin dịch vụ",
-    "see_more": "Xem tiếp",
-    "general medicine": "Y học thường thức"
+  "news_page": {
+    "breadcrumb": "Tin tức",
+    "title": "Tin tức",
+    "button": "Xem tiếp"
   },
   "about_page": {
     "breadcrumb": "Về chúng tôi",

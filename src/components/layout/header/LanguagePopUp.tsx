@@ -1,76 +1,71 @@
 import './style.scss'
-import { Badge, Box, ClickAwayListener, MenuItem, MenuList, Paper, Popper, Stack, Typography } from '@mui/material'
-import { useEffect, useRef, useState } from 'react'
+import { Box, ClickAwayListener, MenuItem, MenuList, Paper, Popper, Stack, Typography } from '@mui/material'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { PiCaretDown } from 'react-icons/pi'
 import { LANGUAGES } from '~/utils/constant'
 
+type LanguageKey = keyof typeof LANGUAGES
+
 const LanguagePopUp = () => {
   const { i18n, t } = useTranslation()
-  type LanguageKey = keyof typeof LANGUAGES
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null)
+  const open = Boolean(anchorEl)
+
   const currentLanguage = i18n.language as LanguageKey
 
-  const languagesArray: Array<[string, { title: string; icon: string }]> = Object.entries(LANGUAGES).map(
-    ([lng, value]) => [lng, { title: value.title, icon: value.icon }]
+  const languagesArray = useMemo(
+    () => Object.entries(LANGUAGES) as [LanguageKey, { title: string; icon: string }][],
+    []
   )
 
-  const anchorRefLanguage = useRef(null)
-  const [openLanguage, setOpenLanguage] = useState(false)
-
-  const handlerChangeLanguage = (lng: string) => {
+  const handleChangeLanguage = (lng: LanguageKey) => {
     i18n.changeLanguage(lng)
-    setOpenLanguage(false)
     localStorage.setItem('lng', lng)
   }
 
+  const handleOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget)
+  }
+
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
+
   useEffect(() => {
-    if (localStorage.getItem('lng')) {
-      const curLng: string | null = localStorage.getItem('lng')
-      i18n.changeLanguage(curLng ? curLng : i18n.language)
+    const savedLng = localStorage.getItem('lng') as LanguageKey | null
+    if (savedLng && savedLng !== i18n.language) {
+      i18n.changeLanguage(savedLng)
     }
-  }, [])
+  }, [i18n])
+
   return (
-    <Badge sx={{ cursor: 'pointer' }} ref={anchorRefLanguage} onClick={() => setOpenLanguage(!openLanguage)}>
+    <Box onClick={handleOpen} sx={{ cursor: 'pointer' }}>
       <Box className='language-icon'>
-        <Box component={'img'} src={LANGUAGES[currentLanguage].icon} className='flag-icon' />
+        <Box component='img' src={LANGUAGES[currentLanguage]?.icon} className='flag-icon' />
         <PiCaretDown size={16} />
       </Box>
 
-      <Popper
-        open={openLanguage}
-        anchorEl={anchorRefLanguage.current}
-        sx={{ left: '-40px !important', zIndex: '1000' }}
-      >
-        <ClickAwayListener onClickAway={() => setOpenLanguage(false)}>
+      <Popper open={open} anchorEl={anchorEl} placement='bottom-end' sx={{ zIndex: 1200 }}>
+        <ClickAwayListener onClickAway={handleClose}>
           <Paper
             sx={{
-              padding: '8px',
-              borderRadius: '8px',
-              boxShadow: '0px 1px 8px 0px rgba(30, 32, 32, 0.12)'
+              p: 1,
+              borderRadius: 2,
+              boxShadow: '0px 1px 8px rgba(30,32,32,0.12)'
             }}
           >
-            <MenuList
-              autoFocusItem={openLanguage}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '4px'
-              }}
-            >
-              {languagesArray.map(([lng, { title, icon }], index) => (
+            <MenuList autoFocusItem={open} sx={{ display: 'flex', flexDirection: 'column', gap: '4px', padding: '0' }}>
+              {languagesArray.map(([lng, { title, icon }]) => (
                 <MenuItem
-                  key={index}
-                  onClick={() => handlerChangeLanguage(lng)}
+                  key={lng}
+                  onClick={() => handleChangeLanguage(lng)}
                   selected={currentLanguage === lng}
-                  sx={{
-                    borderRadius: '8px'
-                  }}
+                  sx={{ borderRadius: 2 }}
                 >
-                  <Stack direction='row' alignItems='center' justifyContent='flex-start' width='100%' gap='4px'>
-                    <Box component={'img'} src={icon} alt={t(title)} className='flag-icon' />
-                    <Typography variant={currentLanguage === lng ? 'label2' : 'body2'} color={'var(--text-primary)'}>
-                      {t(title)}
-                    </Typography>
+                  <Stack direction='row' alignItems='center' gap={1}>
+                    <Box component='img' src={icon} alt={t(title)} className='flag-icon' />
+                    <Typography variant={'label2'}>{t(title)}</Typography>
                   </Stack>
                 </MenuItem>
               ))}
@@ -78,7 +73,8 @@ const LanguagePopUp = () => {
           </Paper>
         </ClickAwayListener>
       </Popper>
-    </Badge>
+    </Box>
   )
 }
+
 export default LanguagePopUp

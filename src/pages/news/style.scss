@@ -3,6 +3,7 @@
   padding-bottom: 30px;
   .title {
     position: relative;
+    margin-bottom: 30px;
     &:before {
       content: '';
       position: absolute;
@@ -20,6 +21,7 @@
       padding-right: 16px;
       background: var(--white);
       color: var(--primary);
+      margin-block: 0;
     }
   }
 }

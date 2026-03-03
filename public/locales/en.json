@@ -267,6 +267,10 @@
       "description": "provides online medical examination and healthcare appointment booking services at leading hospitals in Vietnam such as Ho Chi Minh City University of Medicine and Pharmacy Hospital, Cho Ray Hospital and Children's Hospital, helping users choose services and doctors according to their needs.",
       "button": "See more"
     },
+    "medical_facilities_section": {
+      "title": "Prominent hospitals",
+      "description": "Make an appointment with more than {{count}} medical facilities nationwide"
+    },
     "statistic_section": {
       "title": "Statistics",
       "items": ["Visits", "Hospital", "Healthcare facilities", "Doctor", "Monthly visits", "Daily visits"]

@@ -5,6 +5,7 @@ import IntroSection from './IntroSection'
 import BlogSection from './BlogSection'
 import StatisticSection from './StatisticSection'
 import HeroSection from './HeroSection'
+import MedicalFacilitiesSliderSection from './MedicalFacilitiesSliderSection'
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <IntroSection />
       <BlogSection />
       <StatisticSection />
+      <MedicalFacilitiesSliderSection />
       <HeroSection />
       <DownloadSection />
     </Box>

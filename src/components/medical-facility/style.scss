@@ -1,0 +1,36 @@
+.medical_facility_card {
+  height: 100%;
+  .card_wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .card_image {
+      display: block;
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      img {
+        width: 125px;
+        height: 125px;
+        margin: auto;
+        transition: all 0.3s ease-in;
+      }
+      &:hover {
+        img {
+          scale: 1.05;
+        }
+      }
+    }
+    .card_content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+      flex: 1;
+      .card_address {
+        margin-top: auto;
+      }
+    }
+  }
+}

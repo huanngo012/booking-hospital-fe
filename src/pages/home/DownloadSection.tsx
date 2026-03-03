@@ -10,7 +10,7 @@ const DownloadSection = () => {
   const isTablet = useMediaQuery(theme.breakpoints.up('tablet'))
 
   return (
-    <Box component={'section'} className='download_section'>
+    <Box component={'section'} className='download_section' id='downloadSection'>
       <Box className='container'>
         <Stack alignItems={'center'} gap={'28px'}>
           <Stack alignItems={'center'} gap={'16px'} className='animate animate--fade-in'>

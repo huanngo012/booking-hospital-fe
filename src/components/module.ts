@@ -1,6 +1,8 @@
 // import { DataGridProps, GridColDef, GridRowsProp } from '@mui/x-data-grid'
 // import { ReactNode } from 'react'
 
+import type { MedicalFacility } from '~/types/medical-facility'
+
 export interface CustomSkeletonProps {
   variant:
     | 'card-search'
@@ -84,4 +86,7 @@ export interface ArticleProps {
 export interface ArticleCardProps {
   article: ArticleProps
   style?: '01' | '02' | '03'
+}
+export interface MedicalFacilityCardProps {
+  facility: MedicalFacility
 }

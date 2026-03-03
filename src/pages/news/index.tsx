@@ -1,5 +1,5 @@
 import './style.scss'
-import { Box, Grid, Typography, useMediaQuery } from '@mui/material'
+import { Box, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -13,7 +13,7 @@ const NewsPage = () => {
     <Box className='news_page'>
       <Box className='container'>
         {<BreadscrumbCustom data={[{ title: t('news_page.breadcrumb') }]} />}
-        <Box>
+        <Stack gap={4}>
           {blogs.map((item, index) => (
             <Box key={index}>
               <Box className='title'>
@@ -69,7 +69,7 @@ const NewsPage = () => {
               )}
             </Box>
           ))}
-        </Box>
+        </Stack>
       </Box>
     </Box>
   )

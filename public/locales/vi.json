@@ -266,6 +266,10 @@
       "description": "cung cấp dịch vụ đặt lịch khám bệnh và chăm sóc sức khỏe trực tuyến tại các bệnh viện hàng đầu Việt Nam như Bệnh viện Đại học Y Dược TP.HCM, Bệnh viện Chợ Rẫy và Bệnh viện Nhi Đồng,giúp người dùng tự lựa chọn dịch vụ và bác sĩ theo nhu cầu của mình.",
       "button": "Xem tiếp"
     },
+    "medical_facilities_section": {
+      "title": "Bệnh viện tiêu biểu",
+      "description": "Đặt lịch khám với hơn {{count}} cơ sở y tế trên khắp cả nước"
+    },
     "statistic_section": {
       "title": "Thống kê",
       "items": ["Lượt khám", "Bệnh viện", "Cơ sở y tế", "Bác sĩ", "Lượt truy cập tháng", "Lượt truy cập trong ngày"]

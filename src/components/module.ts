@@ -1,7 +1,7 @@
 import type { MedicalFacility } from '~/types/medical-facility'
 
 export interface CustomSkeletonProps {
-  variant: 'card-medical-facility'
+  variant: 'card-medical-facility' | 'card-medical-facility-02' | 'card-category'
 }
 
 export interface BreadcrumbItem {
@@ -11,6 +11,11 @@ export interface BreadcrumbItem {
 
 export interface BreadcrumbCustomProps {
   data: BreadcrumbItem[]
+}
+
+export interface EmptyStateProps {
+  title?: string
+  message?: string
 }
 
 export interface ArticleProps {

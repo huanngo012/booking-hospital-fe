@@ -56,12 +56,12 @@ const MedicalFacilitiesSliderSection = () => {
               }}
             >
               {!isLoading
-                ? facilities.map((item, index) => (
-                    <SwiperSlide key={index}>{<MedicalFacilityCard facility={item} />}</SwiperSlide>
+                ? facilities.map((item) => (
+                    <SwiperSlide key={item._id}>{<MedicalFacilityCard facility={item} />}</SwiperSlide>
                   ))
                 : [...Array(10)].map((_, index: number) => (
                     <SwiperSlide key={index}>
-                      <CustomSkeleton key={index} variant='card-medical-facility' />
+                      <CustomSkeleton variant='card-medical-facility' />
                     </SwiperSlide>
                   ))}
             </Swiper>

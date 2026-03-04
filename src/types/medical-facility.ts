@@ -1,4 +1,4 @@
-import type { QueryParams } from './common'
+import type { FacilityWorkingTime, QueryParams } from './common'
 
 export interface MedicalFacilityQueryParams extends QueryParams {
   name?: string
@@ -19,6 +19,7 @@ export interface MedicalFacility {
   images: string[]
   description?: string
   totalRatings: number
+  workingTimes: FacilityWorkingTime[]
 }
 export interface MedicalFacilityResponse {
   status: number

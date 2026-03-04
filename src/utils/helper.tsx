@@ -1,4 +1,7 @@
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+import { DAYS } from './constant'
+import type { MedicalFacility } from '~/types/medical-facility'
+import type { FacilityWorkingTime } from '~/types/common'
 
 export const getBase64 = (file: File) => {
   if (!file) return ''
@@ -50,4 +53,46 @@ export const getGoogleMapEmbedUrl = (address?: {
 }) => {
   const fullAddress = formatAddress(address)
   return `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`
+}
+
+export const formatWorkingTimes = (workingTimes: MedicalFacility['workingTimes']) => {
+  if (!workingTimes?.length) return ''
+
+  const normalizeDay = (day: number) => (day === 0 ? 7 : day)
+
+  const sorted = [...workingTimes].sort((a, b) => normalizeDay(a.dayOfWeek) - normalizeDay(b.dayOfWeek))
+
+  const groups: string[] = []
+  let start = sorted[0]
+  let prev = sorted[0]
+
+  for (let i = 1; i < sorted.length; i++) {
+    const current = sorted[i]
+
+    const sameTime = current.startTime === prev.startTime && current.endTime === prev.endTime
+
+    const consecutiveDay = normalizeDay(current.dayOfWeek) === normalizeDay(prev.dayOfWeek) + 1
+
+    if (sameTime && consecutiveDay) {
+      prev = current
+    } else {
+      groups.push(buildLabel(start, prev))
+      start = current
+      prev = current
+    }
+  }
+
+  groups.push(buildLabel(start, prev))
+
+  return groups.join('; ')
+}
+
+export const buildLabel = (start: FacilityWorkingTime, end: FacilityWorkingTime) => {
+  const timeLabel = `(${start.startTime} - ${start.endTime})`
+
+  if (start.dayOfWeek === end.dayOfWeek) {
+    return `${DAYS[start.dayOfWeek]} ${timeLabel}`
+  }
+
+  return `${DAYS[start.dayOfWeek]} - ${DAYS[end.dayOfWeek]} ${timeLabel}`
 }

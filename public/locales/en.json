@@ -203,7 +203,8 @@
     "description_seo": "Find and book appointments at 100+ hospitals and over 1000 trusted clinics nationwide. Medpro makes healthcare access faster, easier, and more convenient.",
     "breadcrumb": "Healthcare facilities",
     "title": "MAKE AN APPOINTMENT AT THE FACILITY",
-    "description": "Make an appointment quickly, save time, safely and conveniently"
+    "description": "Make an appointment quickly, save time, safely and conveniently",
+    "not_found": "No medical facilities found"
   },
   "news_page": {
     "title_seo": "Latest health news - Continuously updated from Medpro",

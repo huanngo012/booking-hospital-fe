@@ -203,7 +203,8 @@
     "description_seo": "Tìm kiếm và đặt lịch khám tại hơn 100 bệnh viện, 1000+ phòng khám và phòng mạch uy tín trên toàn quốc. Medpro giúp bạn đặt khám nhanh chóng, thuận tiện và tiết kiệm thời gian.",
     "breadcrumb": "Cơ sở y tế",
     "title": "ĐẶT KHÁM TẠI CƠ SỞ",
-    "description": "Đặt khám nhanh chóng, tiết kiệm thời gian, an toàn tiện lợi"
+    "description": "Đặt khám nhanh chóng, tiết kiệm thời gian, an toàn tiện lợi",
+    "not_found": "Không tìm thấy cơ sở y tế"
   },
   "news_page": {
     "title_seo": "Tin tức y tế mới nhất - Cập nhập liên tục từ Medpro",

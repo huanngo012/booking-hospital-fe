@@ -1,4 +1,5 @@
 .intro_section {
+  background: var(--white);
   .intro_banner {
     width: 100%;
     height: 100%;
@@ -31,10 +32,8 @@
 
 .blog_section {
   padding-block: 40px;
+  background: var(--white);
   .blog_inner {
-    margin-top: 10px;
-    background: var(--white);
-    border-radius: 20px;
     .content_top {
       padding: 20px;
     }
@@ -57,18 +56,28 @@
   }
 }
 
-.medical_facilities_section {
-  background: var(--white);
-  padding-block: 30px;
-  margin-top: 50px;
+.banners_section {
+  padding-block: 40px;
+  .banners_inner {
+    img {
+      border-radius: 16px;
+      height: 100%;
+    }
+  }
 }
 
 .statistic_section {
+  padding-block: 40px;
   .statistic_inner {
     background: linear-gradient(84.1deg, #00b5f1 33.44%, #00e0ff 132.9%);
     border-radius: 26px;
     text-align: center;
   }
+}
+
+.medical_facilities_section {
+  background: var(--white);
+  padding-block: 40px;
 }
 
 .hero_section {

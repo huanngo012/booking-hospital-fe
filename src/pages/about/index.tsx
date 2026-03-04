@@ -1,5 +1,5 @@
 import './style.scss'
-import { Box, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
+import { Box, Container, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { BreadscrumbCustom, SEO } from '~/components'
 import { images } from '~/assets'
@@ -16,7 +16,7 @@ const AboutPage = () => {
   return (
     <Box className='about_page'>
       <SEO title={t('about_page.title_seo')} description={t('about_page.description_seo')} />
-      <Box className='container'>
+      <Container>
         {<BreadscrumbCustom data={[{ title: t('about_page.breadcrumb') }]} />}
         <Grid container spacing={2}>
           <Grid size={{ mobile: 12, tablet: 6, desktop: 7 }}>
@@ -24,7 +24,7 @@ const AboutPage = () => {
               <Typography variant='h5' color='#00b5f1'>
                 {t('about_page.title')}
               </Typography>
-              <Typography variant='body3'>{t('about_page.description')}</Typography>
+              <Typography variant='body2'>{t('about_page.description')}</Typography>
             </Stack>
             <Box
               component='img'
@@ -116,7 +116,7 @@ const AboutPage = () => {
             </Swiper>
           </Box>
         </Box>
-      </Box>
+      </Container>
     </Box>
   )
 }

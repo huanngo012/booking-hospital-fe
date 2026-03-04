@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
+import { Box, Container, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 
 import { BENEFIT_DOWNLOAD_LEFT, BENEFIT_DOWNLOAD_RIGHT } from '~/utils/constant'
@@ -11,7 +11,7 @@ const DownloadSection = () => {
 
   return (
     <Box component={'section'} className='download_section' id='downloadSection'>
-      <Box className='container'>
+      <Container>
         <Stack alignItems={'center'} gap={'28px'}>
           <Stack alignItems={'center'} gap={'16px'} className='animate animate--fade-in'>
             <Typography variant={isTablet ? 'h4' : 'h6'}>
@@ -124,7 +124,7 @@ const DownloadSection = () => {
             </Stack>
           </Stack>
         </Stack>
-      </Box>
+      </Container>
     </Box>
   )
 }

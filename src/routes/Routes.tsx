@@ -1,31 +1,31 @@
 import { AboutPage, HomePage, MedicalFacilitiesPage, NewsPage, NotFoundPage } from '~/pages'
-import { paths } from '~/utils/constant'
+import { PATHS } from '~/utils/constant'
 
 const privateRoutes = []
 
 const publicRoutes = [
   {
-    path: paths.HOME,
+    path: PATHS.HOME,
     component: HomePage,
     layout: true
   },
 
   {
-    path: paths.MEDICALFACILITIES,
+    path: PATHS.MEDICALFACILITIES,
     component: MedicalFacilitiesPage,
     layout: true
   },
   {
-    path: paths.NEWS,
+    path: PATHS.NEWS,
     component: NewsPage,
     layout: true
   },
   {
-    path: paths.ABOUT,
+    path: PATHS.ABOUT,
     component: AboutPage,
     layout: true
   },
-  { path: paths.NOT_FOUND, component: NotFoundPage, layout: true }
+  { path: PATHS.NOT_FOUND, component: NotFoundPage, layout: true }
 ]
 
 export { publicRoutes, privateRoutes }

@@ -1,8 +1,8 @@
-import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
+import { Box, Container, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { Navigation } from 'swiper/modules'
+import { Navigation, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { MedicalFacilityCard } from '~/components'
+import { CustomSkeleton, MedicalFacilityCard } from '~/components'
 import { useMedicalFacilities } from '~/modules/medical-facility/medical-facility.query'
 import { theme } from '~/themes/Theme'
 
@@ -10,30 +10,38 @@ const MedicalFacilitiesSliderSection = () => {
   const { t } = useTranslation()
   const isDesktop = useMediaQuery(theme.breakpoints.up('desktop'))
 
-  const { data } = useMedicalFacilities({
+  const { data, isLoading } = useMedicalFacilities({
     page: 1,
     limit: 10
   })
 
+  const facilities = data?.data ?? []
+  const total = data?.pagination?.total ?? 0
+
   return (
     <Box component={'section'} className='medical_facilities_section animate animate--fade-in'>
-      <Box className='container'>
+      <Container>
         <Stack gap={2.5}>
           <Box textAlign='center'>
             <Typography variant='h4' color='var(--primary)'>
               {t('home.medical_facilities_section.title')}
             </Typography>
             <Typography variant='label1' color='#858585'>
-              {t('home.medical_facilities_section.description', { count: data?.pagination.total ?? 0 })}
+              {t('home.medical_facilities_section.description', { count: total })}
             </Typography>
           </Box>
           <Box position={'relative'}>
             <Swiper
-              slidesPerView={3}
+              slidesPerView={2}
               spaceBetween={16}
-              modules={[Navigation]}
+              modules={[Navigation, Autoplay]}
               navigation={isDesktop}
+              autoplay
+              loop
               breakpoints={{
+                550: {
+                  slidesPerView: 3
+                },
                 700: {
                   slidesPerView: 4
                 },
@@ -43,17 +51,23 @@ const MedicalFacilitiesSliderSection = () => {
               }}
               style={{
                 position: 'static',
-                paddingBlock: '20px',
-                marginBlock: '-20px'
+                padding: '20px 10px',
+                margin: '-20px -10px'
               }}
             >
-              {data?.data.map((item, index) => (
-                <SwiperSlide key={index}>{<MedicalFacilityCard facility={item} />}</SwiperSlide>
-              ))}
+              {!isLoading
+                ? facilities.map((item, index) => (
+                    <SwiperSlide key={index}>{<MedicalFacilityCard facility={item} />}</SwiperSlide>
+                  ))
+                : [...Array(10)].map((_, index: number) => (
+                    <SwiperSlide key={index}>
+                      <CustomSkeleton key={index} variant='card-medical-facility' />
+                    </SwiperSlide>
+                  ))}
             </Swiper>
           </Box>
         </Stack>
-      </Box>
+      </Container>
     </Box>
   )
 }

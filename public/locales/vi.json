@@ -200,7 +200,10 @@
   },
   "medical_facilities_page": {
     "title_seo": "Cơ sở y tế | Medpro - Đặt lịch khám bệnh",
-    "description_seo": "Tìm kiếm và đặt lịch khám tại hơn 100 bệnh viện, 1000+ phòng khám và phòng mạch uy tín trên toàn quốc. Medpro giúp bạn đặt khám nhanh chóng, thuận tiện và tiết kiệm thời gian."
+    "description_seo": "Tìm kiếm và đặt lịch khám tại hơn 100 bệnh viện, 1000+ phòng khám và phòng mạch uy tín trên toàn quốc. Medpro giúp bạn đặt khám nhanh chóng, thuận tiện và tiết kiệm thời gian.",
+    "breadcrumb": "Cơ sở y tế",
+    "title": "ĐẶT KHÁM TẠI CƠ SỞ",
+    "description": "Đặt khám nhanh chóng, tiết kiệm thời gian, an toàn tiện lợi"
   },
   "news_page": {
     "title_seo": "Tin tức y tế mới nhất - Cập nhập liên tục từ Medpro",
@@ -371,5 +374,12 @@
       "title": "Vươn tầm tay kéo gần mọi khoảng cách",
       "description": "Người dùng chọn và thực hiện thanh toán trên phần mềm"
     }
+  },
+  "category": {
+    "all": "Tất cả"
+  },
+  "medical_facilities": {
+    "button_see_detail": "Xem chi  tiết",
+    "map": "Bản đồ"
   }
 }

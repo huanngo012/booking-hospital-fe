@@ -1,5 +1,9 @@
 .medical_facility_card {
   height: 100%;
+  background: var(--white);
+  box-shadow: 0 4.5px 13px #01499e59;
+  border-radius: 12px;
+  padding: 12px;
   .card_wrapper {
     display: flex;
     flex-direction: column;
@@ -9,10 +13,13 @@
       position: relative;
       width: 100%;
       border-radius: 12px;
+      padding-block: 20px;
       overflow: hidden;
       img {
-        width: 125px;
-        height: 125px;
+        aspect-ratio: 1;
+        max-width: 125px;
+        max-height: 125px;
+        height: 100%;
         margin: auto;
         transition: all 0.3s ease-in;
       }
@@ -31,6 +38,44 @@
       .card_address {
         margin-top: auto;
       }
+    }
+  }
+}
+
+.medical_facility_card_02 {
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(149, 179, 207, 0.2);
+  border-radius: 20px;
+  width: 100%;
+  background: #fff;
+  border: 2px solid transparent;
+  transition: all 0.23s ease;
+  &:hover {
+    border-color: var(--primary);
+    box-shadow: none;
+  }
+  .card_wrapper {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    .card_image {
+      img {
+        aspect-ratio: 1;
+        max-width: 100px;
+        max-height: 100px;
+        height: 100%;
+        margin: auto;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .card_content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 12px;
     }
   }
 }

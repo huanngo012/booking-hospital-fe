@@ -23,7 +23,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
   }
 
   return (
-    <Stack minHeight={'100vh'} height={'100%'} sx={{ background: '#e8f2f7' }}>
+    <Stack minHeight={'100vh'} height={'100%'} sx={{ background: 'var(--background)' }}>
       <Header />
       <Box
         marginTop={{

@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
+import { Box, Button, Container, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { BsArrowRight } from 'react-icons/bs'
 import { theme } from '~/themes/Theme'
@@ -9,14 +9,8 @@ const BlogSection = () => {
   const isTablet = useMediaQuery(theme.breakpoints.up('tablet'))
   return (
     <Box component={'section'} className='blog_section'>
-      <Box className='container'>
-        <Box
-          className='blog_inner'
-          padding={{
-            mobile: '10px',
-            tablet: '15.5px 40px 35.5px'
-          }}
-        >
+      <Container>
+        <Box className='blog_inner'>
           <Box className='content_top'>
             <Stack
               direction={{
@@ -53,7 +47,7 @@ const BlogSection = () => {
             ))}
           </Grid>
         </Box>
-      </Box>
+      </Container>
     </Box>
   )
 }

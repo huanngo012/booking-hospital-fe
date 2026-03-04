@@ -1,0 +1,69 @@
+.medical_facilities_page {
+  .medical_facilities_header {
+    background-color: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    .medical_facilities_header-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 48px;
+      height: 100%;
+      .medical_facilities_header-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        background-color: #ffffffd9;
+        padding: 30px;
+        border-radius: 30px;
+        .medical-facilities__title {
+          position: relative;
+          overflow: hidden;
+          &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff8c;
+            animation: typing 6s steps(12) infinite;
+          }
+        }
+      }
+    }
+  }
+  .medical_facilities_body {
+    padding-block: 40px;
+    .medical_facilities_sidebar {
+      position: sticky;
+      top: calc(var(--header-height) + 10px);
+      bottom: 0;
+      height: 100%;
+      overflow-y: auto;
+      .medical_facilities_detail {
+        box-shadow: 0 4px 30px rgba(116, 157, 206, 0.2);
+        border-radius: 20px;
+        background: #fff;
+        padding: 30px 26px;
+        .medical_facilities_detail_header {
+          padding-bottom: 16px;
+          margin-bottom: 16px;
+          border-bottom: 1px solid #b1b1b1;
+          .medical_facilities_detail_logo {
+            margin-bottom: 16px;
+            img {
+              max-width: 200px;
+              margin-inline: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

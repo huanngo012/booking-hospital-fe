@@ -1,4 +1,4 @@
-import { Box, Grid, Stack, Typography } from '@mui/material'
+import { Box, Container, Grid, Stack, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { IMAGE_FOOTER, INFO_FOOTER, MENU_FOOTER } from '~/utils/constant'
@@ -15,7 +15,7 @@ const Footer = () => {
       bgcolor={'var(--white)'}
       borderTop={'1px solid var(--divider-color)'}
     >
-      <Box className='container'>
+      <Container>
         <Stack
           direction={{
             mobile: 'column',
@@ -67,7 +67,7 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Stack>
-      </Box>
+      </Container>
     </Box>
   )
 }

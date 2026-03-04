@@ -31,6 +31,7 @@ import close from './svg/close.svg'
 import homepage_banner from './img/homepage_banner.webp'
 import bg_datkham from './img/bg_datkham.webp'
 import about_us from './img/about_us.webp'
+import medical_facilities_banner from './img/medical_facilities_banner.png'
 
 export const images = {
   notFoundBg,
@@ -65,5 +66,6 @@ export const images = {
   business_examination,
   homepage_banner,
   bg_datkham,
-  about_us
+  about_us,
+  medical_facilities_banner
 }

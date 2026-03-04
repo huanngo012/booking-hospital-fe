@@ -1,6 +1,6 @@
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 
-export const getBase64 = (file: any) => {
+export const getBase64 = (file: File) => {
   if (!file) return ''
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
@@ -10,7 +10,7 @@ export const getBase64 = (file: any) => {
   })
 }
 
-export const formatMoney = (number: any) => Number(Number(number)?.toFixed(1)).toLocaleString()
+export const formatMoney = (number: number) => Number(Number(number)?.toFixed(1)).toLocaleString()
 
 export const renderStartFromNumber = (number: number, size: number) => {
   const stars = []
@@ -36,9 +36,18 @@ export const readFileData = (file: File) => {
   })
 }
 
-export const handleSplitName = (fullName: string) => {
-  const firstName: string = fullName.substring(0, fullName.lastIndexOf(' '))
-  const lastName: string = fullName.substring(fullName.lastIndexOf(' ') + 1, fullName.length)
+export const formatAddress = (address?: { detail?: string; ward?: string; district?: string; province?: string }) => {
+  if (!address) return ''
 
-  return { firstName, lastName }
+  return [address.detail, address.ward, address.district, address.province].filter(Boolean).join(', ')
+}
+
+export const getGoogleMapEmbedUrl = (address?: {
+  detail?: string
+  ward?: string
+  district?: string
+  province?: string
+}) => {
+  const fullAddress = formatAddress(address)
+  return `https://www.google.com/maps?q=${encodeURIComponent(fullAddress)}&output=embed`
 }

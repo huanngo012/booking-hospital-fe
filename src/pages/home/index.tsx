@@ -8,6 +8,7 @@ import HeroSection from './HeroSection'
 import MedicalFacilitiesSliderSection from './MedicalFacilitiesSliderSection'
 import { SEO } from '~/components'
 import { useTranslation } from 'react-i18next'
+import BannersSection from './BannersSection'
 
 const HomePage = () => {
   const { t } = useTranslation()
@@ -17,8 +18,9 @@ const HomePage = () => {
       <SEO title={t('home.title_seo')} description={t('home.description_seo')} />
       <IntroSection />
       <BlogSection />
-      <StatisticSection />
+      <BannersSection />
       <MedicalFacilitiesSliderSection />
+      <StatisticSection />
       <HeroSection />
       <DownloadSection />
     </Box>

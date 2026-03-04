@@ -2,10 +2,11 @@ import type { QueryParams } from './common'
 
 export interface MedicalFacilityQueryParams extends QueryParams {
   name?: string
+  categoryID?: string | number
 }
 
 export interface MedicalFacility {
-  id: string
+  _id: string
   name: string
   logo: string
   slug: string

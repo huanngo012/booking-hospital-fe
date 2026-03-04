@@ -1,10 +1,23 @@
 import React, { useState } from 'react'
-import { Badge, Box, Button, ClickAwayListener, Divider, MenuItem, MenuList, Paper, Popper, Stack, Typography, useMediaQuery } from '@mui/material'
+import {
+  Badge,
+  Box,
+  Button,
+  ClickAwayListener,
+  Divider,
+  MenuItem,
+  MenuList,
+  Paper,
+  Popper,
+  Stack,
+  Typography,
+  useMediaQuery
+} from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { FiMenu } from 'react-icons/fi'
-import { paths } from '~/utils/constant'
 import { theme } from '~/themes/Theme'
+import { PATHS } from '~/utils/constant'
 
 interface NavbarPopUpProps {
   tabs?: { title: string; path: string }[]
@@ -12,8 +25,10 @@ interface NavbarPopUpProps {
   activeLink?: string | null
 }
 
-const imageAppStore = 'https://medpro.vn/_next/image?url=https%3A%2F%2Fbo-api.medpro.com.vn%2Fstatic%2Fimages%2Fmedpro%2Fweb%2Ficon_ios.svg%3Ft%3D11111111&w=1920&q=75'
-const imageCHPlay = 'https://medpro.vn/_next/image?url=https%3A%2F%2Fbo-api.medpro.com.vn%2Fstatic%2Fimages%2Fmedpro%2Fweb%2Ficon_google_play.svg%3Ft%3D1111111&w=1920&q=75'
+const imageAppStore =
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fbo-api.medpro.com.vn%2Fstatic%2Fimages%2Fmedpro%2Fweb%2Ficon_ios.svg%3Ft%3D11111111&w=1920&q=75'
+const imageCHPlay =
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fbo-api.medpro.com.vn%2Fstatic%2Fimages%2Fmedpro%2Fweb%2Ficon_google_play.svg%3Ft%3D1111111&w=1920&q=75'
 
 const NavbarPopUp = ({ tabs, handleNav, activeLink }: NavbarPopUpProps) => {
   const { t } = useTranslation()
@@ -33,7 +48,12 @@ const NavbarPopUp = ({ tabs, handleNav, activeLink }: NavbarPopUpProps) => {
   }
 
   return (
-    <Badge className='nav-popup' sx={{ display: { mobile: 'flex', desktop: 'none' } }} ref={anchorRefNav} onClick={handleToggleNav}>
+    <Badge
+      className='nav-popup'
+      sx={{ display: { mobile: 'flex', desktop: 'none' } }}
+      ref={anchorRefNav}
+      onClick={handleToggleNav}
+    >
       <FiMenu size={24} />
       <Popper
         open={openNav}
@@ -50,8 +70,19 @@ const NavbarPopUp = ({ tabs, handleNav, activeLink }: NavbarPopUpProps) => {
             <MenuList id='menu-list-grow'>
               {tabs?.map((el, index) => {
                 return (
-                  <MenuItem onClick={(e) => handleNav(e, el.path)} key={index} sx={{ borderRadius: '8px' }} selected={activeLink === el.path}>
-                    <Stack direction='row' alignItems={'center'} justifyContent={'space-between'} width={'100%'} gap={'4px'}>
+                  <MenuItem
+                    onClick={(e) => handleNav(e, el.path)}
+                    key={index}
+                    sx={{ borderRadius: '8px' }}
+                    selected={activeLink === el.path}
+                  >
+                    <Stack
+                      direction='row'
+                      alignItems={'center'}
+                      justifyContent={'space-between'}
+                      width={'100%'}
+                      gap={'4px'}
+                    >
                       <Typography id='asdsada' variant='body2'>
                         {el.title}
                       </Typography>
@@ -71,10 +102,20 @@ const NavbarPopUp = ({ tabs, handleNav, activeLink }: NavbarPopUpProps) => {
               </Button>
             ) : (
               <Stack flexDirection='row' alignItems='center' gap='16px'>
-                <Button className='signup-button' variant='outlined' color='primary' onClick={() => navigate(`${paths.LOGIN}?state=signUp`)}>
+                <Button
+                  className='signup-button'
+                  variant='outlined'
+                  color='primary'
+                  onClick={() => navigate(`${PATHS.LOGIN}?state=signUp`)}
+                >
                   <Typography variant='button2'>Đăng ký</Typography>
                 </Button>
-                <Button className='login-button' variant='contained' color='primary' onClick={() => navigate(paths.LOGIN)}>
+                <Button
+                  className='login-button'
+                  variant='contained'
+                  color='primary'
+                  onClick={() => navigate(PATHS.LOGIN)}
+                >
                   <Typography variant='button2'>Đăng nhập</Typography>
                 </Button>
               </Stack>

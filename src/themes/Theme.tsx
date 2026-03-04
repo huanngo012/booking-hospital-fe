@@ -465,6 +465,25 @@ export const theme = createTheme({
           }
         }
       }
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          maxWidth: 'var(--max-width)',
+
+          [theme.breakpoints.up('tablet')]: {
+            paddingInline: 32
+          },
+
+          [theme.breakpoints.up('desktop')]: {
+            paddingInline: 64
+          },
+
+          [theme.breakpoints.up('oversize')]: {
+            paddingInline: 160
+          }
+        })
+      }
     }
   },
   typography: {

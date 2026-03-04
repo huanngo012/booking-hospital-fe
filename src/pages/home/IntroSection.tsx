@@ -1,4 +1,4 @@
-import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
+import { Box, Container, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { theme } from '~/themes/Theme'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -21,31 +21,28 @@ const IntroSection = () => {
           background: `url(${homepage_banner})`
         }}
       >
-        <Stack
-          alignItems='center'
-          gap='16px'
-          textAlign='center'
-          paddingBlock={'30px'}
-          className='container animate animate--fade-in'
-        >
-          <Typography variant='h5' color='var(--primary)'>
-            {t('home.intro_section.sub_title')}
-          </Typography>
-          <Typography variant={isTablet ? 'h3' : 'h5'} color='var(--secondary)'>
-            {t('home.intro_section.title')}
-          </Typography>
+        <Container className=' animate animate--fade-in'>
+          <Stack alignItems='center' gap='16px' textAlign='center' paddingBlock={'30px'}>
+            <Typography variant='h5' color='var(--primary)'>
+              {t('home.intro_section.sub_title')}
+            </Typography>
+            <Typography variant={isTablet ? 'h3' : 'h5'} color='var(--secondary)'>
+              {t('home.intro_section.title')}
+            </Typography>
 
-          <Stack direction={'row'} gap={1} alignItems={'center'} position={'relative'} width='100%'></Stack>
-          <Typography variant='body1' color='var(--secondary)'>
-            {t('home.intro_section.description')}
-          </Typography>
-        </Stack>
+            <Stack direction={'row'} gap={1} alignItems={'center'} position={'relative'} width='100%'></Stack>
+            <Typography variant='body1' color='var(--secondary)'>
+              {t('home.intro_section.description')}
+            </Typography>
+          </Stack>
+        </Container>
       </Box>
-      <Box
-        className='container animate animate--fade-in'
-        width='100%'
-        marginTop={{
-          desktop: '-6%'
+      <Container
+        className=' animate animate--fade-in'
+        sx={{
+          marginTop: {
+            desktop: '-6%'
+          }
         }}
       >
         <Box position={'relative'}>
@@ -80,7 +77,7 @@ const IntroSection = () => {
             ))}
           </Swiper>
         </Box>
-      </Box>
+      </Container>
     </Box>
   )
 }

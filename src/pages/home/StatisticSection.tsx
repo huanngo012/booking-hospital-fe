@@ -1,4 +1,4 @@
-import { Box, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
+import { Box, Container, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { theme } from '~/themes/Theme'
 import { STATISTIC_INFO } from '~/utils/constant'
@@ -8,7 +8,7 @@ const StatisticSection = () => {
   const isTablet = useMediaQuery(theme.breakpoints.up('tablet'))
   return (
     <Box component={'section'} className='statistic_section animate animate--fade-in'>
-      <Box className='container'>
+      <Container>
         <Box
           className='statistic_inner'
           padding={{
@@ -37,7 +37,7 @@ const StatisticSection = () => {
             ))}
           </Grid>
         </Box>
-      </Box>
+      </Container>
     </Box>
   )
 }

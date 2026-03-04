@@ -6,7 +6,7 @@ import { images } from '~/assets'
 
 const { examinationEars, hospital, clinic, doctor, location, eye } = images
 
-export const paths = {
+export const PATHS = {
   HOME: '/',
   LOGIN: '/login',
   USER: '/user',
@@ -17,14 +17,6 @@ export const paths = {
   NEWS: '/news',
   ABOUT: '/about',
   NOT_FOUND: '*'
-}
-
-export const paddingScreen = {
-  padding: {
-    oversize: '0 160px',
-    desktop: '0 64px',
-    mobile: '10px 32px'
-  }
 }
 
 export const tabsUser = [
@@ -58,27 +50,27 @@ export const MENUS = [
   {
     id: 1,
     title: 'home.home',
-    path: paths.HOME
+    path: PATHS.HOME
   },
   {
     id: 2,
-    title: 'healthcare_facilities.healthcare_facilities',
-    path: paths.MEDICALFACILITIES
+    title: 'medical_facilities_page.breadcrumb',
+    path: PATHS.MEDICALFACILITIES
   },
   {
     id: 4,
     title: 'doctor.doctor',
-    path: paths.DOCTORS
+    path: PATHS.DOCTORS
   },
   {
     id: 5,
     title: 'news_page.breadcrumb',
-    path: paths.NEWS
+    path: PATHS.NEWS
   },
   {
     id: 6,
     title: 'about_page.breadcrumb',
-    path: paths.ABOUT
+    path: PATHS.ABOUT
   }
 ]
 
@@ -318,6 +310,19 @@ export const BLOGS = [
     des: 'blogs.blog_3.description',
     img: '/images/blog_3.webp'
   }
+]
+
+export const BANNERS = [
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F7e9e0dac-8ec7-46b7-bdfb-5ed346e94c3d-care247_nhaaoan_thuaaac_taaoai_nhaa_4_web_chi_tiet_1540x340px_copy.png&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F5c04f295-fbc8-40c3-9419-d0ba161df7fc-chaam_saac_saaa(c)c_khaaae_4.0_banner_fb_1180x310_2_copy.png&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F342af2da-3285-4da2-9305-0da8454031ed-desk.jpg&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F5ddb363f-8886-4b33-bde9-f57bec34a86b-care247-tro-ly-ca-nhan-ho-tro-nguoi-dan-di-kham.png&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F45560a3a-943c-4566-afba-cbfc25d133d2-maaoaau_1.png&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F5c1cd33f-3934-44e1-91b1-59a36945fe2b-banner_home_desktop_-_1180x310.png&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F2ef4ca2e-7283-457f-a9c1-e7d9a08d94db-giai-phap-quan-ly-phong-mach.png&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F7a3e3e55-cadf-4210-9e64-f56ee30c7e57-banner-homepage-dat-kham-co-so-y-ye-tren-medpro.jpg&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2F4edacddd-7280-41e0-b6c9-3eb7d438c107-banner_cashback_1180x310_desktop.jpg&w=1200&q=100',
+  'https://medpro.vn/_next/image?url=https%3A%2F%2Fcdn.medpro.vn%2Fprod-partner%2Fda64c9ee-fdd6-4a13-bc52-fe74255fc079-promote-vaccine-d.jpg&w=1200&q=100'
 ]
 export const STATISTIC_INFO = [
   {

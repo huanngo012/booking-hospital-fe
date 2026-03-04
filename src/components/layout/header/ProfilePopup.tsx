@@ -4,7 +4,7 @@ import { IoLogOut } from 'react-icons/io5'
 import { useNavigate } from 'react-router-dom'
 import { images } from '~/assets'
 import { theme } from '~/themes/Theme'
-import { paths, tabsUser } from '~/utils/constant'
+import { PATHS, tabsUser } from '~/utils/constant'
 
 const { UserIcon, UserAvatar, defaultAvt } = images
 
@@ -55,7 +55,7 @@ const ProfilePopup = () => {
           </Stack>
         </Box>
         {tabsUser?.map((el, index) => (
-          <Box key={index} className='dropdown-item' onClick={() => navigate(`${paths.USER}?state=${el.path}`)}>
+          <Box key={index} className='dropdown-item' onClick={() => navigate(`${PATHS.USER}?state=${el.path}`)}>
             {el.icon}
             <Typography variant='body1'>{el.text}</Typography>
           </Box>

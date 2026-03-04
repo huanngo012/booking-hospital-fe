@@ -200,7 +200,10 @@
   },
   "medical_facilities_page": {
     "title_seo": "Medical Facilities | Medpro - Online Appointment Booking",
-    "description_seo": "Find and book appointments at 100+ hospitals and over 1000 trusted clinics nationwide. Medpro makes healthcare access faster, easier, and more convenient."
+    "description_seo": "Find and book appointments at 100+ hospitals and over 1000 trusted clinics nationwide. Medpro makes healthcare access faster, easier, and more convenient.",
+    "breadcrumb": "Healthcare facilities",
+    "title": "MAKE AN APPOINTMENT AT THE FACILITY",
+    "description": "Make an appointment quickly, save time, safely and conveniently"
   },
   "news_page": {
     "title_seo": "Latest health news - Continuously updated from Medpro",
@@ -372,5 +375,12 @@
       "title": "Extending reach to bridge every distance",
       "description": "Users select and make payments on the software"
     }
+  },
+  "category": {
+    "all": "All"
+  },
+  "medical_facilities": {
+    "button_see_detail": "See details",
+    "map": "Map"
   }
 }

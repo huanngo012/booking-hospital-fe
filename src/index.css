@@ -5,17 +5,13 @@
   -webkit-tap-highlight-color: transparent;
   font-size: 100%;
 }
-
+html {
+  --header-height: 135px;
+}
 body {
   font-family: 'Roboto', sans-serif;
   min-height: 100vh;
   height: 100%;
-}
-.container {
-  max-width: var(--max-width);
-  margin-inline: auto;
-  padding-inline: 16px;
-  width: 100%;
 }
 
 img {
@@ -23,41 +19,27 @@ img {
   width: 100%;
   height: auto;
 }
-@media (min-width: 700px) {
-  .container {
-    padding-inline: 32px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    padding-inline: 64px;
-  }
-}
-@media (min-width: 1600px) {
-  .container {
-    padding-inline: 160px;
-  }
-}
-/* MuiDataGrid */
-[class*='-MuiDataGrid-root'] .MuiDataGrid-columnHeader:focus-within {
-  outline: none !important;
+
+iframe {
+  width: 100%;
+  border-radius: 16px;
 }
 
 *::-webkit-scrollbar {
-  width: 2px;
-  height: 2px;
-  border-radius: 180px;
+  width: 8px;
+  height: 8px;
+  border-radius: 30px;
   flex-shrink: 0;
   align-self: stretch;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #abb0b0; /* Màu của con trỏ thanh cuộn */
-  border-radius: 180px;
+  background-color: #abb0b0;
+  border-radius: 30px;
 }
 
 *::-webkit-scrollbar-track {
-  background-color: transparent; /* Màu của nền thanh cuộn */
+  background-color: transparent;
 }
 
 .truncate_1 {
@@ -98,65 +80,24 @@ img {
   justify-content: center;
 }
 
-.popup__content {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  flex-shrink: 0;
-  width: 100%;
-  height: 100%;
+.swiper {
+  --swiper-theme-color: var(--secondary);
+  --swiper-navigation-size: 30px;
+  --swiper-navigation-sides-offset: -40px;
+  --swiper-pagination-color: var(--primary);
+  --swiper-pagination-bullet-size: 6px;
+  --swiper-pagination-bottom: -30px;
+}
+.swiper.swiper--auto .swiper-slide {
+  width: auto;
 }
 
-.popup__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 100%;
-  padding: 24px;
-}
-.popup__footer {
-  display: flex;
-  width: 100%;
-  padding: 24px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 16px;
-}
-
-.popup__body {
-  display: flex;
-  flex: 1;
-  width: 100%;
-  padding: 24px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 24px;
-  overflow: auto;
-}
-
-.MuiDivider-root.MuiDivider-fullWidth {
-  border-bottom: 1px solid var(--border-color);
-  width: 100%;
-  margin: 16px 0;
-}
-
-.MuiDivider-root.MuiDivider-vertical {
-  width: 1px;
-}
-
-.MuiPagination-root {
-  display: flex;
-  justify-content: center;
-}
 .swiper .swiper-slide {
   height: unset;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-  --swiper-theme-color: var(--secondary);
-  --swiper-navigation-size: 30px;
-  --swiper-navigation-sides-offset: -40px;
   box-shadow:
     0 0 1px 0 rgba(0, 0, 0, 0.04),
     0 2px 6px 0 rgba(0, 0, 0, 0.04),

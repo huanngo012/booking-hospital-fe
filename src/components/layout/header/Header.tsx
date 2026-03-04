@@ -1,8 +1,8 @@
 import './style.scss'
 import { useTranslation } from 'react-i18next'
 import { Fragment, useEffect, useRef, useState } from 'react'
-import { MENUS, NETWORKS, paths } from '~/utils/constant'
-import { Box, Button, Stack, Tab, Tabs, Typography } from '@mui/material'
+import { MENUS, NETWORKS, PATHS } from '~/utils/constant'
+import { Box, Button, Container, Stack, Tab, Tabs, Typography } from '@mui/material'
 import { useLocation, Link } from 'react-router-dom'
 import LanguagePopUp from './LanguagePopUp'
 import { FaUser } from 'react-icons/fa'
@@ -20,6 +20,7 @@ const Header = () => {
   const isLoggedIn = false
 
   const lastScrollY = useRef(0)
+  const headerRef = useRef<HTMLDivElement>(null)
   const [className, setClassName] = useState<'scroll-up' | 'scroll-down'>('scroll-up')
 
   useEffect(() => {
@@ -28,8 +29,10 @@ const Header = () => {
 
       if (currentScrollY > lastScrollY.current) {
         setClassName('scroll-down')
+        document.documentElement.style.setProperty('--header-height', `${headerRef.current?.offsetHeight}px`)
       } else if (currentScrollY < lastScrollY.current) {
         setClassName('scroll-up')
+        document.documentElement.style.setProperty('--header-height', `${headerRef.current?.offsetHeight}px`)
       }
 
       lastScrollY.current = currentScrollY
@@ -39,10 +42,10 @@ const Header = () => {
   }, [])
 
   return (
-    <Box component={'header'} className={`header header--${className}`}>
-      <Box className='container'>
+    <Box ref={headerRef} component={'header'} className={`header header--${className}`}>
+      <Container>
         <Stack direction={'row'} alignItems={'center'} gap={'30px'} width={'100%'}>
-          <Link to={paths.HOME}>
+          <Link to={PATHS.HOME}>
             <Box component='img' src={'/svgs/logo.svg'} alt={'Logo'} width={'150px'} />
           </Link>
           <Box width={'100%'}>
@@ -74,7 +77,7 @@ const Header = () => {
                   <Typography variant='button2'>{t('download_app')}</Typography>
                 </Button>
                 {!isLoggedIn ? (
-                  <Button component={Link} className='login-button' variant='outlined' color='primary' to={paths.LOGIN}>
+                  <Button component={Link} className='login-button' variant='outlined' color='primary' to={PATHS.LOGIN}>
                     <FaUser />
                     <Typography variant='button2'>{t('user.account')}</Typography>
                   </Button>
@@ -122,7 +125,7 @@ const Header = () => {
             </Stack>
           </Box>
         </Stack>
-      </Box>
+      </Container>
     </Box>
   )
 }

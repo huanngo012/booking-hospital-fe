@@ -43,7 +43,7 @@ const Header = () => {
       <Box className='container'>
         <Stack direction={'row'} alignItems={'center'} gap={'30px'} width={'100%'}>
           <Link to={paths.HOME}>
-            <Box component='img' src={'/svgs/logo.svg'} alt={t('title')} width={'150px'} />
+            <Box component='img' src={'/svgs/logo.svg'} alt={'Logo'} width={'150px'} />
           </Link>
           <Box width={'100%'}>
             <Box display={DISPLAY.DESKTOP_ONLY} className='header__menu-top'>

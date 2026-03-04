@@ -90,3 +90,8 @@ export interface ArticleCardProps {
 export interface MedicalFacilityCardProps {
   facility: MedicalFacility
 }
+
+export interface SEOProps {
+  title: string
+  description: string
+}

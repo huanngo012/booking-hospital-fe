@@ -1,16 +1,9 @@
-import { AboutPage, HomePage, HospitalPage, NewsPage, NotFoundPage } from '~/pages'
+import { AboutPage, HomePage, MedicalFacilitiesPage, NewsPage, NotFoundPage } from '~/pages'
 import { paths } from '~/utils/constant'
 
-const privateRoutes = [
-  //   {
-  //     path: paths.USER,
-  //     component: UserPage,
-  //     layout: true
-  //   }
-]
+const privateRoutes = []
 
 const publicRoutes = [
-  //   { path: paths.LOGIN, component: LoginPage, layout: false },
   {
     path: paths.HOME,
     component: HomePage,
@@ -18,20 +11,10 @@ const publicRoutes = [
   },
 
   {
-    path: paths.HOSPITALS,
-    component: HospitalPage,
+    path: paths.MEDICALFACILITIES,
+    component: MedicalFacilitiesPage,
     layout: true
   },
-  //   {
-  //     path: paths.DOCTORS,
-  //     component: DoctorPage,
-  //     layout: true
-  //   },
-  //   {
-  //     path: paths.HOSPITAL_DETAIL,
-  //     component: HospitalDetailPage,
-  //     layout: true
-  //   },
   {
     path: paths.NEWS,
     component: NewsPage,

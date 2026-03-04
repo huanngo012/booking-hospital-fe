@@ -165,6 +165,8 @@
   },
 
   "not_found_page": {
+    "title_seo": "Trang không tồn tại | Medpro - Nền tảng đặt lịch khám trực tuyến",
+    "description_seo": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển. Khám phá Medpro - nền tảng đặt lịch khám trực tuyến tại 100+ bệnh viện và 1000+ phòng khám trên toàn quốc.",
     "title": "Trang bạn tìm kiếm không đúng hoặc không tồn tại !",
     "button": "Trở về trang chủ"
   },
@@ -196,12 +198,20 @@
   "all specialties": {
     "all specialties": "Tất cả chuyên khoa"
   },
+  "medical_facilities_page": {
+    "title_seo": "Cơ sở y tế | Medpro - Đặt lịch khám bệnh",
+    "description_seo": "Tìm kiếm và đặt lịch khám tại hơn 100 bệnh viện, 1000+ phòng khám và phòng mạch uy tín trên toàn quốc. Medpro giúp bạn đặt khám nhanh chóng, thuận tiện và tiết kiệm thời gian."
+  },
   "news_page": {
+    "title_seo": "Tin tức y tế mới nhất - Cập nhập liên tục từ Medpro",
+    "description_seo": "Theo dõi tin tức y tế mới nhất và thông tin hữu ích từ Medpro. Cập nhật liên tục về các dịch vụ, xu hướng y học và kiến thức chăm sóc sức khỏe",
     "breadcrumb": "Tin tức",
     "title": "Tin tức",
     "button": "Xem tiếp"
   },
   "about_page": {
+    "title_seo": "Giới thiệu Medpro - Ứng dụng y tế được sử dụng nhiều nhất",
+    "description_seo": "Tìm hiểu về Medpro, ứng dụng tiên phong trong việc kết nối người dùng với dịch vụ y tế. Đơn giản hóa quá trình tiếp cận, khám, chữa bệnh và tư vấn sức khoẻ",
     "breadcrumb": "Về chúng tôi",
     "title": "Giới thiệu",
     "description": "Ứng dụng này giúp người bệnh và thân nhân người bệnh có thể thực hiện trực tuyến quá trình đăng ký khám bệnh tại bệnh viện ở mọi lúc mọi nơi mà không cần phải đến trực tiếp bệnh viện",
@@ -233,6 +243,8 @@
     "frequently asked questions": "Câu hỏi thường gặp"
   },
   "home": {
+    "title_seo": "Medpro - Đặt khám nhanh 100+ bệnh viện, 1000+ phòng khám, phòng mạch",
+    "description_seo": "Nền tảng y tế số được 4 triệu người, 100+ BV, 1000+ Phòng khám, phòng mạch tin tưởng lựa chọn. Giải pháp đặt khám toàn diện qua tổng đài 19002115, web, app, MXH",
     "home": "Trang chủ",
     "search for healthcare facilities": "Tìm kiếm cơ sở y tế",
     "search for specialties": "Tìm kiếm chuyên khoa",

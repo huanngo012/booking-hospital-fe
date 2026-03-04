@@ -3,7 +3,7 @@ import { Box, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { ArticleCard, BreadscrumbCustom } from '~/components'
+import { ArticleCard, BreadscrumbCustom, SEO } from '~/components'
 import { theme } from '~/themes/Theme'
 
 const NewsPage = () => {
@@ -11,6 +11,7 @@ const NewsPage = () => {
   const isDesktop = useMediaQuery(theme.breakpoints.up('desktop'))
   return (
     <Box className='news_page'>
+      <SEO title={t('news_page.title_seo')} description={t('news_page.description_seo')} />
       <Box className='container'>
         {<BreadscrumbCustom data={[{ title: t('news_page.breadcrumb') }]} />}
         <Stack gap={4}>

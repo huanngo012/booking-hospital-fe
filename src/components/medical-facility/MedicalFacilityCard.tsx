@@ -10,7 +10,7 @@ const MedicalFacilityCard = ({ facility }: MedicalFacilityCardProps) => {
   return (
     <Box className='medical_facility_card'>
       <Box className='card_wrapper'>
-        <Link to={`${paths.HOSPITALS}/${slug}`} className='card_image'>
+        <Link to={`${paths.MEDICALFACILITIES}/${slug}`} className='card_image'>
           <Box component={'img'} alt={name} src={logo ? logo : '/svgs/logo.svg'} />
         </Link>
 

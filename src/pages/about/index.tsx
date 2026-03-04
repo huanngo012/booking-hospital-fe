@@ -1,7 +1,7 @@
 import './style.scss'
 import { Box, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { BreadscrumbCustom } from '~/components'
+import { BreadscrumbCustom, SEO } from '~/components'
 import { images } from '~/assets'
 import { ABOUT_US_ITEMS, PROMINENT_HOSPITALS } from '~/utils/constant'
 import { theme } from '~/themes/Theme'
@@ -15,6 +15,7 @@ const AboutPage = () => {
 
   return (
     <Box className='about_page'>
+      <SEO title={t('about_page.title_seo')} description={t('about_page.description_seo')} />
       <Box className='container'>
         {<BreadscrumbCustom data={[{ title: t('about_page.breadcrumb') }]} />}
         <Grid container spacing={2}>

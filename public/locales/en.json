@@ -165,6 +165,8 @@
   },
 
   "not_found_page": {
+    "title_seo": "Page Not Found | Medpro - Online Medical Appointment Platform",
+    "description_seo": "The page you are looking for does not exist or has been moved. Explore Medpro – a trusted online medical appointment platform connecting users with 100+ hospitals and 1000+ clinics nationwide.",
     "title": "The page you are looking for is incorrect or does not exist!",
     "button": "Return to homepage"
   },
@@ -196,12 +198,20 @@
   "all specialties": {
     "all specialties": "All specialties"
   },
+  "medical_facilities_page": {
+    "title_seo": "Medical Facilities | Medpro - Online Appointment Booking",
+    "description_seo": "Find and book appointments at 100+ hospitals and over 1000 trusted clinics nationwide. Medpro makes healthcare access faster, easier, and more convenient."
+  },
   "news_page": {
+    "title_seo": "Latest health news - Continuously updated from Medpro",
+    "description_seo": "Stay updated with the latest medical news and useful information from Medpro. Get continuous updates on services, medical trends, and healthcare knowledge.",
     "breadcrumb": "News",
     "title": "News",
     "button": "See more"
   },
   "about_page": {
+    "title_seo": "Introducing Medpro - The most widely used healthcare app.",
+    "description_seo": "Learn more about Medpro, a pioneering application that connects users with healthcare services. It simplifies the process of accessing medical care, receiving treatment, and getting health consultations.",
     "breadcrumb": "About us",
     "title": "Introduction",
     "description": "This app allows patients and their families to complete the online appointment registration process with hospitals anytime, anywhere, without the need to visit the hospital in person.",
@@ -233,6 +243,8 @@
     "frequently asked questions": "Frequently asked questions"
   },
   "home": {
+    "title_seo": "Medpro - Book appointments quickly at over 100 hospitals, over 1000 clinics, and medical practices.",
+    "description_seo": "A digital healthcare platform trusted by 4 million users, 100+ hospitals, and 1,000+ clinics and private practices. A comprehensive appointment booking solution available via hotline 19002115, website, mobile app, and social media channels.",
     "home": "Home",
     "technology platform": "Technology platform",
     "connecting": "Connecting people with Healthcare Facilities - Services",

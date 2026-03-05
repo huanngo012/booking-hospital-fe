@@ -2,6 +2,7 @@ import { FaUserCircle } from 'react-icons/fa'
 import { IoMdCalendar } from 'react-icons/io'
 import { RiLockPasswordLine } from 'react-icons/ri'
 import { SiFacebook, SiTiktok, SiYoutube } from 'react-icons/si'
+import { LuFileUser } from 'react-icons/lu'
 import { images } from '~/assets'
 
 const { examinationEars, hospital, clinic, doctor, location, eye } = images
@@ -95,27 +96,27 @@ export const TIME_SLOT_CODE = {
   SLOT_23_30: '23:30'
 }
 
-export const tabsUser = [
+export const TABSUser = [
   {
-    icon: <FaUserCircle size={24} />,
+    icon: <FaUserCircle size={18} />,
     text: 'Thông tin cá nhân',
     // component: <TabProfile />,
     path: `profile`
   },
   {
-    icon: <RiLockPasswordLine size={24} />,
+    icon: <RiLockPasswordLine size={18} />,
     text: 'Đổi mật khẩu',
     // component: <TabPassword />,
     path: `password`
   },
-  // {
-  //   icon: <UserRecord width='24px' height='24px' />,
-  //   text: 'Hồ sơ bệnh nhân',
-  //   // component: <TabRecord />,
-  //   path: `record`
-  // },
   {
-    icon: <IoMdCalendar size={24} />,
+    icon: <LuFileUser size={18} />,
+    text: 'Hồ sơ bệnh nhân',
+    // component: <TabRecord />,
+    path: `record`
+  },
+  {
+    icon: <IoMdCalendar size={18} />,
     text: 'Lịch khám',
     // component: <TabBooking />,
     path: `booking`

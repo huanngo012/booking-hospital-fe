@@ -16,7 +16,7 @@ import {
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { FiMenu } from 'react-icons/fi'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 import { PATHS } from '~/utils/constant'
 
 interface NavbarPopUpProps {

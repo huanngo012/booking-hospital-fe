@@ -1,7 +1,8 @@
 import axios from '~/axios'
-import type { CategoryQueryParams, CategoryResponse } from '~/types/category'
+import type { Category, CategoryQueryParams } from '~/types/category'
+import type { PaginatedResponse } from '~/types/common'
 
-export const getCategories = (params?: CategoryQueryParams): Promise<CategoryResponse> =>
+export const getCategories = (params?: CategoryQueryParams): Promise<PaginatedResponse<Category>> =>
   axios({
     url: '/category',
     method: 'get',

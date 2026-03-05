@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 import { STATISTIC_INFO } from '~/utils/constant'
 
 const StatisticSection = () => {

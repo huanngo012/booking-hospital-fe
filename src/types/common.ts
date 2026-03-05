@@ -6,6 +6,17 @@ export interface QueryParams {
   page?: number
   limit?: number
 }
+export interface Pagination {
+  page: number
+  limit: number
+  total: number
+  totalPages: number
+}
+
+export interface PaginatedResponse<T> {
+  items: T[]
+  pagination: Pagination
+}
 
 export type TimeSlotCode = (typeof TIME_SLOT_CODE)[keyof typeof TIME_SLOT_CODE]
 

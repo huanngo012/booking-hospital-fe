@@ -1,7 +1,7 @@
 import { Box, Button, Container, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { images } from '~/assets'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 
 const { bg_datkham } = images
 const HeroSection = () => {

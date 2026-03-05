@@ -8,16 +8,17 @@ import LanguagePopUp from './LanguagePopUp'
 import { FaUser } from 'react-icons/fa'
 import { MdOutlineSmartphone } from 'react-icons/md'
 import { DISPLAY } from '~/utils/responsive'
+import { useUser } from '~/modules/auth/auth.query'
+import ProfilePopup from './ProfilePopup'
 
 const Header = () => {
   const { t } = useTranslation()
   const location = useLocation()
+  const { data: user } = useUser()
 
   const tab =
     MENUS.find((menu) => (menu.path === '/' ? location.pathname === '/' : location.pathname.startsWith(menu.path)))
       ?.path || false
-
-  const isLoggedIn = false
 
   const lastScrollY = useRef(0)
   const headerRef = useRef<HTMLDivElement>(null)
@@ -76,12 +77,14 @@ const Header = () => {
                   <MdOutlineSmartphone />
                   <Typography variant='button2'>{t('download_app')}</Typography>
                 </Button>
-                {!isLoggedIn ? (
+                {!user ? (
                   <Button component={Link} className='login-button' variant='outlined' color='primary' to={PATHS.LOGIN}>
                     <FaUser />
                     <Typography variant='button2'>{t('user.account')}</Typography>
                   </Button>
-                ) : null}
+                ) : (
+                  <ProfilePopup />
+                )}
                 <LanguagePopUp />
               </Stack>
             </Box>
@@ -118,7 +121,6 @@ const Header = () => {
               </Stack>
               <Stack className='item-right' display={DISPLAY.MOBILE_ONLY}>
                 {/* <LanguagePopUp /> */}
-                {/* {isLoggedIn && <ProfilePopup />} */}
 
                 {/* <NavbarPopUp tabs={menu} handleNav={handleChangeTab} activeLink={tab} /> */}
               </Stack>

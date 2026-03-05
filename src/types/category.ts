@@ -8,8 +8,3 @@ export interface Category {
   _id: number
   tag: string
 }
-export interface CategoryResponse {
-  status: number
-  success: boolean
-  data: Category[]
-}

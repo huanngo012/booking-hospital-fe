@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import { SERVICES } from '~/utils/constant'
@@ -52,7 +52,7 @@ const IntroSection = () => {
             modules={[Navigation]}
             navigation={isDesktop}
             breakpoints={{
-              700: {
+              768: {
                 slidesPerView: 4
               },
               1200: {

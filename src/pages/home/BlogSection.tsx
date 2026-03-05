@@ -1,7 +1,7 @@
 import { Box, Button, Container, Grid, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { BsArrowRight } from 'react-icons/bs'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 import { BLOGS } from '~/utils/constant'
 
 const BlogSection = () => {

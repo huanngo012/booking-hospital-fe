@@ -1,12 +1,14 @@
-import { Box, Button, FormControl, Typography } from '@mui/material'
+import { Box, Button, CircularProgress, FormControl, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { CustomInputField } from '~/components'
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
-
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+import { PATHS } from '~/utils/constant'
+import { useLogin } from '~/modules/auth/auth.mutation'
+import { useToast } from '~/hooks/useToast'
+import { TOAST_TYPE } from '~/components/module'
 
 export interface LoginValues {
   email: string
@@ -15,26 +17,33 @@ export interface LoginValues {
 
 const LoginForm = () => {
   const { t } = useTranslation()
+  const navigate = useNavigate()
+
+  const { showToast } = useToast()
+  const { mutate: loginUser, isPending } = useLogin()
 
   const loginSchema = z.object({
-    email: z
-      .string({ message: t('login_page.email_required') })
-      .min(1, { message: t('login_page.email_required') })
-      .refine((value) => emailRegex.test(value), {
-        message: t('loginPage.invalid-email-format')
-      }),
-    password: z.string({ error: '' }).min(8, { message: t('loginPage.password-length-required') })
+    email: z.email({ message: t('login_page.email_invalid_format') }).trim(),
+    password: z.string().min(6, { message: t('login_page.password_length_required') })
   })
 
-  const { register, handleSubmit, getValues, setValue, formState } = useForm<LoginValues>({
+  const { register, handleSubmit, formState } = useForm<LoginValues>({
     resolver: zodResolver(loginSchema),
+    shouldFocusError: false,
     mode: 'onChange'
   })
-
   const { errors } = formState
 
   const handleLogin = (data: LoginValues) => {
-    console.log('huanha')
+    if (isPending) return
+    loginUser(data, {
+      onSuccess: () => {
+        navigate(PATHS.HOME)
+      },
+      onError: (error) => {
+        showToast(error.message, TOAST_TYPE.ERROR)
+      }
+    })
   }
 
   return (
@@ -43,26 +52,42 @@ const LoginForm = () => {
         <Typography variant='h4'>{t('login_page.login')}</Typography>
       </Box>
       <Box className='login_body'>
-        <FormControl onSubmit={handleSubmit(handleLogin)} className='login_form'>
+        <FormControl component={'form'} onSubmit={handleSubmit(handleLogin)} className='login_form'>
           <Box className='login_form-fields'>
             <CustomInputField
               label={t('login_page.email')}
               placeholder={t('login_page.email_placeholder')}
-              helperText={errors.email?.message}
               error={Boolean(errors.email)}
+              helperText={errors.email?.message}
               register={register('email')}
             />
+            <CustomInputField
+              type='password'
+              label={t('login_page.password')}
+              placeholder={t('login_page.password_placeholder')}
+              error={Boolean(errors.password)}
+              helperText={errors.password?.message}
+              register={register('password')}
+            />
+            {/* <Box className='login_options'>
+              <Link to={`${PATHS.LOGIN}?state=forgetPassword`}>
+                <Typography variant='body2' className='login__forgot'>
+                  {t('login_page.forgot_password')}
+                </Typography>
+              </Link>
+            </Box> */}
           </Box>
-          <Button variant='contained' type='submit' disableElevation>
+          <Button variant='contained' type='submit' disableElevation sx={{ width: '100%', borderRadius: '6px' }}>
+            {isPending && <CircularProgress size={18} color='inherit' />}
             <Typography variant='button2'>{t('login_page.login')}</Typography>
           </Button>
         </FormControl>
       </Box>
       <Box className='login_footer'>
         <Typography variant='body2'>{t('login_page.no_account')}</Typography>
-        <Link to='/login?state=signUp'>
+        <Link to={`${PATHS.LOGIN}?state=signUp`}>
           <Typography variant='body2' className='login_signup'>
-            Đăng kí
+            {t('login_page.signup')}
           </Typography>
         </Link>
       </Box>

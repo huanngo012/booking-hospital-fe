@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { ArticleCard, BreadscrumbCustom, SEO } from '~/components'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 
 const NewsPage = () => {
   const { t } = useTranslation()
@@ -47,7 +47,7 @@ const NewsPage = () => {
                     modules={[Navigation]}
                     navigation={isDesktop}
                     breakpoints={{
-                      700: {
+                      768: {
                         slidesPerView: 3
                       },
                       1200: {

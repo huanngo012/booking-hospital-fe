@@ -17,7 +17,7 @@ const MedicalFacilitiesBody = () => {
   const [page, setPage] = useState<number>(1)
 
   const { data: categoriesResponse, isLoading: isCategoriesLoading } = useCategories()
-  const categories = categoriesResponse?.data ?? []
+  const categories = categoriesResponse?.items ?? []
 
   const { data: medicalFacilitiesResponse, isLoading: isMedicalFacilitiesLoading } = useMedicalFacilities({
     page,
@@ -30,7 +30,7 @@ const MedicalFacilitiesBody = () => {
     setMedicalFacility(null)
   }
 
-  const medicalFacilities = medicalFacilitiesResponse?.data ?? []
+  const medicalFacilities = medicalFacilitiesResponse?.items ?? []
 
   const selectedFacility = medicalFacility ?? medicalFacilities[0] ?? null
   const totalPage = medicalFacilitiesResponse?.pagination?.totalPages ?? 0

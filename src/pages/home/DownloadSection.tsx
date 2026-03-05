@@ -2,7 +2,7 @@ import { Box, Container, Stack, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 
 import { BENEFIT_DOWNLOAD_LEFT, BENEFIT_DOWNLOAD_RIGHT } from '~/utils/constant'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 import { DISPLAY } from '~/utils/responsive'
 
 const DownloadSection = () => {

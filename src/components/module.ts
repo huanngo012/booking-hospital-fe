@@ -20,7 +20,6 @@ export interface CustomInputFieldProps {
   placeholder?: string
   error?: boolean
   helperText?: string
-  onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> | undefined
   register?: UseFormRegisterReturn
 }
 
@@ -49,4 +48,20 @@ export interface MedicalFacilityCardProps {
 export interface SEOProps {
   title: string
   description: string
+}
+
+export const TOAST_TYPE = {
+  SUCCESS: 'success',
+  ERROR: 'error',
+  WARNING: 'warning',
+  INFO: 'info'
+} as const
+
+export type ToastType = (typeof TOAST_TYPE)[keyof typeof TOAST_TYPE]
+
+export interface ToastProps {
+  open: boolean
+  message: string
+  type?: ToastType
+  onClose: () => void
 }

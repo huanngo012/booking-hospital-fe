@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query'
 import { getMedicalFacilities } from './medical-facility.api'
-import { type MedicalFacilityResponse, type MedicalFacilityQueryParams } from '~/types/medical-facility'
+import { type MedicalFacilityQueryParams, type MedicalFacility } from '~/types/medical-facility'
+import type { PaginatedResponse } from '~/types/common'
 
 export const useMedicalFacilities = (params?: MedicalFacilityQueryParams) => {
-  return useQuery<MedicalFacilityResponse>({
+  return useQuery<PaginatedResponse<MedicalFacility>>({
     queryKey: ['medical-facilities', params],
     queryFn: () => getMedicalFacilities(params)
   })

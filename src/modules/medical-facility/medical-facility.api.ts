@@ -1,7 +1,10 @@
 import axios from '~/axios'
-import type { MedicalFacilityQueryParams, MedicalFacilityResponse } from '~/types/medical-facility'
+import type { PaginatedResponse } from '~/types/common'
+import type { MedicalFacility, MedicalFacilityQueryParams } from '~/types/medical-facility'
 
-export const getMedicalFacilities = (params?: MedicalFacilityQueryParams): Promise<MedicalFacilityResponse> =>
+export const getMedicalFacilities = (
+  params?: MedicalFacilityQueryParams
+): Promise<PaginatedResponse<MedicalFacility>> =>
   axios({
     url: '/medical-facility',
     method: 'get',

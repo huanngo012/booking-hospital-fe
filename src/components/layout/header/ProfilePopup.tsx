@@ -1,74 +1,60 @@
-import { Avatar, Box, Button, ClickAwayListener, Stack, Typography, useMediaQuery } from '@mui/material'
+import { Box, Button, ClickAwayListener, Stack, Typography } from '@mui/material'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { FaUserAlt } from 'react-icons/fa'
 import { IoLogOut } from 'react-icons/io5'
-import { useNavigate } from 'react-router-dom'
-import { images } from '~/assets'
-import { theme } from '~/themes/Theme'
-import { PATHS, tabsUser } from '~/utils/constant'
-
-const { UserIcon, UserAvatar, defaultAvt } = images
+import { Link } from 'react-router-dom'
+import { useLogout } from '~/modules/auth/auth.mutation'
+import { useUser } from '~/modules/auth/auth.query'
+import { PATHS, TABSUser } from '~/utils/constant'
 
 const ProfilePopup = () => {
-  const navigate = useNavigate()
-  const isTablet = useMediaQuery(theme.breakpoints.up('tablet'))
+  const { t } = useTranslation()
   const [showMenu, setShowMenu] = useState<boolean>(false)
+  const { data: user } = useUser()
+  const { mutate: logoutUser } = useLogout()
 
-  const current = {
-    fullName: 'Ngô Công Huân',
-    avatar: ''
+  const toggleMenu = () => setShowMenu((prev) => !prev)
+
+  const handleLogout = () => {
+    logoutUser()
   }
+  if (!user) return null
 
   return (
-    <Stack flexDirection='column' position='relative'>
+    <Box className='profile-popup'>
       <ClickAwayListener onClickAway={() => setShowMenu(false)}>
-        {isTablet ? (
-          <Button
-            variant='outlined'
-            color='primary'
-            sx={{
-              display: 'flex',
-              gap: '4px',
-              borderRadius: '30px'
-            }}
-            onClick={() => setShowMenu(!showMenu)}
-          >
-            <UserIcon />
-            <Typography variant='button2'>{current?.fullName}</Typography>
-          </Button>
-        ) : (
-          <Avatar
-            sx={{ width: 32, height: 32, cursor: 'pointer' }}
-            src={current?.avatar || defaultAvt}
-            alt='User Avatar'
-            onClick={() => setShowMenu(!showMenu)}
-          />
-        )}
+        <Button variant='outlined' color='primary' onClick={toggleMenu}>
+          <FaUserAlt />
+          <Typography variant='button2'>{user.name}</Typography>
+        </Button>
       </ClickAwayListener>
-      <Box className='dropdown-list' display={showMenu ? 'block' : 'none'}>
-        <Box className='dropdown-item'>
-          <UserAvatar />
-          <Stack flexDirection='column'>
-            <Typography variant='body3'>Xin chào,</Typography>
-            <Typography variant='label1' color='var(--primary)'>
-              {current?.fullName}
-            </Typography>
-          </Stack>
-        </Box>
-        {tabsUser?.map((el, index) => (
-          <Box key={index} className='dropdown-item' onClick={() => navigate(`${PATHS.USER}?state=${el.path}`)}>
-            {el.icon}
-            <Typography variant='body1'>{el.text}</Typography>
+      {showMenu && (
+        <Box className='profile-popup_menu'>
+          <Box className='profile-popup_item'>
+            <Stack>
+              <Typography variant='body3'>{t('header.hi')},</Typography>
+              <Typography variant='label1' color='var(--primary)'>
+                {user.name}
+              </Typography>
+            </Stack>
           </Box>
-        ))}
+          {TABSUser?.map((item, index) => (
+            <Link key={index} className='profile-popup_item' to={`${PATHS.USER}?state=${item.path}`}>
+              {item.icon}
+              <Typography variant='label2'>{item.text}</Typography>
+            </Link>
+          ))}
 
-        <Box className='dropdown-item' borderTop='1px solid var(--border-color)'>
-          <IoLogOut size={24} color='var(--red-300)' />
-          <Typography variant='body1' color='var(--red-300)'>
-            Đăng xuất
-          </Typography>
+          <Box onClick={handleLogout} className='profile-popup_item'>
+            <IoLogOut size={24} color='var(--red-400)' />
+            <Typography variant='label2' color='var(--red-400)'>
+              {t('header.logout')}
+            </Typography>
+          </Box>
         </Box>
-      </Box>
-    </Stack>
+      )}
+    </Box>
   )
 }
 

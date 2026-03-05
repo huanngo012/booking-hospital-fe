@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { BreadscrumbCustom, SEO } from '~/components'
 import { images } from '~/assets'
 import { ABOUT_US_ITEMS, PROMINENT_HOSPITALS } from '~/utils/constant'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 

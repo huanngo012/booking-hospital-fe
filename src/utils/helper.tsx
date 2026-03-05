@@ -96,3 +96,15 @@ export const buildLabel = (start: FacilityWorkingTime, end: FacilityWorkingTime)
 
   return `${DAYS[start.dayOfWeek]} - ${DAYS[end.dayOfWeek]} ${timeLabel}`
 }
+
+export const getAccessToken = () => {
+  return localStorage.getItem('accessToken')
+}
+
+export const setAccessToken = (token: string) => {
+  localStorage.setItem('accessToken', token)
+}
+
+export const removeAccessToken = () => {
+  localStorage.removeItem('accessToken')
+}

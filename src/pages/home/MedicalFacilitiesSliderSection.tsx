@@ -4,7 +4,7 @@ import { Navigation, Autoplay } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { CustomSkeleton, MedicalFacilityCard } from '~/components'
 import { useMedicalFacilities } from '~/modules/medical-facility/medical-facility.query'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 
 const MedicalFacilitiesSliderSection = () => {
   const { t } = useTranslation()
@@ -15,7 +15,7 @@ const MedicalFacilitiesSliderSection = () => {
     limit: 10
   })
 
-  const facilities = data?.data ?? []
+  const facilities = data?.items ?? []
   const total = data?.pagination?.total ?? 0
 
   return (
@@ -42,7 +42,7 @@ const MedicalFacilitiesSliderSection = () => {
                 550: {
                   slidesPerView: 3
                 },
-                700: {
+                768: {
                   slidesPerView: 4
                 },
                 1200: {

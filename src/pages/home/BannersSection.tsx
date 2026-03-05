@@ -1,5 +1,5 @@
 import { Box, Container } from '@mui/material'
-import { Pagination } from 'swiper/modules'
+import { Autoplay, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { BANNERS } from '~/utils/constant'
 
@@ -13,7 +13,8 @@ const BannersSection = () => {
               slidesPerView={1}
               spaceBetween={16}
               loop
-              modules={[Pagination]}
+              autoplay
+              modules={[Pagination, Autoplay]}
               pagination={{ clickable: true }}
               style={{
                 position: 'static'

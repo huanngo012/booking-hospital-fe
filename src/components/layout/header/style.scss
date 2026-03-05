@@ -63,37 +63,40 @@
   border-radius: 10px;
 }
 
-.dropdown-list {
-  position: absolute;
-  width: 350px;
-  top: 100%;
-  right: 0;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-top: 12px;
-  background-color: var(--white);
-  z-index: 1000;
-  animation-name: fade;
-  animation-duration: 0.5s;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  cursor: pointer;
-  padding: 16px 0 16px 16px;
-  &:hover {
-    background-color: #e6f2ff;
-  }
-}
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
+.profile-popup {
+  position: relative;
+  .profile-popup_menu {
+    position: absolute;
+    width: 350px;
+    top: 100%;
+    right: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 12px;
+    background-color: hsla(0, 0%, 100%, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    animation-name: fade-bottom;
+    animation-duration: 0.5s;
+    box-shadow:
+      0 0 1px 0 rgba(0, 0, 0, 0.04),
+      0 2px 6px 0 rgba(0, 0, 0, 0.04),
+      0 10px 20px 0 rgba(0, 0, 0, 0.04);
+    .profile-popup_item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px;
+      &:not(:first-child) {
+        cursor: pointer;
+        &:hover {
+          background-color: #e6f2ff;
+        }
+      }
+      &:last-child {
+        border-top: 1px solid var(--border-color);
+      }
+    }
   }
 }
 
@@ -105,31 +108,5 @@
   &:hover {
     border: 1px solid var(--border-color);
     border-radius: 8px;
-  }
-}
-
-.nav-popup {
-  cursor: pointer;
-}
-.popup-container {
-  padding: 12px !important;
-  border-radius: 8px;
-  box-shadow: 0px 1px 8px 0px rgba(30, 32, 32, 0.12) !important;
-  #menu-list-grow {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .logout-button,
-  .signup-button,
-  .login-button {
-    display: flex;
-    gap: 4px;
-    width: 100%;
-  }
-
-  .logout-button {
-    background: linear-gradient(83.63deg, #ff3f33 33.34%, #ff675c 113.91%);
   }
 }

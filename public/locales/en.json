@@ -26,7 +26,6 @@
   "all locations": "All locations",
   "new": "new",
   "see details": "See details",
-  "logout": "Log out",
   "of-total-label-table": "of",
   "please-enter-full-information": "Please enter full information",
   "province-city": "Province / City",
@@ -44,19 +43,30 @@
   "delete-confirm": "Are you sure delete?",
   "login_page": {
     "title_seo": "Login | Medpro - Online Medical Appointment Booking",
-    "description_seo": "Log in to Medpro to quickly book appointments at 100+ trusted hospitals and clinics. Easily manage your appointments and medical records online.",
-    "login": "Log in",
+    "description_seo": "Log in to Medpro to quickly book medical appointments at 100+ trusted hospitals and clinics. Easily manage your appointments and medical records.",
+    "login": "Login",
+    "signup": "Sign up",
     "email": "Email",
-    "email_required": "Email is required",
+    "email_invalid_format": "Invalid email format",
     "email_placeholder": "Enter your email",
     "password": "Password",
-    "password-placeholder": "Enter your password",
-    "remember-me": "Remember me",
-    "forgot-password?": "Forgot Password?",
-    "don't-have-an-account-yet?": "Don't have an account yet?",
-    "sign-up": "Sign Up",
+    "password_required": "Please enter your password",
+    "password_length_required": "Password must be at least 8 characters",
+    "password_placeholder": "Enter your password",
+    "password_not_match": "Passwords do not match",
+    "confirm_password": "Confirm password",
+    "confirm_password_placeholder": "Re-enter your password",
+    "name": "Full name",
+    "name_placeholder": "Enter your full name",
+    "name_required": "Please enter your full name",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot password?",
     "no_account": "Don't have an account?",
-    "have_account": "Do you already have an account?"
+    "have_account": "Already have an account?",
+    "login_success": "Logged in successfully",
+    "login_failed": "Login failed",
+    "signup_success": "Account created successfully",
+    "signup_failed": "Registration failed"
   },
   "user": {
     "list": "List User",
@@ -327,6 +337,10 @@
         }
       ]
     }
+  },
+  "header": {
+    "hi": "Hi",
+    "logout": "Log out"
   },
   "languages": {
     "vi": "Vietnamese",

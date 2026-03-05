@@ -2,7 +2,7 @@ import { Box, Container, Typography, useMediaQuery } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { images } from '~/assets'
 import { BreadscrumbCustom } from '~/components'
-import { theme } from '~/themes/Theme'
+import { theme } from '~/themes'
 
 const { medical_facilities_banner } = images
 

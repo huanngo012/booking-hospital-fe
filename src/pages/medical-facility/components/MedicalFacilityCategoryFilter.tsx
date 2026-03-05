@@ -19,8 +19,19 @@ const MedicalFacilityCategoryFilter = ({
 }: MedicalFacilityCategoryFilterProps) => {
   const { t } = useTranslation()
   return (
-    <Box>
-      <Swiper className='swiper--auto' slidesPerView={'auto'} spaceBetween={16} autoplay freeMode>
+    <Box position={'relative'}>
+      <Swiper
+        className='swiper--auto'
+        slidesPerView={'auto'}
+        spaceBetween={16}
+        autoplay
+        freeMode
+        style={{
+          position: 'static',
+          padding: '20px 10px',
+          margin: '-20px -10px'
+        }}
+      >
         {!isLoading ? (
           <>
             <SwiperSlide>

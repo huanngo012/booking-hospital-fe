@@ -187,3 +187,15 @@ $-keyframes: -30px;
     left: 0;
   }
 }
+
+@keyframes slideLeftRight {
+  0% {
+    transform: translate(18px);
+  }
+  50% {
+    transform: translate(15px);
+  }
+  100% {
+    transform: translate(18px);
+  }
+}

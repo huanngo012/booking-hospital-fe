@@ -33,7 +33,7 @@ const MedicalFacilitiesBody = () => {
   const medicalFacilities = medicalFacilitiesResponse?.data ?? []
 
   const selectedFacility = medicalFacility ?? medicalFacilities[0] ?? null
-
+  const totalPage = medicalFacilitiesResponse?.pagination?.totalPages ?? 0
   const isEmpty = !isMedicalFacilitiesLoading && medicalFacilities.length === 0
 
   return (
@@ -48,10 +48,24 @@ const MedicalFacilitiesBody = () => {
 
         {isMedicalFacilitiesLoading ? (
           <Grid container spacing={3}>
-            <Grid size={{ mobile: 12, tablet: 8 }}>
-              <MedicalFacilityList medicalFacilities={[]} onSelect={setMedicalFacility} isLoading />
+            <Grid size={{ mobile: 12, tablet: 7, desktop: 8 }}>
+              <MedicalFacilityList
+                medicalFacilities={[]}
+                onSelect={setMedicalFacility}
+                isLoading
+                page={page}
+                totalPage={totalPage}
+                onChangePage={setPage}
+              />
             </Grid>
-            <Grid size={{ mobile: 12, tablet: 4 }}>
+            <Grid
+              size={{ mobile: 12, tablet: 5, desktop: 4 }}
+              className='medical_facilities_sidebar'
+              display={{
+                mobile: 'none',
+                tablet: 'block'
+              }}
+            >
               <MedicalFacilityDetail medicalFacility={null} isLoading />
             </Grid>
           </Grid>
@@ -59,14 +73,24 @@ const MedicalFacilitiesBody = () => {
           <EmptyState title={t('medical_facilities_page.not_found')} />
         ) : (
           <Grid container spacing={3}>
-            <Grid size={{ mobile: 12, tablet: 8 }}>
+            <Grid size={{ mobile: 12, tablet: 7, desktop: 8 }}>
               <MedicalFacilityList
                 medicalFacilities={medicalFacilities}
                 selectedId={selectedFacility?._id}
                 onSelect={setMedicalFacility}
+                page={page}
+                totalPage={totalPage}
+                onChangePage={setPage}
               />
             </Grid>
-            <Grid size={{ mobile: 12, tablet: 4 }} className='medical_facilities_sidebar'>
+            <Grid
+              size={{ mobile: 12, tablet: 5, desktop: 4 }}
+              className='medical_facilities_sidebar'
+              display={{
+                mobile: 'none',
+                tablet: 'block'
+              }}
+            >
               <MedicalFacilityDetail medicalFacility={selectedFacility} />
             </Grid>
           </Grid>

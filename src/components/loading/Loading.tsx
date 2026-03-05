@@ -1,5 +1,5 @@
-import { Box } from '@mui/material'
 import './style.scss'
+import { Box } from '@mui/material'
 
 const Loading = () => {
   return (

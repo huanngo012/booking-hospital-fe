@@ -43,17 +43,21 @@
   },
   "delete-title": "Xóa",
   "delete-confirm": "Bạn có chắc muốn xóa?",
-  "login": {
-    "log-in": "Đăng nhập",
+  "login_page": {
+    "title_seo": "Đăng nhập | Medpro - Đặt lịch khám trực tuyến",
+    "description_seo": "Đăng nhập vào Medpro để đặt lịch khám nhanh chóng tại hơn 100+ bệnh viện và phòng khám uy tín. Quản lý lịch hẹn và hồ sơ khám bệnh dễ dàng.",
+    "login": "Đăng nhập",
     "email": "Email",
-    "email-placeholder": "Nhập email của bạn",
+    "email_required": "Vui lòng nhập email",
+    "email_placeholder": "Nhập email của bạn",
     "password": "Mật khẩu",
     "password-placeholder": "Nhập mật khẩu",
     "remember-me": "Nhớ mật khẩu",
     "forgot-password?": "Quên mật khẩu?",
     "don't-have-an-account-yet?": "Bạn chưa có tài khoản?",
     "sign-up": "Đăng ký",
-    "welcome-to-tma-innovation": "Chào mừng đến với TMA Innovation"
+    "no_account": "Không có tài khoản?",
+    "have_account": "Đã có tài khoản?"
   },
   "user": {
     "list": "Danh sách người dùng",
@@ -93,8 +97,6 @@
     "unlock-account-sub-message1": "Sau khi nhấn xác nhận, họ sẽ có lại quyền truy cập vào tài khoản của mình hoặc truy cập vào bất kỳ dữ liệu liên quan.",
     "unlock-account-sub-message2": "Nhấn vào nút “Xác nhận” để tiếp tục hoặc nhấn vào nút “Hủy” để tài khoản tiếp tục bị khóa.",
     "account": "Tài khoản",
-    "no-account": "Không có tài khoản?",
-    "have-account": "Đã có tài khoản?",
     "please enter a new password for your account.": " Vui lòng nhập mật khẩu mới cho tài khoản của bạn.",
     "account information": "Thông tin tài khoản",
     "update password": "Cập nhật mật khẩu"

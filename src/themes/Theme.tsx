@@ -484,6 +484,29 @@ export const theme = createTheme({
           }
         })
       }
+    },
+    MuiPaginationItem: {
+      styleOverrides: {
+        root: {
+          background: 'var(--white)',
+          color: 'var(--primary)',
+          boxShadow: '0 3px 15px rgba(116,157,206,.2)',
+          border: '1px solid transparent',
+          transition: 'all 0.3s ease',
+          '&:hover': {
+            borderColor: 'var(--primary)',
+            boxShadow: '0 4px 15px rgba(116,157,206,.5)',
+            background: 'var(--white)'
+          },
+          '&.Mui-selected': {
+            background: 'var(--primary)',
+            color: 'var(--white)',
+            '&:hover': {
+              backgroundColor: 'var(--primary)'
+            }
+          }
+        }
+      }
     }
   },
   typography: {

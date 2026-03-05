@@ -1,6 +1,7 @@
 import { Box, Stack, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { MdOutlineAccessTime } from 'react-icons/md'
+import { CustomSkeleton } from '~/components'
 import type { MedicalFacility } from '~/types/medical-facility'
 import { formatWorkingTimes, getGoogleMapEmbedUrl } from '~/utils/helper'
 
@@ -11,6 +12,10 @@ interface MedicalFacilityDetailProps {
 
 const MedicalFacilityDetail = ({ medicalFacility, isLoading }: MedicalFacilityDetailProps) => {
   const { t } = useTranslation()
+
+  if (isLoading) {
+    return <CustomSkeleton variant='card-medical-facility-detail' />
+  }
 
   if (!medicalFacility) return null
 
@@ -25,10 +30,10 @@ const MedicalFacilityDetail = ({ medicalFacility, isLoading }: MedicalFacilityDe
         <Typography variant='h6' className='truncate_2' color='var(--primary)' textAlign={'center'}>
           {name}
         </Typography>
-        <Stack direction={'row'} gap={0.5} marginTop={'6px'}>
-          <Box component={'span'}>
+        <Stack direction={'row'} alignItems={'center'} gap={0.5} marginTop={'6px'}>
+          <Stack>
             <MdOutlineAccessTime size={20} color='var(--orange-400)' />
-          </Box>
+          </Stack>
           <Typography variant='body2'>{formatWorkingTimes(workingTimes)}</Typography>
         </Stack>
       </Box>

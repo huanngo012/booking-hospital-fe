@@ -7,3 +7,4 @@ export { default as MedicalFacilityCard } from '~/components/medical-facility/Me
 export { default as MedicalFacilityCard02 } from '~/components/medical-facility/MedicalFacilityCard02'
 export { default as SEO } from '~/components/seo/SEO'
 export { default as EmptyState } from '~/components/empty-state/EmptyState'
+export { default as CustomInputField } from '~/components/input/CustomInputField'

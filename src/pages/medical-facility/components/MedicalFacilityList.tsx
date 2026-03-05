@@ -1,4 +1,4 @@
-import { Box, Stack } from '@mui/material'
+import { Box, Pagination, Stack } from '@mui/material'
 import { CustomSkeleton, MedicalFacilityCard02 } from '~/components'
 import type { MedicalFacility } from '~/types/medical-facility'
 
@@ -7,9 +7,20 @@ interface MedicalFacilityListProps {
   selectedId?: string
   onSelect: (facility: MedicalFacility) => void
   isLoading?: boolean
+  page: number
+  totalPage: number
+  onChangePage: (page: number) => void
 }
 
-const MedicalFacilityList = ({ medicalFacilities, selectedId, onSelect, isLoading }: MedicalFacilityListProps) => {
+const MedicalFacilityList = ({
+  medicalFacilities,
+  selectedId,
+  onSelect,
+  isLoading,
+  page,
+  totalPage,
+  onChangePage
+}: MedicalFacilityListProps) => {
   return (
     <Stack gap={2.5}>
       {!isLoading
@@ -28,6 +39,18 @@ const MedicalFacilityList = ({ medicalFacilities, selectedId, onSelect, isLoadin
             </Box>
           ))
         : [...Array(10)].map((_, index: number) => <CustomSkeleton key={index} variant='card-medical-facility-02' />)}
+
+      {!isLoading && totalPage > 1 && (
+        <Stack alignItems={'center'}>
+          <Pagination
+            count={totalPage}
+            page={page}
+            onChange={(_, value) => onChangePage(value)}
+            shape='rounded'
+            color='primary'
+          />
+        </Stack>
+      )}
     </Stack>
   )
 }

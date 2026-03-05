@@ -32,6 +32,7 @@ import homepage_banner from './img/homepage_banner.webp'
 import bg_datkham from './img/bg_datkham.webp'
 import about_us from './img/about_us.webp'
 import medical_facilities_banner from './img/medical_facilities_banner.png'
+import login_banner from './img/login_banner.avif'
 
 export const images = {
   notFoundBg,
@@ -67,5 +68,6 @@ export const images = {
   homepage_banner,
   bg_datkham,
   about_us,
-  medical_facilities_banner
+  medical_facilities_banner,
+  login_banner
 }

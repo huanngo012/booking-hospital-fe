@@ -1,9 +1,10 @@
-import { AboutPage, HomePage, MedicalFacilitiesPage, NewsPage, NotFoundPage } from '~/pages'
+import { AboutPage, HomePage, LoginPage, MedicalFacilitiesPage, NewsPage, NotFoundPage } from '~/pages'
 import { PATHS } from '~/utils/constant'
 
 const privateRoutes = []
 
 const publicRoutes = [
+  { path: PATHS.LOGIN, component: LoginPage, layout: false },
   {
     path: PATHS.HOME,
     component: HomePage,

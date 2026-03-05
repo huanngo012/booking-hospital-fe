@@ -42,17 +42,21 @@
   },
   "delete-title": "Delete",
   "delete-confirm": "Are you sure delete?",
-  "login": {
-    "log-in": "Log In",
+  "login_page": {
+    "title_seo": "Login | Medpro - Online Medical Appointment Booking",
+    "description_seo": "Log in to Medpro to quickly book appointments at 100+ trusted hospitals and clinics. Easily manage your appointments and medical records online.",
+    "login": "Log in",
     "email": "Email",
-    "email-placeholder": "Enter your email",
+    "email_required": "Email is required",
+    "email_placeholder": "Enter your email",
     "password": "Password",
     "password-placeholder": "Enter your password",
     "remember-me": "Remember me",
     "forgot-password?": "Forgot Password?",
     "don't-have-an-account-yet?": "Don't have an account yet?",
     "sign-up": "Sign Up",
-    "welcome-to-tma-innovation": "Welcome to TMA Innovation"
+    "no_account": "Don't have an account?",
+    "have_account": "Do you already have an account?"
   },
   "user": {
     "list": "List User",
@@ -93,8 +97,6 @@
     "unlock-account-perspective-statement": "After confirming, they will regain access to their account or access any related data.",
     "unlock-account-instruction-statement": "Press the \"Confirm\" button to proceed or press the \"Cancel\" button to keep the account locked.",
     "account": "Account",
-    "no-account": "Don't have an account?",
-    "have-account": "Do you already have an account?",
     "please enter a new password for your account.": " Please enter a new password for your account.",
     "account information": "Account information",
     "update password": "Update password"

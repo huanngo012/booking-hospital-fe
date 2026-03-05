@@ -36,7 +36,7 @@ const MedicalFacilityCategoryFilter = ({
           <>
             <SwiperSlide>
               <Button variant={selectedCategoryId === 0 ? 'contained' : 'outlined'} onClick={() => onSelect(0)}>
-                <Typography variant='label2'>{t('category.all')}</Typography>
+                <Typography variant='label2'>{t('common.all')}</Typography>
               </Button>
             </SwiperSlide>
             {categories?.map((item) => (

@@ -1,9 +1,9 @@
 import './style.scss'
 import { Box, Stack, Typography } from '@mui/material'
-import { formatAddress, renderStartFromNumber } from '~/utils/helper'
-import type { MedicalFacilityCardProps } from '../module'
 import { Link } from 'react-router-dom'
+import { formatAddress, renderStartFromNumber } from '~/utils/helper'
 import { PATHS } from '~/utils/constant'
+import type { MedicalFacilityCardProps } from '~/components/module'
 
 const MedicalFacilityCard = ({ facility }: MedicalFacilityCardProps) => {
   const { name, slug, logo, address, totalRatings } = facility

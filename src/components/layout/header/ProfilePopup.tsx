@@ -6,7 +6,7 @@ import { IoLogOut } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
 import { useLogout } from '~/modules/auth/auth.mutation'
 import { useUser } from '~/modules/auth/auth.query'
-import { PATHS, TABSUser } from '~/utils/constant'
+import { PATHS, TABS_USER } from '~/utils/constant'
 
 const ProfilePopup = () => {
   const { t } = useTranslation()
@@ -39,17 +39,17 @@ const ProfilePopup = () => {
               </Typography>
             </Stack>
           </Box>
-          {TABSUser?.map((item, index) => (
+          {TABS_USER.map((item, index) => (
             <Link key={index} className='profile-popup_item' to={`${PATHS.USER}?state=${item.path}`}>
               {item.icon}
-              <Typography variant='label2'>{item.text}</Typography>
+              <Typography variant='label2'>{t(item.title)}</Typography>
             </Link>
           ))}
 
           <Box onClick={handleLogout} className='profile-popup_item'>
             <IoLogOut size={24} color='var(--red-400)' />
             <Typography variant='label2' color='var(--red-400)'>
-              {t('header.logout')}
+              {t('auth.logout')}
             </Typography>
           </Box>
         </Box>

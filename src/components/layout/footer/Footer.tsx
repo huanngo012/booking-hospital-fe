@@ -29,7 +29,7 @@ const Footer = () => {
             <Box
               component='img'
               src={'/svgs/logo_footer.svg'}
-              alt='Logo footer'
+              alt={t('common.brand_name')}
               width={{
                 mobile: '120px',
                 desktop: '220px'

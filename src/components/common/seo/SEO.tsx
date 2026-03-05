@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-import type { SEOProps } from '../module'
+import type { SEOProps } from '~/components/module'
 
 export default function SEO({ title, description }: SEOProps) {
   return (

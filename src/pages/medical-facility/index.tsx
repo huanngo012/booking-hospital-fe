@@ -10,7 +10,10 @@ const MedicalFacilitiesPage = () => {
 
   return (
     <Box className='medical_facilities_page'>
-      <SEO title={t('medical_facilities_page.title_seo')} description={t('medical_facilities_page.description_seo')} />
+      <SEO
+        title={t('pages.medical_facilities.title_seo')}
+        description={t('pages.medical_facilities.description_seo')}
+      />
       <MedicalFacilitiesHeader />
       <Container>
         <MedicalFacilitiesBody />

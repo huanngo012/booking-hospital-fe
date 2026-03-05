@@ -15,16 +15,16 @@ const AboutPage = () => {
 
   return (
     <Box className='about_page'>
-      <SEO title={t('about_page.title_seo')} description={t('about_page.description_seo')} />
+      <SEO title={t('pages.about.title_seo')} description={t('pages.about.description_seo')} />
       <Container>
-        {<BreadscrumbCustom data={[{ title: t('about_page.breadcrumb') }]} />}
+        {<BreadscrumbCustom data={[{ title: t('navigation.about_us') }]} />}
         <Grid container spacing={2}>
           <Grid size={{ mobile: 12, tablet: 6, desktop: 7 }}>
             <Stack gap={'20px'}>
-              <Typography variant='h5' color='#00b5f1'>
-                {t('about_page.title')}
+              <Typography variant='h5' color='var(--primary)'>
+                {t('pages.about.title')}
               </Typography>
-              <Typography variant='body2'>{t('about_page.description')}</Typography>
+              <Typography variant='body2'>{t('pages.about.description')}</Typography>
             </Stack>
             <Box
               component='img'
@@ -93,7 +93,7 @@ const AboutPage = () => {
           }}
         >
           <Typography variant='h5' color='var(--primary)'>
-            {t('about_page.prominent')}
+            {t('pages.about.prominent')}
           </Typography>
           <Box marginTop={'20px'}>
             <Swiper

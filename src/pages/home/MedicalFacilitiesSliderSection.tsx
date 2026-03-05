@@ -24,10 +24,10 @@ const MedicalFacilitiesSliderSection = () => {
         <Stack gap={2.5}>
           <Box textAlign='center'>
             <Typography variant='h4' color='var(--primary)'>
-              {t('home.medical_facilities_section.title')}
+              {t('pages.home.medical_facilities_section.title')}
             </Typography>
             <Typography variant='label1' color='#858585'>
-              {t('home.medical_facilities_section.description', { count: total })}
+              {t('pages.home.medical_facilities_section.description', { count: total })}
             </Typography>
           </Box>
           <Box position={'relative'}>

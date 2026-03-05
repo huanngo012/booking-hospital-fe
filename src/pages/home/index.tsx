@@ -15,7 +15,7 @@ const HomePage = () => {
 
   return (
     <Box>
-      <SEO title={t('home.title_seo')} description={t('home.description_seo')} />
+      <SEO title={t('pages.home.title_seo')} description={t('pages.home.description_seo')} />
       <IntroSection />
       <BlogSection />
       <BannersSection />

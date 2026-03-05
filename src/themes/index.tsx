@@ -76,7 +76,7 @@ export const theme = createTheme({
           ...(ownerState.variant === 'contained' &&
             ownerState.color === 'primary' && {
               color: 'var(--white) ',
-              background: 'linear-gradient(83.63deg,#00b5f1 33.34%,#00e0ff 113.91%)',
+              background: 'linear-gradient(83.63deg,var(--primary) 33.34%,#00e0ff 113.91%)',
               '&:active': {
                 backgroundColor: 'var(--white)',
                 boxShadow: 'none'
@@ -114,11 +114,11 @@ export const theme = createTheme({
               borderWidth: 1,
               borderColor: 'var(--primary)',
               '&:hover': {
-                background: 'linear-gradient(83.63deg,#00b5f1 33.34%,#00e0ff 113.91%)',
+                background: 'linear-gradient(83.63deg,var(--primary) 33.34%,#00e0ff 113.91%)',
                 color: 'var(--white)'
               },
               '&:active': {
-                background: 'linear-gradient(83.63deg,#00b5f1 33.34%,#00e0ff 113.91%)',
+                background: 'linear-gradient(83.63deg,var(--primary) 33.34%,#00e0ff 113.91%)',
                 color: 'var(--white)'
               }
             }),

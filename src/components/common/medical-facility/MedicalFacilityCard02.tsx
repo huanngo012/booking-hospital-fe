@@ -1,10 +1,10 @@
 import { Box, Button, Stack, Typography } from '@mui/material'
-import type { MedicalFacilityCardProps } from '../module'
 import { renderStartFromNumber } from '~/utils/helper'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { IoLocationOutline } from 'react-icons/io5'
 import { PATHS } from '~/utils/constant'
+import type { MedicalFacilityCardProps } from '~/components/module'
 
 const MedicalFacilityCard02 = ({ facility }: MedicalFacilityCardProps) => {
   const { t } = useTranslation()
@@ -38,7 +38,7 @@ const MedicalFacilityCard02 = ({ facility }: MedicalFacilityCardProps) => {
             ))}
           </Stack>
           <Button component={Link} to={`${PATHS.MEDICALFACILITIES}/${slug}`} variant='outlined'>
-            <Typography variant='label2'>{t('medical_facilities.button_see_detail')}</Typography>
+            <Typography variant='label2'>{t('common.view_detail')}</Typography>
           </Button>
         </Box>
       </Box>

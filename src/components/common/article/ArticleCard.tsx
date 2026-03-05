@@ -1,8 +1,8 @@
 import './style.scss'
 import { Link } from 'react-router-dom'
-import type { ArticleCardProps } from '../module'
 import { Box, Stack, Typography } from '@mui/material'
 import { GoDotFill } from 'react-icons/go'
+import type { ArticleCardProps } from '~/components/module'
 
 const ArticleCard = ({ article, style = '01' }: ArticleCardProps) => {
   const { title, description, url, image, blog } = article

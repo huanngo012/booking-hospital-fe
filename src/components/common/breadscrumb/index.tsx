@@ -6,7 +6,7 @@ import type { BreadcrumbCustomProps, BreadcrumbItem } from '~/components/module'
 const BreadscrumbCustom = ({ data }: BreadcrumbCustomProps) => {
   const { t } = useTranslation()
 
-  const breadcrumbs = [{ title: 'home.home', link: '/' }, ...data]
+  const breadcrumbs = [{ title: 'pages.home.title', link: '/' }, ...data]
   return (
     <Box role='presentation' paddingBlock='20px'>
       <Breadcrumbs aria-label='breadcrumb'>

@@ -32,7 +32,7 @@ const LoginPage = () => {
 
   return (
     <Box className='login_page' sx={{ background: `url(${login_banner})` }}>
-      <SEO title={t('login_page.title_seo')} description={t('login_page.description_seo')} />
+      <SEO title={t('pages.login.title_seo')} description={t('pages.login.description_seo')} />
       <Container sx={{ height: '100%' }}>
         <Box className='login_inner'>
           <Box className='login_card'>

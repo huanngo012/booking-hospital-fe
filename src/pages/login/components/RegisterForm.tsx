@@ -28,14 +28,14 @@ const RegisterForm = () => {
     () =>
       z
         .object({
-          name: z.string().min(1, { message: t('login_page.password_length_required') }),
-          email: z.email({ message: t('login_page.email_invalid_format') }).trim(),
-          password: z.string().min(6, { message: t('login_page.password_length_required') }),
+          name: z.string().min(1, { message: t('auth.password_length_required') }),
+          email: z.email({ message: t('auth.email_invalid_format') }).trim(),
+          password: z.string().min(6, { message: t('auth.password_length_required') }),
           confirmPassword: z.string()
         })
         .refine((data) => data.password === data.confirmPassword, {
           path: ['confirmPassword'],
-          message: t('login_page.password_not_match')
+          message: t('auth.password_not_match')
         }),
     [t]
   )
@@ -54,7 +54,7 @@ const RegisterForm = () => {
     if (isPending) return
     registerUser(data, {
       onSuccess: () => {
-        showToast(t('login_page.signup_success'))
+        showToast(t('pages.login.signup_success'))
       },
       onError: (error) => {
         showToast(error.message, TOAST_TYPE.ERROR)
@@ -64,37 +64,37 @@ const RegisterForm = () => {
   return (
     <Box className='form_wrapper login_form_wrapper'>
       <Box className='login_header'>
-        <Typography variant='h4'>{t('login_page.signup')}</Typography>
+        <Typography variant='h4'>{t('auth.signup')}</Typography>
       </Box>
       <Box className='login_body'>
         <FormControl component={'form'} onSubmit={handleSubmit(handleRegister)} className='login_form'>
           <Box className='login_form-fields'>
             <CustomInputField
-              label={t('login_page.name')}
-              placeholder={t('login_page.name_placeholder')}
+              label={t('auth.name')}
+              placeholder={t('auth.name_placeholder')}
               error={Boolean(errors.name)}
               helperText={errors.name?.message}
               register={register('name')}
             />
             <CustomInputField
-              label={t('login_page.email')}
-              placeholder={t('login_page.email_placeholder')}
+              label={t('auth.email')}
+              placeholder={t('auth.email_placeholder')}
               error={Boolean(errors.email)}
               helperText={errors.email?.message}
               register={register('email')}
             />
             <CustomInputField
               type='password'
-              label={t('login_page.password')}
-              placeholder={t('login_page.password_placeholder')}
+              label={t('auth.password')}
+              placeholder={t('auth.password_placeholder')}
               error={Boolean(errors.password)}
               helperText={errors.password?.message}
               register={register('password')}
             />
             <CustomInputField
               type='password'
-              label={t('login_page.confirm_password')}
-              placeholder={t('login_page.confirm_password_placeholder')}
+              label={t('auth.confirm_password')}
+              placeholder={t('auth.confirm_password_placeholder')}
               error={Boolean(errors.confirmPassword)}
               helperText={errors.confirmPassword?.message}
               register={register('confirmPassword')}
@@ -102,15 +102,15 @@ const RegisterForm = () => {
           </Box>
           <Button variant='contained' type='submit' sx={{ width: '100%', borderRadius: '6px' }}>
             {isPending && <CircularProgress size={18} color='inherit' />}
-            <Typography variant='button2'>{t('login_page.signup')}</Typography>
+            <Typography variant='button2'>{t('auth.signup')}</Typography>
           </Button>
         </FormControl>
       </Box>
       <Box className='login_footer'>
-        <Typography variant='body2'>{t('login_page.have_account')}</Typography>
+        <Typography variant='body2'>{t('pages.login.have_account')}</Typography>
         <Link to={PATHS.LOGIN}>
           <Typography variant='body2' className='login_signup'>
-            {t('login_page.login')}
+            {t('auth.login')}
           </Typography>
         </Link>
       </Box>

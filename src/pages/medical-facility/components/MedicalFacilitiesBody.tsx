@@ -70,7 +70,7 @@ const MedicalFacilitiesBody = () => {
             </Grid>
           </Grid>
         ) : isEmpty ? (
-          <EmptyState title={t('medical_facilities_page.not_found')} />
+          <EmptyState title={t('pages.medical_facilities.not_found')} />
         ) : (
           <Grid container spacing={3}>
             <Grid size={{ mobile: 12, tablet: 7, desktop: 8 }}>

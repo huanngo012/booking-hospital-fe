@@ -17,11 +17,11 @@ const StatisticSection = () => {
           }}
         >
           <Typography variant={isTablet ? 'h4' : 'h5'} color='var(--white)'>
-            {t('home.statistic_section.title')}
+            {t('pages.home.statistic_section.title')}
           </Typography>
           <Grid container spacing={3} marginTop={'16px'}>
-            {STATISTIC_INFO.map((item, index) => (
-              <Grid size={{ mobile: 4, desktop: 2 }} key={index}>
+            {STATISTIC_INFO.map((item) => (
+              <Grid size={{ mobile: 4, desktop: 2 }} key={item.id}>
                 <Stack alignItems={'center'} gap={'16px'}>
                   <Box component='img' src={item.icon} alt={t(item.title)} width={'50%'} />
                   <Stack gap={'4px'}>

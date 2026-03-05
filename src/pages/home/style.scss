@@ -69,7 +69,7 @@
 .statistic_section {
   padding-block: 40px;
   .statistic_inner {
-    background: linear-gradient(84.1deg, #00b5f1 33.44%, #00e0ff 132.9%);
+    background: linear-gradient(84.1deg, var(--primary) 33.44%, #00e0ff 132.9%);
     border-radius: 26px;
     text-align: center;
   }

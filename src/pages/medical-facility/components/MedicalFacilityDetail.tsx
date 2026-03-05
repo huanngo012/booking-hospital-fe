@@ -41,7 +41,7 @@ const MedicalFacilityDetail = ({ medicalFacility, isLoading }: MedicalFacilityDe
         <Typography variant='body2'>{description}</Typography>
         <Stack gap={1.5} marginTop={1.5}>
           <Typography variant='h6' color='var(--secondary)'>
-            {t('medical_facilities.map')}
+            {t('common.map')}
           </Typography>
           <iframe
             title='google-map'

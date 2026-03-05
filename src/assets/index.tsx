@@ -20,6 +20,18 @@ import about_us from './img/about_us.webp'
 import medical_facilities_banner from './img/medical_facilities_banner.png'
 import login_banner from './img/login_banner.avif'
 
+//svg
+import home_icon from './svg/home-icon.svg'
+import doctor_icon from './svg/doctor-icon.svg'
+import medical_facility_icon from './svg/medical-facility-icon.svg'
+import news_icon from './svg/news-icon.svg'
+import about_us_icon from './svg/about-us-icon.svg'
+import down_app_icon from './svg/down-app-icon.svg'
+import record_icon from './svg/record-icon.svg'
+import profile_icon from './svg/profile-icon.svg'
+import password_icon from './svg/password-icon.svg'
+import schedule_icon from './svg/schedule-icon.svg'
+
 export const images = {
   booking,
   consult,
@@ -41,5 +53,15 @@ export const images = {
   bg_datkham,
   about_us,
   medical_facilities_banner,
-  login_banner
+  login_banner,
+  home_icon,
+  doctor_icon,
+  medical_facility_icon,
+  news_icon,
+  about_us_icon,
+  down_app_icon,
+  record_icon,
+  profile_icon,
+  password_icon,
+  schedule_icon
 }

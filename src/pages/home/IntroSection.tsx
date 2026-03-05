@@ -24,15 +24,15 @@ const IntroSection = () => {
         <Container className=' animate animate--fade-in'>
           <Stack alignItems='center' gap='16px' textAlign='center' paddingBlock={'30px'}>
             <Typography variant='h5' color='var(--primary)'>
-              {t('home.intro_section.sub_title')}
+              {t('pages.home.intro_section.sub_title')}
             </Typography>
             <Typography variant={isTablet ? 'h3' : 'h5'} color='var(--secondary)'>
-              {t('home.intro_section.title')}
+              {t('pages.home.intro_section.title')}
             </Typography>
 
             <Stack direction={'row'} gap={1} alignItems={'center'} position={'relative'} width='100%'></Stack>
             <Typography variant='body1' color='var(--secondary)'>
-              {t('home.intro_section.description')}
+              {t('pages.home.intro_section.description')}
             </Typography>
           </Stack>
         </Container>

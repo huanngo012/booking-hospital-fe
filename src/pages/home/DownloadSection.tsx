@@ -15,14 +15,14 @@ const DownloadSection = () => {
         <Stack alignItems={'center'} gap={'28px'}>
           <Stack alignItems={'center'} gap={'16px'} className='animate animate--fade-in'>
             <Typography variant={isTablet ? 'h4' : 'h6'}>
-              {t('home.download_section.title')}{' '}
+              {t('pages.home.download_section.title')}{' '}
               <Typography component='span' variant={isTablet ? 'h4' : 'h6'} color='var(--primary)'>
                 MEDPRO
               </Typography>
             </Typography>
             <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} gap={'16px'}>
-              <Box component='img' width={'100px'} src='/svgs/app_store.svg' alt='app_store' />
-              <Box component='img' width={'100px'} src='/svgs/ch_play.svg' alt='ch_play' />
+              <Box component='img' width={'100px'} src='/svgs/app_store.svg' alt='App store' />
+              <Box component='img' width={'100px'} src='/svgs/ch_play.svg' alt='CH play' />
             </Stack>
           </Stack>
           <Stack
@@ -63,7 +63,7 @@ const DownloadSection = () => {
                       }}
                     ></Typography>
                   </Box>
-                  <Box component='img' src={item.image} alt='' width={'60px'} />
+                  <Box component='img' src={item.image} alt={t(item.title)} width={'60px'} />
                 </Stack>
               ))}
             </Stack>
@@ -106,7 +106,7 @@ const DownloadSection = () => {
                   width={'100%'}
                   paddingLeft={index % 2 === 0 ? '30px' : '90px'}
                 >
-                  <Box component='img' src={item.image} alt='' width={'60px'} />
+                  <Box component='img' src={item.image} alt={t(item.title)} width={'60px'} />
                   <Box sx={{ textAlign: 'left' }}>
                     <Typography variant='label2' color='var(--secondary)'>
                       {t(item.title)}

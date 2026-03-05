@@ -1,18 +1,38 @@
-.spinner-3 {
-  width: 50px;
-  padding: 8px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--primary);
-  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
-  -webkit-mask: var(--_m);
-  mask: var(--_m);
-  -webkit-mask-composite: source-out;
-  mask-composite: subtract;
-  animation: s3 1s infinite linear;
+.loading {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    path {
+      stroke-dasharray: 1000;
+      stroke: var(--primary);
+      opacity: 1;
+      animation: loading 1.2s cubic-bezier(0.54, 0.02, 1, 0.98) infinite;
+      stroke-width: 1;
+    }
+  }
 }
-@keyframes s3 {
-  to {
-    transform: rotate(1turn);
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+    fill: none;
+    stroke-dashoffset: 1000;
+  }
+  5% {
+    opacity: 1;
+    fill: none;
+    stroke-dashoffset: 1000;
+  }
+  60% {
+    fill: var(--primary);
+  }
+  95%,
+  100% {
+    opacity: 1;
+    fill: var(--primary);
+    stroke-dashoffset: 0;
   }
 }

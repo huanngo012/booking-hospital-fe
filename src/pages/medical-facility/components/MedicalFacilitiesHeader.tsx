@@ -16,14 +16,14 @@ const MedicalFacilitiesHeader = () => {
     <Box className='medical_facilities_header' sx={{ background: `url(${medical_facilities_banner})` }}>
       <Container>
         <Box className='medical_facilities_header-inner'>
-          {<BreadscrumbCustom data={[{ title: t('medical_facilities_page.breadcrumb') }]} />}
+          {<BreadscrumbCustom data={[{ title: t('navigation.medical_facilities') }]} />}
           <Box className='medical_facilities_header-text'>
             <Typography variant={variant1} color='var(--primary)' className='medical-facilities__title'>
-              {t('medical_facilities_page.title')}
+              {t('pages.medical_facilities.title')}
             </Typography>
 
             <Typography variant={variant2} color='var(--secondary)' className='medical-facilities__description'>
-              {t('medical_facilities_page.description')}
+              {t('pages.medical_facilities.description')}
             </Typography>
           </Box>
         </Box>

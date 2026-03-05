@@ -1,52 +1,74 @@
 {
-  "title": "Đặt lịch bệnh viện",
-  "id": "Số thứ tự",
-  "patient": "Bệnh nhân",
-  "add": "Thêm",
-  "select": "Chọn",
-  "update": "Cập nhật",
-  "detail": "Chi tiết",
-  "delete": "Xóa",
-  "cancel": "Hủy",
-  "add-new": "Thêm mới",
-  "back": "Quay lại",
-  "success": "Thành công",
-  "failed": "Thất bại",
-  "save": "Lưu",
-  "confirm": "Xác nhận",
-  "update-infomation": "Cập nhật thông tin",
-  "description": "Mô tả chi tiết",
-  "description-placeholder": "Nhập mô tả chi tiết",
-  "data-not-found": "Không tìm thấy dữ liệu",
-  "please-add-data": "Vui lòng thêm dữ liệu",
-  "doctor-appointment-schedule": "Lịch khám",
-  "patient-appointment-schedule": "Đặt lịch",
-  "img": "Ảnh",
-  "search": "Tìm kiếm",
-  "all locations": "Tất cả địa điểm",
-  "new": "mới",
-  "see details": "Xem chi tiết",
-  "of-total-label-table": "trong số",
-  "please-enter-full-information": "Vui lòng nhập đầy đủ",
-  "province-city": "Tỉnh / Thành phố",
-  "province-city-placeholder": "Chọn Tỉnh / Thành phố",
-  "district-town": "Quận / Huyện",
-  "district-town-placeholder": "Chọn Quận / Huyện",
-  "ward": "Phường / Xã",
-  "ward-placeholder": "Chọn Phường / Xã",
-  "download_app": "Tải ứng dụng",
-  "website": "Trang web",
-  "popup": {
-    "delete": "Xóa",
-    "cancel": "Hủy"
+  "common": {
+    "brand_name": "Medpro",
+    "address": "Địa chỉ",
+    "phone": "Điện thoại",
+    "website": "Trang web",
+    "email": "Email",
+    "all": "Tất cả",
+    "view_more": "Xem tiếp",
+    "view_detail": "Xem chi  tiết",
+    "map": "Bản đồ",
+    "scroll_to_top": "Cuộn lên đầu trang"
   },
-  "delete-title": "Xóa",
-  "delete-confirm": "Bạn có chắc muốn xóa?",
-  "login_page": {
-    "title_seo": "Đăng nhập | Medpro - Đặt lịch khám trực tuyến",
-    "description_seo": "Đăng nhập vào Medpro để đặt lịch khám nhanh chóng tại hơn 100+ bệnh viện và phòng khám uy tín. Quản lý lịch hẹn và hồ sơ khám bệnh dễ dàng.",
+  "header": {
+    "hi": "Xin chào",
+    "download_app": "Tải ứng dụng",
+    "download_app_description": "Ứng dụng đặt khám nhanh tại hơn 300 bệnh viện hàng đầu Việt Nam",
+    "consultation_booking": "Tư vấn / Đặt khám",
+    "hotline": "1900 2115"
+  },
+  "footer": {
+    "address": "97 Trần Quang Diệu, Phường 14, Quận 3, Tp. Hồ Chí Minh",
+    "link_web": "https://pkh.vn",
+    "email": "cskh@medpro.vn",
+    "phone": "(028) 710 78098 ",
+    "menu": [
+      {
+        "title": "Dịch vụ Y tế",
+        "sub_menu": [
+          "Đặt khám tại cơ sở",
+          "Đặt khám theo bác sĩ",
+          "Tư vấn khám bệnh từ xa",
+          "Đặt lịch xét nghiệm",
+          "Chăm sóc Y tế tại nhà",
+          "Thanh toán viện phí"
+        ]
+      },
+      {
+        "title": "Cơ sở y tế",
+        "sub_menu": ["Bệnh viện công", "Bệnh viện tư", "Phòng khám", "Phòng mạch", "Xét nghiệm"]
+      },
+      {
+        "title": "Hướng dẫn",
+        "sub_menu": ["Cài đặt ứng dụng", "Đặt lịch khám", "Quy trình hoàn phí", "Câu hỏi thường gặp"]
+      },
+      {
+        "title": "Tin tức",
+        "sub_menu": ["Tin dịch vụ", "Tin y tế", "Y học thường thức"]
+      },
+      {
+        "title": "Về chúng tôi",
+        "sub_menu": ["Giới thiệu", "Điều khoản dịch vụ", "Chính sách bảo mật", "Quy định sử dụng"]
+      }
+    ]
+  },
+  "languages": {
+    "vi": "Tiếng Việt",
+    "en": "Tiếng Anh"
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "medical_facilities": "Cơ sở y tế",
+    "doctors": "Bác sĩ",
+    "news": "Tin tức",
+    "about_us": "Về chúng tôi"
+  },
+  "auth": {
+    "account": "Tài khoản",
     "login": "Đăng nhập",
     "signup": "Đăng ký",
+    "logout": "Đăng xuất",
     "email": "Email",
     "email_invalid_format": "Email không đúng định dạng",
     "email_placeholder": "Nhập email của bạn",
@@ -59,344 +81,150 @@
     "confirm_password_placeholder": "Nhập lại mật khẩu của bạn",
     "name": "Họ và tên",
     "name_placeholder": "Nhập họ tên của bạn",
-    "name_required": "Vui lòng nhập họ tên",
-    "remember_me": "Nhớ mật khẩu",
-    "forgot_password": "Quên mật khẩu?",
-    "no_account": "Bạn chưa có tài khoản?",
-    "have_account": "Đã có tài khoản?",
-    "login_success": "Đăng nhập thành công",
-    "login_failed": "Đăng nhập thất bại",
-    "signup_success": "Đăng ký thành công",
-    "signup_failed": "Đăng ký thất bại"
+    "name_required": "Vui lòng nhập họ tên"
   },
   "user": {
-    "list": "Danh sách người dùng",
-    "user": "Người dùng",
-    "fullname": "Họ và tên",
-    "fullname-placeholder": "Nhập họ và tên",
-    "password": "Mật khẩu",
-    "password-placeholder": "Nhập mật khẩu",
-    "email": "Email",
-    "email-placeholder": "Nhập email",
-    "phone": "Số điện thoại",
-    "phone-placeholder": "Nhập số điện thoại",
-    "address": "Địa chỉ",
-    "address-placeholder": "Nhập địa chỉ",
-    "gender": "Giới tính",
-    "gender-placeholder": "Chọn giới tính",
-    "male": "Nam",
-    "female": "Nữ",
-    "role": "Vai trò",
-    "role-placeholder": "Chọn vai trò",
-    "status": "Trạng thái",
-    "block": "Chặn",
-    "active": "Hoạt động",
-    "avatar": "Ảnh đại diện",
-    "add-user": "Thêm người dùng mới",
-    "reset-password": "Thay đổi mật khẩu",
-    "new-password": "Mật khẩu mới",
-    "old password": "Mật khẩu cũ",
-    "new-password-placeholder": "Nhập mật khẩu mới",
-    "change-status-account": "Thay đổi trạng thái tài khoản",
-    "lock-account-title": "Khóa tài khoản",
-    "lock-account-message": "Bạn có muốn khóa tài khoản này vĩnh viễn?",
-    "lock-account-sub-message1": "Sau khi nhấn xác nhận, họ sẽ không còn quyền truy cập vào tài khoản của mình hoặc truy cập vào bất kỳ dữ liệu liên quan.",
-    "lock-account-sub-message2": "Nhấn vào nút “Xác nhận” để tiếp tục hoặc nhấn vào nút “Hủy” để giữ cho tài khoản không bị khóa.",
-    "unlock-account-title": "Mở tài khoản?",
-    "unlock-account-message": "Bạn muốn mở khóa tài khoản này lại?",
-    "unlock-account-sub-message1": "Sau khi nhấn xác nhận, họ sẽ có lại quyền truy cập vào tài khoản của mình hoặc truy cập vào bất kỳ dữ liệu liên quan.",
-    "unlock-account-sub-message2": "Nhấn vào nút “Xác nhận” để tiếp tục hoặc nhấn vào nút “Hủy” để tài khoản tiếp tục bị khóa.",
-    "account": "Tài khoản",
-    "please enter a new password for your account.": " Vui lòng nhập mật khẩu mới cho tài khoản của bạn.",
-    "account information": "Thông tin tài khoản",
-    "update password": "Cập nhật mật khẩu"
+    "profile": "Thông tin cá nhân",
+    "change_password": "Đổi mật khẩu",
+    "patient_records": "Hồ sơ bệnh nhân",
+    "appointments": "Lịch khám"
   },
-  "doctor": {
-    "list": "Danh sách bác sĩ",
-    "doctor": "Bác sĩ",
-    "name": "Tên bác sĩ",
-    "name-placeholder": "Nhập tên bác sĩ",
-    "roomID": "Tên phòng",
-    "roomID-placeholder": "Nhập tên phòng",
-    "position": "Chức danh",
-    "position-placeholder": "Nhập chức danh",
-    "add-doctor": "Thêm bác sĩ mới"
-  },
-  "specialty": {
-    "list": "Danh sách chuyên khoa",
-    "list-placeholder": "Chọn danh sách chuyên khoa",
-    "specialty": "Chuyên khoa",
-    "name": "Tên chuyên khoa",
-    "name-placeholder": "Nhập tên chuyên khoa",
-    "add-specialty": "Thêm chuyên khoa mới",
-    "img-specialty": "Ảnh chuyên khoa"
-  },
-  "hospital": {
-    "list": "Danh sách bệnh viện",
-    "hospital": "Bệnh viện",
-    "name": "Tên bệnh viện",
-    "name-placeholder": "Nhập tên bệnh viện",
-    "address": "Địa chỉ bệnh viện",
-    "non-hospital-specialties": "Chuyên khoa không thuộc bệnh viện",
-    "hospital-specialties": "Chuyên khoa thuộc bệnh viện",
-    "add-hospital": "Thêm bệnh viện mới",
-    "host": "Quản lí",
-    "host-placeholder": "Chọn quản lí",
-    "add-specialty": "Thêm chuyên khoa",
-    "delete-specialty": "Xóa chuyên khoa",
-    "all hospital": "Tất cả bệnh viện",
-    "prominent hospitals": "Bệnh viện tiêu biểu"
-  },
-  "schedule": {
-    "schedule": "Lịch khám",
-    "list": "Danh sách lịch khám",
-    "date": "Ngày khám",
-    "time": "Giờ khám",
-    "number": "Số lượng",
-    "number-placeholder": "Nhập số lượng",
-    "cost": "Giá",
-    "cost-placeholder": "Nhập giá",
-    "add-schedule": "Thêm lịch khám mới",
-    "appointment_assistance": "Hỗ trợ đặt khám",
-    "appointment_phone": "1900 2115"
-  },
-  "booking": {
-    "booking": "Đặt lịch",
-    "list": "Danh sách đặt lịch",
-    "name-patient": "Tên bệnh nhân",
-    "description-img": "Ảnh mô tả",
-    "payment": "Thanh toán",
-    "unpaid": "Chưa thanh toán",
-    "paid": "Đã thanh toán",
-    "cancelled": "Đã hủy",
-    "pending": "Đang xử lý",
-    "confirmed": "Đã xác nhận",
-    "examined": "Đã khám",
-    "leaved": "Bỏ khám",
-    "book_now": "Đặt lịch ngay"
-  },
-
-  "not_found_page": {
-    "title_seo": "Trang không tồn tại | Medpro - Nền tảng đặt lịch khám trực tuyến",
-    "description_seo": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển. Khám phá Medpro - nền tảng đặt lịch khám trực tuyến tại 100+ bệnh viện và 1000+ phòng khám trên toàn quốc.",
-    "title": "Trang bạn tìm kiếm không đúng hoặc không tồn tại !",
-    "button": "Trở về trang chủ"
-  },
-  "notification": {
-    "notification": "Thông báo",
-    "notification-read": "Bạn đã đọc hết thông báo",
-    "click-tab-read": "Bạn có thể xem lại thông báo cũ trong mục đã đọc"
-  },
-  "healthcare_facilities": {
-    "healthcare_facilities": "Cơ sở y tế",
-    "all": "Tất cả",
-    "public hospital": "Bệnh viện công",
-    "private hospital": "Bệnh viện tư",
-    "medical clinic": "Phòng khám",
-    "consultation room": "Phòng mạch",
-    "medical test": "Xét nghiệm",
-    "appointment": "Đặt khám ngay",
-    "select date": "Chọn ngày:",
-    "no appointment": "Bác sĩ hiện không có lịch khám",
-    "review": "Đánh giá",
-    "comment": "Nhận xét",
-    "rv now": "Đánh giá ngay!",
-    "rv and cmt": "Đánh giá & Nhận xét",
-    "rv of hospital": "Đánh giá bệnh viện này?",
-    "have rv": "Bạn đã đánh giá bệnh viện này",
-    "view map": "Xem bản đồ",
-    "doctor not found": "Không tìm thấy bác sĩ"
-  },
-  "all specialties": {
-    "all specialties": "Tất cả chuyên khoa"
-  },
-  "medical_facilities_page": {
-    "title_seo": "Cơ sở y tế | Medpro - Đặt lịch khám bệnh",
-    "description_seo": "Tìm kiếm và đặt lịch khám tại hơn 100 bệnh viện, 1000+ phòng khám và phòng mạch uy tín trên toàn quốc. Medpro giúp bạn đặt khám nhanh chóng, thuận tiện và tiết kiệm thời gian.",
-    "breadcrumb": "Cơ sở y tế",
-    "title": "ĐẶT KHÁM TẠI CƠ SỞ",
-    "description": "Đặt khám nhanh chóng, tiết kiệm thời gian, an toàn tiện lợi",
-    "not_found": "Không tìm thấy cơ sở y tế"
-  },
-  "news_page": {
-    "title_seo": "Tin tức y tế mới nhất - Cập nhập liên tục từ Medpro",
-    "description_seo": "Theo dõi tin tức y tế mới nhất và thông tin hữu ích từ Medpro. Cập nhật liên tục về các dịch vụ, xu hướng y học và kiến thức chăm sóc sức khỏe",
-    "breadcrumb": "Tin tức",
-    "title": "Tin tức",
-    "button": "Xem tiếp"
-  },
-  "about_page": {
-    "title_seo": "Giới thiệu Medpro - Ứng dụng y tế được sử dụng nhiều nhất",
-    "description_seo": "Tìm hiểu về Medpro, ứng dụng tiên phong trong việc kết nối người dùng với dịch vụ y tế. Đơn giản hóa quá trình tiếp cận, khám, chữa bệnh và tư vấn sức khoẻ",
-    "breadcrumb": "Về chúng tôi",
-    "title": "Giới thiệu",
-    "description": "Ứng dụng này giúp người bệnh và thân nhân người bệnh có thể thực hiện trực tuyến quá trình đăng ký khám bệnh tại bệnh viện ở mọi lúc mọi nơi mà không cần phải đến trực tiếp bệnh viện",
-    "items": [
-      {
-        "title": "Đăng ký và chọn ngày,",
-        "description": "giờ khám bệnh"
+  "pages": {
+    "home": {
+      "title_seo": "Medpro - Đặt khám nhanh 100+ bệnh viện, 1000+ phòng khám, phòng mạch",
+      "description_seo": "Nền tảng y tế số được 4 triệu người, 100+ BV, 1000+ Phòng khám, phòng mạch tin tưởng lựa chọn. Giải pháp đặt khám toàn diện qua tổng đài 19002115, web, app, MXH",
+      "title": "Trang chủ",
+      "intro_section": {
+        "title": "Kết nối người dân với Cơ sở - Dịch vụ Y tế",
+        "sub_title": "Nền tảng công nghệ",
+        "description": "Đặt khám nhanh - Lấy số thứ tự trực tuyến - Tư vấn sức khỏe từ xa",
+        "services": [
+          "Đặt khám tại cơ sở",
+          "Đặt khám theo bác sĩ",
+          "Tư vấn khám bệnh từ xa",
+          "Đặt lịch xét nghiệm",
+          "Khám doanh nghiệp",
+          "Gói khám sức khỏe",
+          "Đặt lịch tiêm chủng",
+          "Thanh toán Viện phí"
+        ]
       },
-      {
-        "title": "Thanh toán chi phí",
-        "description": "không dùng tiền mặt"
+      "blog_section": {
+        "title": "Đặt khám nhanh",
+        "description": "cung cấp dịch vụ đặt lịch khám bệnh và chăm sóc sức khỏe trực tuyến tại các bệnh viện hàng đầu Việt Nam như Bệnh viện Đại học Y Dược TP.HCM, Bệnh viện Chợ Rẫy và Bệnh viện Nhi Đồng,giúp người dùng tự lựa chọn dịch vụ và bác sĩ theo nhu cầu của mình.",
+        "blogs": [
+          {
+            "title": "Vì thời gian của bạn là vô giá",
+            "description": "Bệnh nhân chủ động chọn thông tin đặt khám (ngày khám và giờ khám)"
+          },
+          {
+            "title": "Vun đắp sức khỏe cho mọi nhà",
+            "description": "Bệnh nhân sẽ nhận phiếu khám trực tuyến ngay trên phần mềm"
+          },
+          {
+            "title": "Vươn tầm tay kéo gần mọi khoảng cách",
+            "description": "Người dùng chọn và thực hiện thanh toán trên phần mềm"
+          }
+        ]
       },
-      {
-        "title": "Quản lý cuộc hẹn",
-        "description": "khám bệnh và tái khám"
+      "medical_facilities_section": {
+        "title": "Bệnh viện tiêu biểu",
+        "description": "Đặt lịch khám với hơn {{count}} cơ sở y tế trên khắp cả nước"
       },
-      {
-        "title": "Quản lý thông tin",
-        "description": "dữ liệu của người bệnh"
+      "statistic_section": {
+        "title": "Thống kê",
+        "items": ["Lượt khám", "Bệnh viện", "Cơ sở y tế", "Bác sĩ", "Lượt truy cập tháng", "Lượt truy cập trong ngày"]
+      },
+      "hero_section": {
+        "title": "Đặt khám nhanh - Lấy số thứ tự trực tuyến",
+        "description": "Bệnh nhân chủ động chọn thông tin đặt khám nhanh (ngày khám, giờ khám và cơ sở y tế). Bệnh nhân sẽ nhận lấy số thứ tự trực tuyến ngay trên phần mềm",
+        "button": "Đặt lịch ngay"
+      },
+      "download_section": {
+        "title": "Tải ứng dụng Đặt khám nhanh",
+        "items": [
+          {
+            "title": "Lấy số khám trực tuyến nhanh chóng",
+            "description": "Đăng ký khám / tái khám theo ngày.<br />Đăng ký khám theo chuyên khoa.<br />Tái khám theo lịch hẹn"
+          },
+          {
+            "title": "Tư vấn khám bệnh từ xa",
+            "description": "Tư vấn y tế từ xa, gọi video với đội ngũ y bác sĩ"
+          },
+          {
+            "title": "Tra cứu kết quả cận lâm sàng",
+            "description": "Tra cứu kết quả xét nghiệm trực tuyến dễ dàng và tiện lợi"
+          },
+          {
+            "title": "Thanh toán viện phí",
+            "description": "Hệ thống thanh toán trực tuyến đa dạng. Hỗ trợ các ví điện tử phổ biến hiện nay"
+          },
+          {
+            "title": "Chăm sóc y tế tại nhà",
+            "description": "Dịch vụ chăm sóc y tế tại nhà chuyên nghiệp (điều dưỡng, xét nghiệm) đáp ứng các nhu cầu chăm sóc sức khỏe tại nhà phổ biến"
+          },
+          {
+            "title": "Mạng lưới cơ sở liên kết",
+            "description": "Mạng lưới kết nối bệnh viện, phòng khám, cơ sở y tế trên toàn quốc"
+          }
+        ]
       }
-    ],
-    "prominent": "Bệnh viện tiêu biểu"
-  },
-  "guidelines": {
-    "guidelines": "Hướng dẫn",
-    "app installation": "Cài đặt ứng dụng",
-    "schedule an appointment": "Đặt lịch khám",
-    "refund process": "Quy trình hoàn phí",
-    "frequently asked questions": "Câu hỏi thường gặp"
-  },
-  "home": {
-    "title_seo": "Medpro - Đặt khám nhanh 100+ bệnh viện, 1000+ phòng khám, phòng mạch",
-    "description_seo": "Nền tảng y tế số được 4 triệu người, 100+ BV, 1000+ Phòng khám, phòng mạch tin tưởng lựa chọn. Giải pháp đặt khám toàn diện qua tổng đài 19002115, web, app, MXH",
-    "home": "Trang chủ",
-    "search for healthcare facilities": "Tìm kiếm cơ sở y tế",
-    "search for specialties": "Tìm kiếm chuyên khoa",
-    "search for doctors": "Tìm kiếm bác sĩ",
-    "des_2": "cung cấp dịch vụ đặt lịch khám bệnh và chăm sóc sức khỏe trực tuyến tại các bệnh viện hàng đầu Việt Nam như Bệnh viện Đại học Y Dược TP.HCM, Bệnh viện Chợ Rẫy và Bệnh viện Nhi Đồng,giúp người dùng tự lựa chọn dịch vụ và bác sĩ theo nhu cầu của mình.",
-    "visits": "Lượt khám",
-    "monthly visits": "Lượt truy cập tháng",
-    "daily visits": "Lượt truy cập trong ngày",
-    "des-3": "Đặt lịch khám với hơn",
-    "des-4": " bệnh viện trên khắp cả nước",
-    "quick appointment-get online queue number": "Đặt khám nhanh - Lấy số thứ tự trực tuyến",
-    "des-5": "Bệnh nhân chủ động chọn thông tin đặt khám nhanh (ngày khám, giờ khám và cơ sở y tế). Bệnh nhân sẽ nhận lấy số thứ tự trực tuyến ngay trên phần mềm",
-    "download the quick appointment booking app": "Tải ứng dụng Đặt khám nhanh",
-    "intro_section": {
-      "title": "Kết nối người dân với Cơ sở - Dịch vụ Y tế",
-      "sub_title": "Nền tảng công nghệ",
-      "description": "Đặt khám nhanh - Lấy số thứ tự trực tuyến - Tư vấn sức khỏe từ xa",
-      "services": [
-        "Đặt khám tại cơ sở",
-        "Đặt khám theo bác sĩ",
-        "Tư vấn khám bệnh từ xa",
-        "Đặt lịch xét nghiệm",
-        "Khám doanh nghiệp",
-        "Gói khám sức khỏe",
-        "Đặt lịch tiêm chủng",
-        "Thanh toán Viện phí"
-      ]
     },
-    "blog_section": {
-      "title": "Đặt khám nhanh",
-      "description": "cung cấp dịch vụ đặt lịch khám bệnh và chăm sóc sức khỏe trực tuyến tại các bệnh viện hàng đầu Việt Nam như Bệnh viện Đại học Y Dược TP.HCM, Bệnh viện Chợ Rẫy và Bệnh viện Nhi Đồng,giúp người dùng tự lựa chọn dịch vụ và bác sĩ theo nhu cầu của mình.",
+    "medical_facilities": {
+      "title_seo": "Cơ sở y tế | Medpro - Đặt lịch khám bệnh",
+      "description_seo": "Tìm kiếm và đặt lịch khám tại hơn 100 bệnh viện, 1000+ phòng khám và phòng mạch uy tín trên toàn quốc. Medpro giúp bạn đặt khám nhanh chóng, thuận tiện và tiết kiệm thời gian.",
+      "title": "ĐẶT KHÁM TẠI CƠ SỞ",
+      "description": "Đặt khám nhanh chóng, tiết kiệm thời gian, an toàn tiện lợi",
+      "not_found": "Không tìm thấy cơ sở y tế"
+    },
+    "news": {
+      "title_seo": "Tin tức y tế mới nhất - Cập nhập liên tục từ Medpro",
+      "description_seo": "Theo dõi tin tức y tế mới nhất và thông tin hữu ích từ Medpro. Cập nhật liên tục về các dịch vụ, xu hướng y học và kiến thức chăm sóc sức khỏe",
+      "title": "Tin tức",
       "button": "Xem tiếp"
     },
-    "medical_facilities_section": {
-      "title": "Bệnh viện tiêu biểu",
-      "description": "Đặt lịch khám với hơn {{count}} cơ sở y tế trên khắp cả nước"
-    },
-    "statistic_section": {
-      "title": "Thống kê",
-      "items": ["Lượt khám", "Bệnh viện", "Cơ sở y tế", "Bác sĩ", "Lượt truy cập tháng", "Lượt truy cập trong ngày"]
-    },
-    "hero_section": {
-      "title": "Đặt khám nhanh - Lấy số thứ tự trực tuyến",
-      "description": "Bệnh nhân chủ động chọn thông tin đặt khám nhanh (ngày khám, giờ khám và cơ sở y tế). Bệnh nhân sẽ nhận lấy số thứ tự trực tuyến ngay trên phần mềm",
-      "button": "Đặt lịch ngay"
-    },
-    "download_section": {
-      "title": "Tải ứng dụng Đặt khám nhanh",
+    "about": {
+      "title_seo": "Giới thiệu Medpro - Ứng dụng y tế được sử dụng nhiều nhất",
+      "description_seo": "Tìm hiểu về Medpro, ứng dụng tiên phong trong việc kết nối người dùng với dịch vụ y tế. Đơn giản hóa quá trình tiếp cận, khám, chữa bệnh và tư vấn sức khoẻ",
+      "title": "Giới thiệu",
+      "description": "Ứng dụng này giúp người bệnh và thân nhân người bệnh có thể thực hiện trực tuyến quá trình đăng ký khám bệnh tại bệnh viện ở mọi lúc mọi nơi mà không cần phải đến trực tiếp bệnh viện",
       "items": [
         {
-          "title": "Lấy số khám trực tuyến nhanh chóng",
-          "description": "Đăng ký khám / tái khám theo ngày.<br />Đăng ký khám theo chuyên khoa.<br />Tái khám theo lịch hẹn"
+          "title": "Đăng ký và chọn ngày,",
+          "description": "giờ khám bệnh"
         },
         {
-          "title": "Tư vấn khám bệnh từ xa",
-          "description": "Tư vấn y tế từ xa, gọi video với đội ngũ y bác sĩ"
+          "title": "Thanh toán chi phí",
+          "description": "không dùng tiền mặt"
         },
         {
-          "title": "Tra cứu kết quả cận lâm sàng",
-          "description": "Tra cứu kết quả xét nghiệm trực tuyến dễ dàng và tiện lợi"
+          "title": "Quản lý cuộc hẹn",
+          "description": "khám bệnh và tái khám"
         },
         {
-          "title": "Thanh toán viện phí",
-          "description": "Hệ thống thanh toán trực tuyến đa dạng. Hỗ trợ các ví điện tử phổ biến hiện nay"
-        },
-        {
-          "title": "Chăm sóc y tế tại nhà",
-          "description": "Dịch vụ chăm sóc y tế tại nhà chuyên nghiệp (điều dưỡng, xét nghiệm) đáp ứng các nhu cầu chăm sóc sức khỏe tại nhà phổ biến"
-        },
-        {
-          "title": "Mạng lưới cơ sở liên kết",
-          "description": "Mạng lưới kết nối bệnh viện, phòng khám, cơ sở y tế trên toàn quốc"
+          "title": "Quản lý thông tin",
+          "description": "dữ liệu của người bệnh"
         }
-      ]
+      ],
+      "prominent": "Bệnh viện tiêu biểu"
+    },
+    "login": {
+      "title_seo": "Đăng nhập | Medpro - Đặt lịch khám trực tuyến",
+      "description_seo": "Đăng nhập vào Medpro để đặt lịch khám nhanh chóng tại hơn 100+ bệnh viện và phòng khám uy tín. Quản lý lịch hẹn và hồ sơ khám bệnh dễ dàng.",
+      "remember_me": "Nhớ mật khẩu",
+      "forgot_password": "Quên mật khẩu?",
+      "no_account": "Bạn chưa có tài khoản?",
+      "have_account": "Đã có tài khoản?",
+      "login_success": "Đăng nhập thành công",
+      "login_failed": "Đăng nhập thất bại",
+      "signup_success": "Đăng ký thành công",
+      "signup_failed": "Đăng ký thất bại"
+    },
+    "not_found": {
+      "title_seo": "Trang không tồn tại | Medpro - Nền tảng đặt lịch khám trực tuyến",
+      "description_seo": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển. Khám phá Medpro - nền tảng đặt lịch khám trực tuyến tại 100+ bệnh viện và 1000+ phòng khám trên toàn quốc.",
+      "title": "Trang bạn tìm kiếm không đúng hoặc không tồn tại !",
+      "button": "Trở về trang chủ"
     }
-  },
-  "header": {
-    "hi": "Xin chào",
-    "logout": "Đăng xuất"
-  },
-  "languages": {
-    "vi": "Tiếng Việt",
-    "en": "Tiếng Anh"
-  },
-  "menu_footer": {
-    "address": "97 Trần Quang Diệu, Phường 14, Quận 3, Tp. Hồ Chí Minh",
-    "link_web": "https://pkh.vn",
-    "email": "cskh@medpro.vn",
-    "phone": "(028) 710 78098 ",
-    "menu_1": {
-      "title": "Dịch vụ Y tế",
-      "sub_menu": [
-        "Đặt khám tại cơ sở",
-        "Đặt khám theo bác sĩ",
-        "Tư vấn khám bệnh từ xa",
-        "Đặt lịch xét nghiệm",
-        "Chăm sóc Y tế tại nhà",
-        "Thanh toán viện phí"
-      ]
-    },
-    "menu_2": {
-      "title": "Cơ sở y tế",
-      "sub_menu": ["Bệnh viện công", "Bệnh viện tư", "Phòng khám", "Phòng mạch", "Xét nghiệm"]
-    },
-    "menu_3": {
-      "title": "Hướng dẫn",
-      "sub_menu": ["Cài đặt ứng dụng", "Đặt lịch khám", "Quy trình hoàn phí", "Câu hỏi thường gặp"]
-    },
-    "menu_4": {
-      "title": "Tin tức",
-      "sub_menu": ["Tin dịch vụ", "Tin y tế", "Y học thường thức"]
-    },
-    "menu_5": {
-      "title": "Về chúng tôi",
-      "sub_menu": ["Giới thiệu", "Điều khoản dịch vụ", "Chính sách bảo mật", "Quy định sử dụng"]
-    }
-  },
-  "blogs": {
-    "blog_1": {
-      "title": "Vì thời gian của bạn là vô giá",
-      "description": "Bệnh nhân chủ động chọn thông tin đặt khám (ngày khám và giờ khám)"
-    },
-    "blog_2": {
-      "title": "Vun đắp sức khỏe cho mọi nhà",
-      "description": "Bệnh nhân sẽ nhận phiếu khám trực tuyến ngay trên phần mềm"
-    },
-    "blog_3": {
-      "title": "Vươn tầm tay kéo gần mọi khoảng cách",
-      "description": "Người dùng chọn và thực hiện thanh toán trên phần mềm"
-    }
-  },
-  "category": {
-    "all": "Tất cả"
-  },
-  "medical_facilities": {
-    "button_see_detail": "Xem chi  tiết",
-    "map": "Bản đồ"
   }
 }

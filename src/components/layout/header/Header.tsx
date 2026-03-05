@@ -10,6 +10,7 @@ import { MdOutlineSmartphone } from 'react-icons/md'
 import { DISPLAY } from '~/utils/responsive'
 import { useUser } from '~/modules/auth/auth.query'
 import ProfilePopup from './ProfilePopup'
+import MenuMobile from './MenuMobile'
 
 const Header = () => {
   const { t } = useTranslation()
@@ -43,11 +44,24 @@ const Header = () => {
   }, [])
 
   return (
-    <Box ref={headerRef} component={'header'} className={`header header--${className}`}>
+    <Box
+      ref={headerRef}
+      component={'header'}
+      className={`header header--${className}`}
+      paddingBlock={{
+        mobile: '12px',
+        desktop: '0'
+      }}
+    >
       <Container>
         <Stack direction={'row'} alignItems={'center'} gap={'30px'} width={'100%'}>
           <Link to={PATHS.HOME}>
-            <Box component='img' src={'/svgs/logo.svg'} alt={'Logo'} width={'150px'} />
+            <Box
+              component='img'
+              src={'/svgs/logo.svg'}
+              alt={t('common.brand_name')}
+              width={{ mobile: '120px', desktop: '150px' }}
+            />
           </Link>
           <Box width={'100%'}>
             <Box display={DISPLAY.DESKTOP_ONLY} className='header__menu-top'>
@@ -75,12 +89,12 @@ const Header = () => {
               <Stack direction={'row'} alignItems={'center'} gap={'16px'}>
                 <Button component={'a'} className='dowload-button' variant='contained' href='#downloadSection'>
                   <MdOutlineSmartphone />
-                  <Typography variant='button2'>{t('download_app')}</Typography>
+                  <Typography variant='button2'>{t('header.download_app')}</Typography>
                 </Button>
                 {!user ? (
                   <Button component={Link} className='login-button' variant='outlined' color='primary' to={PATHS.LOGIN}>
                     <FaUser />
-                    <Typography variant='button2'>{t('user.account')}</Typography>
+                    <Typography variant='button2'>{t('auth.account')}</Typography>
                   </Button>
                 ) : (
                   <ProfilePopup />
@@ -93,9 +107,9 @@ const Header = () => {
               <Stack display={DISPLAY.DESKTOP_ONLY} direction={'row'} flexShrink={'0'} gap={'12px'} minWidth={'180px'}>
                 <Box component='img' src={'/svgs/contact.svg'} alt='' width={40} />
                 <Stack>
-                  <Typography variant='label2'>{t('schedule.appointment_assistance')}</Typography>
+                  <Typography variant='label2'>{t('header.consultation_booking')}</Typography>
                   <Typography variant='h5' color='var(--orange-400)'>
-                    {t('schedule.appointment_phone')}
+                    {t('header.hotline')}
                   </Typography>
                 </Stack>
               </Stack>
@@ -119,10 +133,15 @@ const Header = () => {
                   ))}
                 </Tabs>
               </Stack>
-              <Stack className='item-right' display={DISPLAY.MOBILE_ONLY}>
-                {/* <LanguagePopUp /> */}
-
-                {/* <NavbarPopUp tabs={menu} handleNav={handleChangeTab} activeLink={tab} /> */}
+              <Stack
+                direction={'row'}
+                alignItems={'center'}
+                justifyContent={'flex-end'}
+                width={'100%'}
+                display={DISPLAY.MOBILE_ONLY}
+              >
+                <LanguagePopUp />
+                <MenuMobile />
               </Stack>
             </Stack>
           </Box>

@@ -3,8 +3,10 @@ import { useCallback, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import Header from '~/components/layout/header/Header'
 import Footer from '~/components/layout/footer/Footer'
+import { useTranslation } from 'react-i18next'
 
 const Layout = ({ children }: { children: ReactNode }) => {
+  const { t } = useTranslation()
   const [showScrollButton, setShowScrollButton] = useState(false)
 
   const handleScroll = useCallback(() => {
@@ -27,7 +29,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Header />
       <Box
         marginTop={{
-          mobile: '66px',
+          mobile: '60px',
           desktop: '135px'
         }}
       ></Box>
@@ -38,7 +40,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
         <Box
           component={'img'}
           src='/svgs/scroll_to_top.svg'
-          alt='Scroll to top'
+          alt={t('common.scroll_to_top')}
           position={'fixed'}
           bottom={'56px'}
           right={{
@@ -50,6 +52,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
             fill: 'var(--primary)',
             cursor: 'pointer'
           }}
+          zIndex={1000}
           onClick={scrollToTop}
         />
       )}

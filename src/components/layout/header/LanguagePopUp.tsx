@@ -1,5 +1,5 @@
 import './style.scss'
-import { Box, ClickAwayListener, MenuItem, MenuList, Paper, Popper, Stack, Typography } from '@mui/material'
+import { Box, ClickAwayListener, MenuItem, MenuList, Paper, Popper, Typography } from '@mui/material'
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { PiCaretDown } from 'react-icons/pi'
@@ -40,33 +40,27 @@ const LanguagePopUp = () => {
   }, [i18n])
 
   return (
-    <Box onClick={handleOpen} sx={{ cursor: 'pointer' }}>
-      <Box className='language-icon'>
-        <Box component='img' src={LANGUAGES[currentLanguage]?.icon} className='flag-icon' />
+    <Box onClick={handleOpen} className='language-selector'>
+      <Box className='language-selector__trigger'>
+        <Box component='img' src={LANGUAGES[currentLanguage]?.icon} className='language-selector__flag' />
         <PiCaretDown size={16} />
       </Box>
 
       <Popper open={open} anchorEl={anchorEl} placement='bottom-end' sx={{ zIndex: 1200 }}>
         <ClickAwayListener onClickAway={handleClose}>
-          <Paper
-            sx={{
-              p: 1,
-              borderRadius: 2,
-              boxShadow: '0px 1px 8px rgba(30,32,32,0.12)'
-            }}
-          >
-            <MenuList autoFocusItem={open} sx={{ display: 'flex', flexDirection: 'column', gap: '4px', padding: '0' }}>
+          <Paper className='language-selector__menu'>
+            <MenuList autoFocusItem={open} className='language-selector__menu_list'>
               {languagesArray.map(([lng, { title, icon }]) => (
                 <MenuItem
                   key={lng}
                   onClick={() => handleChangeLanguage(lng)}
                   selected={currentLanguage === lng}
-                  sx={{ borderRadius: 2 }}
+                  className='language-selector__option'
                 >
-                  <Stack direction='row' alignItems='center' gap={1}>
-                    <Box component='img' src={icon} alt={t(title)} className='flag-icon' />
+                  <Box className='language-selector__item'>
+                    <Box component='img' src={icon} alt={t(title)} className='language-selector__flag' />
                     <Typography variant={'label2'}>{t(title)}</Typography>
-                  </Stack>
+                  </Box>
                 </MenuItem>
               ))}
             </MenuList>

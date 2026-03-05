@@ -22,13 +22,13 @@ const HeroSection = () => {
           >
             <Stack gap={'16px'} alignItems={isTablet ? 'flex-start' : 'center'} className='animate animate--fade-left'>
               <Typography variant={isTablet ? 'h4' : 'h6'} color='var(--primary)'>
-                {t('home.hero_section.title')}
+                {t('pages.home.hero_section.title')}
               </Typography>
               <Typography variant={isTablet ? 'label1' : 'label2'} color='var(--secondary)'>
-                {t('home.hero_section.description')}
+                {t('pages.home.hero_section.description')}
               </Typography>
               <Button variant='contained' color='primary'>
-                <Typography variant={isTablet ? 'label1' : 'label2'}>{t('home.hero_section.button')}</Typography>
+                <Typography variant={isTablet ? 'label1' : 'label2'}>{t('pages.home.hero_section.button')}</Typography>
               </Button>
             </Stack>
             <Box component='img' width={'50%'} src='/images/image_1.webp' alt='' />

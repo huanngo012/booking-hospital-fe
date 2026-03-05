@@ -1,11 +1,27 @@
 import { FaUserCircle } from 'react-icons/fa'
 import { IoMdCalendar } from 'react-icons/io'
-import { RiLockPasswordLine } from 'react-icons/ri'
 import { SiFacebook, SiTiktok, SiYoutube } from 'react-icons/si'
 import { LuFileUser } from 'react-icons/lu'
 import { images } from '~/assets'
+import { PiPasswordBold } from 'react-icons/pi'
 
-const { examinationEars, hospital, clinic, doctor, location, eye } = images
+const {
+  examinationEars,
+  hospital,
+  clinic,
+  doctor,
+  location,
+  eye,
+  home_icon,
+  doctor_icon,
+  medical_facility_icon,
+  news_icon,
+  about_us_icon,
+  record_icon,
+  profile_icon,
+  password_icon,
+  schedule_icon
+} = images
 
 export const PATHS = {
   HOME: '/',
@@ -96,28 +112,36 @@ export const TIME_SLOT_CODE = {
   SLOT_23_30: '23:30'
 }
 
-export const TABSUser = [
+export const TABS_USER = [
   {
+    id: 1,
     icon: <FaUserCircle size={18} />,
-    text: 'Thông tin cá nhân',
+    icon_mobile: profile_icon,
+    title: 'user.profile',
     // component: <TabProfile />,
     path: `profile`
   },
   {
-    icon: <RiLockPasswordLine size={18} />,
-    text: 'Đổi mật khẩu',
+    id: 2,
+    icon: <PiPasswordBold size={18} />,
+    icon_mobile: password_icon,
+    title: 'user.change_password',
     // component: <TabPassword />,
     path: `password`
   },
   {
+    id: 3,
     icon: <LuFileUser size={18} />,
-    text: 'Hồ sơ bệnh nhân',
+    title: 'user.patient_records',
+    icon_mobile: record_icon,
     // component: <TabRecord />,
     path: `record`
   },
   {
+    id: 4,
     icon: <IoMdCalendar size={18} />,
-    text: 'Lịch khám',
+    title: 'user.appointments',
+    icon_mobile: schedule_icon,
     // component: <TabBooking />,
     path: `booking`
   }
@@ -126,27 +150,32 @@ export const TABSUser = [
 export const MENUS = [
   {
     id: 1,
-    title: 'home.home',
+    title: 'navigation.home',
+    icon: home_icon,
     path: PATHS.HOME
   },
   {
     id: 2,
-    title: 'medical_facilities_page.breadcrumb',
+    title: 'navigation.medical_facilities',
+    icon: medical_facility_icon,
     path: PATHS.MEDICALFACILITIES
   },
   {
-    id: 4,
-    title: 'doctor.doctor',
+    id: 3,
+    title: 'navigation.doctors',
+    icon: doctor_icon,
     path: PATHS.DOCTORS
   },
   {
-    id: 5,
-    title: 'news_page.breadcrumb',
+    id: 4,
+    title: 'navigation.news',
+    icon: news_icon,
     path: PATHS.NEWS
   },
   {
-    id: 6,
-    title: 'about_page.breadcrumb',
+    id: 5,
+    title: 'navigation.about_us',
+    icon: about_us_icon,
     path: PATHS.ABOUT
   }
 ]
@@ -186,179 +215,179 @@ export const LANGUAGES = {
 export const SERVICES = [
   {
     id: 1,
-    name: 'home.intro_section.services.0',
+    name: 'pages.home.intro_section.services.0',
     icon: images.booking
   },
   {
     id: 2,
-    name: 'home.intro_section.services.1',
+    name: 'pages.home.intro_section.services.1',
     icon: images.examinationEars1
   },
   {
     id: 3,
-    name: 'home.intro_section.services.2',
+    name: 'pages.home.intro_section.services.2',
     icon: images.consult
   },
   {
     id: 4,
-    name: 'home.intro_section.services.3',
+    name: 'pages.home.intro_section.services.3',
     icon: images.schedule
   },
   {
     id: 5,
-    name: 'home.intro_section.services.4',
+    name: 'pages.home.intro_section.services.4',
     icon: images.business_examination
   },
   {
     id: 6,
-    name: 'home.intro_section.services.5',
+    name: 'pages.home.intro_section.services.5',
     icon: images.insurance
   },
   {
     id: 7,
-    name: 'home.intro_section.services.6',
+    name: 'pages.home.intro_section.services.6',
     icon: images.injection
   },
   {
     id: 8,
-    name: 'home.intro_section.services.7',
+    name: 'pages.home.intro_section.services.7',
     icon: images.pay
   }
 ]
 
 export const INFO_FOOTER = [
   {
-    title: 'user.address',
-    description: 'menu_footer.address'
+    title: 'common.address',
+    description: 'footer.address'
   },
   {
-    title: 'website',
-    description: 'menu_footer.link_web'
+    title: 'common.website',
+    description: 'footer.link_web'
   },
   {
-    title: 'user.email',
-    description: 'menu_footer.email'
+    title: 'common.email',
+    description: 'footer.email'
   },
   {
-    title: 'user.phone',
-    description: 'menu_footer.phone'
+    title: 'common.phone',
+    description: 'footer.phone'
   }
 ]
 export const MENU_FOOTER = [
   {
-    title: 'menu_footer.menu_1.title',
+    title: 'footer.menu.0.title',
     link: '/',
     sub_menu: [
       {
-        sub_title: 'menu_footer.menu_1.sub_menu.0',
+        sub_title: 'footer.menu.0.sub_menu.0',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_1.sub_menu.1',
+        sub_title: 'footer.menu.0.sub_menu.1',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_1.sub_menu.2',
+        sub_title: 'footer.menu.0.sub_menu.2',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_1.sub_menu.3',
+        sub_title: 'footer.menu.0.sub_menu.3',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_1.sub_menu.4',
+        sub_title: 'footer.menu.0.sub_menu.4',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_1.sub_menu.5',
+        sub_title: 'footer.menu.0.sub_menu.5',
         sub_link: '/'
       }
     ]
   },
   {
-    title: 'menu_footer.menu_2.title',
+    title: 'footer.menu.1.title',
     link: '/',
     sub_menu: [
       {
-        sub_title: 'menu_footer.menu_2.sub_menu.0',
+        sub_title: 'footer.menu.1.sub_menu.0',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_2.sub_menu.1',
+        sub_title: 'footer.menu.1.sub_menu.1',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_2.sub_menu.2',
+        sub_title: 'footer.menu.1.sub_menu.2',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_2.sub_menu.3',
+        sub_title: 'footer.menu.1.sub_menu.3',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_2.sub_menu.4',
+        sub_title: 'footer.menu.1.sub_menu.4',
         sub_link: '/'
       }
     ]
   },
   {
-    title: 'menu_footer.menu_3.title',
+    title: 'footer.menu.2.title',
     link: '/',
     sub_menu: [
       {
-        sub_title: 'menu_footer.menu_3.sub_menu.0',
+        sub_title: 'footer.menu.2.sub_menu.0',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_3.sub_menu.1',
+        sub_title: 'footer.menu.2.sub_menu.1',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_3.sub_menu.2',
+        sub_title: 'footer.menu.2.sub_menu.2',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_3.sub_menu.3',
+        sub_title: 'footer.menu.2.sub_menu.3',
         sub_link: '/'
       }
     ]
   },
   {
-    title: 'menu_footer.menu_4.title',
+    title: 'footer.menu.3.title',
     link: '/',
     sub_menu: [
       {
-        sub_title: 'menu_footer.menu_4.sub_menu.0',
+        sub_title: 'footer.menu.3.sub_menu.0',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_4.sub_menu.1',
+        sub_title: 'footer.menu.3.sub_menu.1',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_4.sub_menu.2',
+        sub_title: 'footer.menu.3.sub_menu.2',
         sub_link: '/'
       }
     ]
   },
   {
-    title: 'menu_footer.menu_5.title',
+    title: 'footer.menu.4.title',
     link: '/',
     sub_menu: [
       {
-        sub_title: 'menu_footer.menu_5.sub_menu.0',
+        sub_title: 'footer.menu.4.sub_menu.0',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_5.sub_menu.1',
+        sub_title: 'footer.menu.4.sub_menu.1',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_5.sub_menu.2',
+        sub_title: 'footer.menu.4.sub_menu.2',
         sub_link: '/'
       },
       {
-        sub_title: 'menu_footer.menu_5.sub_menu.3',
+        sub_title: 'footer.menu.4.sub_menu.3',
         sub_link: '/'
       }
     ]
@@ -373,18 +402,18 @@ export const IMAGE_FOOTER = [
 
 export const BLOGS = [
   {
-    title: 'blogs.blog_1.title',
-    des: 'blogs.blog_1.description',
+    title: 'pages.home.blog_section.blogs.0.title',
+    des: 'pages.home.blog_section.blogs.0.description',
     img: '/images/blog_1.webp'
   },
   {
-    title: 'blogs.blog_2.title',
-    des: 'blogs.blog_2.description',
+    title: 'pages.home.blog_section.blogs.1.title',
+    des: 'pages.home.blog_section.blogs.1.description',
     img: '/images/blog_2.webp'
   },
   {
-    title: 'blogs.blog_3.title',
-    des: 'blogs.blog_3.description',
+    title: 'pages.home.blog_section.blogs.2.title',
+    des: 'pages.home.blog_section.blogs.2.description',
     img: '/images/blog_3.webp'
   }
 ]
@@ -404,37 +433,37 @@ export const BANNERS = [
 export const STATISTIC_INFO = [
   {
     id: 1,
-    title: 'home.statistic_section.items.0',
+    title: 'pages.home.statistic_section.items.0',
     icon: examinationEars,
     number: '2.2M+'
   },
   {
     id: 2,
-    title: 'home.statistic_section.items.1',
+    title: 'pages.home.statistic_section.items.1',
     icon: hospital,
     number: '40+'
   },
   {
     id: 3,
-    title: 'home.statistic_section.items.2',
+    title: 'pages.home.statistic_section.items.2',
     icon: clinic,
     number: '50+'
   },
   {
     id: 4,
-    title: 'home.statistic_section.items.3',
+    title: 'pages.home.statistic_section.items.3',
     icon: doctor,
     number: '1000+'
   },
   {
     id: 5,
-    title: 'home.statistic_section.items.4',
+    title: 'pages.home.statistic_section.items.4',
     icon: location,
     number: '138K+'
   },
   {
     id: 6,
-    title: 'home.statistic_section.items.5',
+    title: 'pages.home.statistic_section.items.5',
     icon: eye,
     number: '4600+'
   }
@@ -443,58 +472,58 @@ export const STATISTIC_INFO = [
 export const BENEFIT_DOWNLOAD_LEFT = [
   {
     image: '/svgs/icon_dang_ky.svg',
-    title: 'home.download_section.items.0.title',
-    description: 'home.download_section.items.0.description'
+    title: 'pages.home.download_section.items.0.title',
+    description: 'pages.home.download_section.items.0.description'
   },
   {
     image: '/svgs/icon_tu_van.svg',
-    title: 'home.download_section.items.1.title',
-    description: 'home.download_section.items.1.description'
+    title: 'pages.home.download_section.items.1.title',
+    description: 'pages.home.download_section.items.1.description'
   },
   {
     image: '/svgs/icon_paraclinical_results.svg',
-    title: 'home.download_section.items.2.title',
-    description: 'home.download_section.items.2.description'
+    title: 'pages.home.download_section.items.2.title',
+    description: 'pages.home.download_section.items.2.description'
   }
 ]
 export const BENEFIT_DOWNLOAD_RIGHT = [
   {
     image: '/svgs/icon_hospital_fees.svg',
-    title: 'home.download_section.items.3.title',
-    description: 'home.download_section.items.3.description'
+    title: 'pages.home.download_section.items.3.title',
+    description: 'pages.home.download_section.items.3.description'
   },
   {
     image: '/svgs/icon_health_care.svg',
-    title: 'home.download_section.items.4.title',
-    description: 'home.download_section.items.4.description'
+    title: 'pages.home.download_section.items.4.title',
+    description: 'pages.home.download_section.items.4.description'
   },
   {
     image: '/svgs/icon_collaborative_facilities.svg',
-    title: 'home.download_section.items.5.title',
-    description: 'home.download_section.items.5.description'
+    title: 'pages.home.download_section.items.5.title',
+    description: 'pages.home.download_section.items.5.description'
   }
 ]
 
 export const ABOUT_US_ITEMS = [
   {
     id: 1,
-    title: 'about_page.items.0.title',
-    description: 'about_page.items.0.description'
+    title: 'pages.about.items.0.title',
+    description: 'pages.about.items.0.description'
   },
   {
     id: 2,
-    title: 'about_page.items.1.title',
-    description: 'about_page.items.1.description'
+    title: 'pages.about.items.1.title',
+    description: 'pages.about.items.1.description'
   },
   {
     id: 3,
-    title: 'about_page.items.2.title',
-    description: 'about_page.items.2.description'
+    title: 'pages.about.items.2.title',
+    description: 'pages.about.items.2.description'
   },
   {
     id: 4,
-    title: 'about_page.items.3.title',
-    description: 'about_page.items.3.description'
+    title: 'pages.about.items.3.title',
+    description: 'pages.about.items.3.description'
   }
 ]
 

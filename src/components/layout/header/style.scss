@@ -57,12 +57,6 @@
   }
 }
 
-.flag-icon {
-  width: 40px;
-  height: 24px;
-  border-radius: 10px;
-}
-
 .profile-popup {
   position: relative;
   .profile-popup_menu {
@@ -100,13 +94,92 @@
   }
 }
 
-.language-icon {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  border: 1px solid transparent;
-  &:hover {
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
+.language-selector {
+  cursor: pointer;
+  .language-selector__trigger {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+    .language-selector__flag {
+      width: 40px;
+      height: 24px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.language-selector__menu {
+  border-radius: 6px;
+  box-shadow:
+    0 3px 6px -4px rgba(0, 0, 0, 0.12),
+    0 6px 16px 0 rgba(0, 0, 0, 0.08),
+    0 9px 28px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 4px;
+  overflow: hidden;
+  .language-selector__menu_list {
+    padding: 0;
+    .language-selector__option {
+      border-left: 2px solid transparent;
+      border-radius: 0;
+      color: var(--secondary);
+      &.Mui-selected {
+        border-color: #11a2f3;
+        color: var(--primary);
+        background: #e6f2ff;
+      }
+      .language-selector__item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .language-selector__flag {
+          width: 40px;
+          height: 24px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}
+
+.drawer-wrapper {
+  height: 100%;
+  .drawer-wrapper-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    .drawer-header {
+      display: flex;
+      flex: 0 1;
+      align-items: center;
+      padding: 12px 16px;
+      border-bottom: 1px solid #f0f0f0;
+      box-shadow:
+        0 0 1px 0 rgba(0, 0, 0, 0.04),
+        0 2px 6px 0 rgba(0, 0, 0, 0.04),
+        0 10px 20px 0 rgba(0, 0, 0, 0.04);
+    }
+    .drawer-body {
+      flex: 1 1;
+      min-width: 0;
+      min-height: 0;
+      overflow: auto;
+      background: var(--background);
+      .mobile-menu_list {
+        background: var(--white);
+        margin-bottom: 16px;
+        .mobile-menu_item {
+          padding-block: 12px;
+          &:not(:last-child) {
+            box-shadow: inset 0 -1.14133334px 0 0 #ededed;
+          }
+        }
+      }
+    }
   }
 }

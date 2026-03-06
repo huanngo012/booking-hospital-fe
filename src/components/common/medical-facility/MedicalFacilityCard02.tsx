@@ -5,13 +5,27 @@ import { useTranslation } from 'react-i18next'
 import { IoLocationOutline } from 'react-icons/io5'
 import { PATHS } from '~/utils/constant'
 import type { MedicalFacilityCardProps } from '~/components/module'
+import { useQueryClient } from '@tanstack/react-query'
+import { getMedicalFacilityBySlug } from '~/modules/medical-facility/medical-facility.api'
 
 const MedicalFacilityCard02 = ({ facility }: MedicalFacilityCardProps) => {
   const { t } = useTranslation()
+  const queryClient = useQueryClient()
+
   const { name, slug, logo, address, totalRatings } = facility
 
+  const handlePrefetch = (slug: string) => {
+    const data = queryClient.getQueryData(['medical-facilities', slug])
+    if (data) return
+
+    queryClient.prefetchQuery({
+      queryKey: ['medical-facilities', slug],
+      queryFn: () => getMedicalFacilityBySlug(slug)
+    })
+  }
+
   return (
-    <Box className='medical_facility_card_02'>
+    <Box className='medical_facility_card_02' onMouseEnter={() => handlePrefetch(slug)}>
       <Box className='card_wrapper'>
         <Box className='card_image'>
           <Box component={'img'} alt={name} src={logo ? logo : '/svgs/logo.svg'} />

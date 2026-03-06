@@ -1,4 +1,5 @@
-import { FaUserCircle } from 'react-icons/fa'
+import dayjs from 'dayjs'
+import { FaBirthdayCake, FaPhone, FaUserAlt, FaUserCircle, FaVenusMars } from 'react-icons/fa'
 import { IoMdCalendar } from 'react-icons/io'
 import { SiFacebook, SiTiktok, SiYoutube } from 'react-icons/si'
 import { LuFileUser } from 'react-icons/lu'
@@ -8,6 +9,7 @@ import TabChangePassword from '~/pages/user/components/TabChangePassword'
 import TabProfile from '~/pages/user/components/TabProfile'
 import TabRecords from '~/pages/user/components/TabRecords'
 import TabBookings from '~/pages/user/components/TabBookings'
+import type { Patient } from '~/types/patient '
 
 const {
   examinationEars,
@@ -32,7 +34,7 @@ export const PATHS = {
   LOGIN: '/login',
   USER: '/user',
   MEDICALFACILITIES: '/medical-facilities',
-  HOSPITAL_DETAIL: '/hospitals/:id',
+  MEDICALFACILITY_DETAIL: '/medical-facilities/:slug',
   SPECIALTIES: '/specialties',
   DOCTORS: '/doctors',
   NEWS: '/news',
@@ -220,42 +222,50 @@ export const SERVICES = [
   {
     id: 1,
     name: 'pages.home.intro_section.services.0',
-    icon: images.booking
+    icon: images.booking,
+    link: PATHS.MEDICALFACILITIES
   },
   {
     id: 2,
     name: 'pages.home.intro_section.services.1',
-    icon: images.examinationEars1
+    icon: images.examinationEars1,
+    link: PATHS.MEDICALFACILITIES
   },
   {
     id: 3,
     name: 'pages.home.intro_section.services.2',
-    icon: images.consult
+    icon: images.consult,
+    link: PATHS.MEDICALFACILITIES
   },
   {
     id: 4,
     name: 'pages.home.intro_section.services.3',
-    icon: images.schedule
+    icon: images.schedule,
+    link: PATHS.MEDICALFACILITIES
   },
   {
     id: 5,
     name: 'pages.home.intro_section.services.4',
-    icon: images.business_examination
+    icon: images.business_examination,
+    link: PATHS.MEDICALFACILITIES
   },
   {
     id: 6,
     name: 'pages.home.intro_section.services.5',
-    icon: images.insurance
+    icon: images.insurance,
+    link: PATHS.MEDICALFACILITIES
   },
   {
     id: 7,
     name: 'pages.home.intro_section.services.6',
-    icon: images.injection
+    icon: images.injection,
+    link: PATHS.MEDICALFACILITIES
   },
   {
     id: 8,
     name: 'pages.home.intro_section.services.7',
-    icon: images.pay
+    icon: images.pay,
+    link: PATHS.MEDICALFACILITIES
   }
 ]
 
@@ -559,4 +569,21 @@ export const PROMINENT_HOSPITALS = [
   'https://medpro.vn/_next/image?url=https%3A%2F%2Fprod-partner.s3-hcm-r1.longvan.net%2Fa1a543af-a13a-432f-8a17-e48f918f6abf-logo_phuioing_aoing_1.png&w=96&q=75',
   'https://medpro.vn/_next/image?url=https%3A%2F%2Fprod-partner.s3-hcm-r1.longvan.net%2F4b1fee11-9767-4673-a0eb-e72a3090a7cd-logo-anvien_1.png&w=96&q=75',
   'https://medpro.vn/_next/image?url=https%3A%2F%2Fprod-partner.s3-hcm-r1.longvan.net%2F783a646d-a76b-427b-9b77-e768d71ce962-logo-sbb.png&w=96&q=75'
+]
+
+export const PATIENT_FIELDS: {
+  key: keyof Patient
+  label: string
+  icon: React.ReactNode
+  format?: (value: string) => string
+}[] = [
+  { key: 'name', label: 'patient.name', icon: <FaUserAlt size={16} /> },
+  {
+    key: 'dob',
+    label: 'patient.dob',
+    icon: <FaBirthdayCake size={16} />,
+    format: (v: string) => dayjs(v).format('DD/MM/YYYY')
+  },
+  { key: 'phone', label: 'patient.phone', icon: <FaPhone size={16} /> },
+  { key: 'gender', label: 'patient.gender', icon: <FaVenusMars size={16} /> }
 ]

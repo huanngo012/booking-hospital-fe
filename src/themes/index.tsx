@@ -410,27 +410,6 @@ export const theme = createTheme({
         }
       }
     },
-    MuiListItem: {
-      styleOverrides: {
-        root: {
-          borderRadius: '6px',
-          '&:hover': {
-            backgroundColor: 'var(--blue-50)'
-          },
-          '&.Mui-selected': {
-            backgroundColor: 'var(--blue-50)',
-            '&.Mui-focusVisible': {
-              color: 'var(--primary)',
-              backgroundColor: 'var(--blue-50)'
-            },
-
-            '&:hover': {
-              backgroundColor: 'var(--blue-50)'
-            }
-          }
-        }
-      }
-    },
     MuiMenuItem: {
       styleOverrides: {
         root: {

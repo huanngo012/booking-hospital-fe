@@ -11,8 +11,10 @@
     "cancel": "Huỷ",
     "view_more": "Xem tiếp",
     "view_detail": "Xem chi  tiết",
+    "book_now": "Đặt khám ngay",
     "map": "Bản đồ",
-    "scroll_to_top": "Cuộn lên đầu trang"
+    "scroll_to_top": "Cuộn lên đầu trang",
+    "images": "Hình ảnh"
   },
   "header": {
     "hi": "Xin chào",
@@ -104,6 +106,16 @@
     "change_password": "Đổi mật khẩu",
     "records": "Hồ sơ bệnh nhân",
     "bookings": "Lịch khám"
+  },
+  "patient": {
+    "name": "Họ và tên",
+    "dob": "Ngày sinh",
+    "phone": "Số điện thoại",
+    "gender": "Giới tính",
+    "ethnicity": "Dân tộc",
+    "address": "Địa chỉ",
+    "update": "Sửa hồ sơ",
+    "delete": "Xóa hồ sơ"
   },
   "pages": {
     "home": {
@@ -248,7 +260,8 @@
         "description": "Vui lòng nhập mật khẩu mới cho tài khoản của bạn"
       },
       "records": {
-        "title_seo": "Hồ sơ bệnh nhân | Medpro - Đặt lịch khám bệnh"
+        "title_seo": "Hồ sơ bệnh nhân | Medpro - Đặt lịch khám bệnh",
+        "title": "Danh sách hồ sơ bệnh nhân"
       },
       "bookings": {
         "title_seo": "Lịch khám | Medpro - Đặt lịch khám bệnh"

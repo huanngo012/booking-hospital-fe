@@ -11,8 +11,10 @@
     "cancel": "Cancel",
     "view_more": "See more",
     "view_detail": "See details",
+    "book_now": "Book your appointment now",
     "map": "Map",
-    "scroll_to_top": "Scroll to top"
+    "scroll_to_top": "Scroll to top",
+    "images": "Images"
   },
   "header": {
     "hi": "Hello",
@@ -70,6 +72,16 @@
     "records": "Patient Records",
     "bookings": "Appointments"
   },
+  "patient": {
+    "name": "Full name",
+    "dob": "Date of birth",
+    "phone": "Phone number",
+    "gender": "Gender",
+    "ethnicity": "Ethnicity",
+    "address": "Address",
+    "update": "Edit profile",
+    "delete": "Delete profile"
+  },
   "pages": {
     "user": {
       "profile": {
@@ -83,7 +95,8 @@
         "description": "Please enter a new password for your account."
       },
       "records": {
-        "title_seo": "Patient Records | Medpro - Medical Appointment Booking"
+        "title_seo": "Patient Records | Medpro - Medical Appointment Booking",
+        "title": "List of patient records"
       },
       "bookings": {
         "title_seo": "Appointments | Medpro - Medical Appointment Booking"

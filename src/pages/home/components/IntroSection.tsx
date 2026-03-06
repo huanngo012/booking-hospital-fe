@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import { SERVICES } from '~/utils/constant'
 import { images } from '~/assets'
+import { Link } from 'react-router-dom'
 
 const { homepage_banner } = images
 
@@ -65,12 +66,12 @@ const IntroSection = () => {
               marginBlock: '-20px'
             }}
           >
-            {SERVICES.map((el, index) => (
-              <SwiperSlide key={index}>
-                <Box className='intro_card'>
-                  <Box component='img' src={el.icon} alt={el.name} width={'50px'} height={'50px'} />
+            {SERVICES.map((item) => (
+              <SwiperSlide key={item.id}>
+                <Box component={Link} to={item.link} className='intro_card'>
+                  <Box component='img' src={item.icon} alt={item.name} width={'50px'} height={'50px'} />
                   <Typography variant={isTablet ? 'body2' : 'body3'} color='var(--secondary)'>
-                    {t(el.name)}
+                    {t(item.name)}
                   </Typography>
                 </Box>
               </SwiperSlide>

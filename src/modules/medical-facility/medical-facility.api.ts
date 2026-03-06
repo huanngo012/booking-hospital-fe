@@ -10,3 +10,9 @@ export const getMedicalFacilities = (
     method: 'get',
     params
   })
+
+export const getMedicalFacilityBySlug = (slug: string): Promise<MedicalFacility> =>
+  axios({
+    url: `/medical-facility/${slug}`,
+    method: 'get'
+  })

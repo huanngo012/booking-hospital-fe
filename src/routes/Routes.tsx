@@ -1,4 +1,13 @@
-import { AboutPage, HomePage, LoginPage, MedicalFacilitiesPage, NewsPage, NotFoundPage, UserPage } from '~/pages'
+import {
+  AboutPage,
+  HomePage,
+  LoginPage,
+  MedicalFacilitiesPage,
+  MedicalFacilityDetail,
+  NewsPage,
+  NotFoundPage,
+  UserPage
+} from '~/pages'
 import type { AppRoute } from '~/types/route.type'
 import { PATHS } from '~/utils/constant'
 
@@ -21,6 +30,11 @@ const publicRoutes: AppRoute[] = [
   {
     path: PATHS.MEDICALFACILITIES,
     component: MedicalFacilitiesPage,
+    layout: true
+  },
+  {
+    path: PATHS.MEDICALFACILITY_DETAIL,
+    component: MedicalFacilityDetail,
     layout: true
   },
   {

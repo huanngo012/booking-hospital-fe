@@ -1,0 +1,53 @@
+.medical_facility_detail_page {
+  padding-bottom: 30px;
+  .medical-facility-detail-header {
+    .medical-facility-detail-header_card {
+      padding: 30px;
+      background-color: var(--white);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+      height: 100%;
+      .medical-facility-detail-header_logo {
+        width: 100%;
+        img {
+          max-width: 150px;
+          width: 100%;
+          aspect-ratio: 1;
+          object-fit: contain;
+          margin-inline: auto;
+        }
+      }
+      .medical-facility-detail-header__divider {
+        width: 100%;
+        height: 1px;
+        background-color: var(--grey-300);
+      }
+    }
+    .medical-facility-detail-header_gallery {
+      height: 100%;
+      img {
+        border-radius: 16px;
+        aspect-ratio: 19 / 6;
+      }
+      .gallery-overlay + img {
+        opacity: 0.6;
+      }
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline;
+        text-transform: lowercase;
+        z-index: 99;
+      }
+    }
+  }
+}

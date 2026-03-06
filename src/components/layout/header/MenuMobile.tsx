@@ -94,8 +94,6 @@ const MenuMobile = () => {
                   </>
                 ) : (
                   <Button
-                    component={Link}
-                    to={PATHS.LOGIN}
                     variant='contained'
                     color='primary'
                     fullWidth
@@ -110,7 +108,7 @@ const MenuMobile = () => {
                 <List className='mobile-menu_list'>
                   {TABS_USER.map((item) => (
                     <ListItem key={item.id} disablePadding className='mobile-menu_item'>
-                      <ListItemButton component={Link} to={item.path}>
+                      <ListItemButton component={Link} to={`${PATHS.USER}?key=${item.path}`}>
                         <ListItemText
                           primary={
                             <Stack direction={'row'} gap={1.5}>

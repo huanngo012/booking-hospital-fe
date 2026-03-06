@@ -1,5 +1,5 @@
 import axios from '~/axios'
-import type { Login, LoginResponse, Register, User } from '~/types/auth'
+import type { Login, LoginResponse, Register, UpdateUser, User } from '~/types/auth'
 
 export const register = (data: Register) =>
   axios({
@@ -20,8 +20,21 @@ export const logout = () =>
     method: 'post'
   })
 
+export const refreshToken = (): Promise<Omit<LoginResponse, 'user'>> =>
+  axios({
+    url: '/auth/refreshtoken',
+    method: 'post'
+  })
+
 export const getCurrentUser = (): Promise<User> =>
   axios({
     url: '/auth/current',
     method: 'get'
+  })
+
+export const updateCurrentUser = (data: UpdateUser): Promise<User> =>
+  axios({
+    url: '/auth/current',
+    method: 'put',
+    data
   })

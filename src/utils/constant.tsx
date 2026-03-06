@@ -4,6 +4,10 @@ import { SiFacebook, SiTiktok, SiYoutube } from 'react-icons/si'
 import { LuFileUser } from 'react-icons/lu'
 import { images } from '~/assets'
 import { PiPasswordBold } from 'react-icons/pi'
+import TabChangePassword from '~/pages/user/components/TabChangePassword'
+import TabProfile from '~/pages/user/components/TabProfile'
+import TabRecords from '~/pages/user/components/TabRecords'
+import TabBookings from '~/pages/user/components/TabBookings'
 
 const {
   examinationEars,
@@ -118,32 +122,32 @@ export const TABS_USER = [
     icon: <FaUserCircle size={18} />,
     icon_mobile: profile_icon,
     title: 'user.profile',
-    // component: <TabProfile />,
-    path: `profile`
+    path: `profile`,
+    component: TabProfile
   },
   {
     id: 2,
     icon: <PiPasswordBold size={18} />,
     icon_mobile: password_icon,
     title: 'user.change_password',
-    // component: <TabPassword />,
-    path: `password`
+    path: `change_password`,
+    component: TabChangePassword
   },
   {
     id: 3,
     icon: <LuFileUser size={18} />,
-    title: 'user.patient_records',
+    title: 'user.records',
     icon_mobile: record_icon,
-    // component: <TabRecord />,
-    path: `record`
+    path: `records`,
+    component: TabRecords
   },
   {
     id: 4,
     icon: <IoMdCalendar size={18} />,
-    title: 'user.appointments',
+    title: 'user.bookings',
     icon_mobile: schedule_icon,
-    // component: <TabBooking />,
-    path: `booking`
+    path: `bookings`,
+    component: TabBookings
   }
 ]
 

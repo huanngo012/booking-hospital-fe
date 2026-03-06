@@ -40,7 +40,7 @@ const ProfilePopup = () => {
             </Stack>
           </Box>
           {TABS_USER.map((item, index) => (
-            <Link key={index} className='profile-popup_item' to={`${PATHS.USER}?state=${item.path}`}>
+            <Link key={index} className='profile-popup_item' to={`${PATHS.USER}?key=${item.path}`}>
               {item.icon}
               <Typography variant='label2'>{t(item.title)}</Typography>
             </Link>

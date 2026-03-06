@@ -1,9 +1,16 @@
-import { AboutPage, HomePage, LoginPage, MedicalFacilitiesPage, NewsPage, NotFoundPage } from '~/pages'
+import { AboutPage, HomePage, LoginPage, MedicalFacilitiesPage, NewsPage, NotFoundPage, UserPage } from '~/pages'
+import type { AppRoute } from '~/types/route.type'
 import { PATHS } from '~/utils/constant'
 
-const privateRoutes = []
+const privateRoutes: AppRoute[] = [
+  {
+    path: PATHS.USER,
+    component: UserPage,
+    layout: true
+  }
+]
 
-const publicRoutes = [
+const publicRoutes: AppRoute[] = [
   { path: PATHS.LOGIN, component: LoginPage, layout: false },
   {
     path: PATHS.HOME,

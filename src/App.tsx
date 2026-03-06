@@ -1,35 +1,17 @@
-import { Fragment, Suspense } from 'react'
+import { Suspense } from 'react'
 import './App.scss'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Layout, Loading } from '~/components'
-import { publicRoutes } from './routes/Routes'
+import { BrowserRouter, Routes } from 'react-router-dom'
+import { Loading } from '~/components'
+import { privateRoutes, publicRoutes } from './routes/Routes'
+import renderRoutes from './routes/RenderRoutes'
 
 function App() {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
         <Routes>
-          {publicRoutes.map((route, index) => {
-            const Page = route.component
-            let LayoutTag
-
-            if (route.layout) {
-              LayoutTag = Layout
-            } else {
-              LayoutTag = Fragment
-            }
-            return (
-              <Route
-                key={index}
-                path={route.path}
-                element={
-                  <LayoutTag>
-                    <Page />
-                  </LayoutTag>
-                }
-              />
-            )
-          })}
+          {renderRoutes(publicRoutes)}
+          {renderRoutes(privateRoutes, true)}
         </Routes>
       </Suspense>
     </BrowserRouter>

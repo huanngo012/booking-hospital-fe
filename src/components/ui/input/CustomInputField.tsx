@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5'
 
 const CustomInputField = (props: CustomInputFieldProps) => {
-  const { label, placeholder, type = 'text', helperText, error, register } = props
+  const { label, placeholder, type = 'text', helperText, error, register, defaultValue, required, disabled } = props
   const [isPasswordShowed, setIsPasswordShowed] = useState(false)
   const fieldName = register?.name ?? label
 
@@ -13,14 +13,18 @@ const CustomInputField = (props: CustomInputFieldProps) => {
     <Box className='form-field'>
       <Box component='label' className='form-label' htmlFor={fieldName}>
         <Typography variant='label2'>{label}</Typography>
-        <Typography variant='label2' color='var(--alert)'>
-          *
-        </Typography>
+        {required && (
+          <Typography variant='label2' color='var(--alert)'>
+            *
+          </Typography>
+        )}
       </Box>
       <TextField
+        defaultValue={defaultValue}
         id={fieldName}
         type={type === 'password' ? (isPasswordShowed ? 'text' : 'password') : 'text'}
         placeholder={placeholder}
+        disabled={disabled}
         error={error}
         helperText={helperText}
         InputProps={{

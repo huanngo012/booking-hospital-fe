@@ -43,6 +43,7 @@ const RegisterForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm<RegisterValues>({
     resolver: zodResolver(registerSchema),
@@ -55,6 +56,7 @@ const RegisterForm = () => {
     registerUser(data, {
       onSuccess: () => {
         showToast(t('pages.login.signup_success'))
+        reset()
       },
       onError: (error) => {
         showToast(error.message, TOAST_TYPE.ERROR)
@@ -75,6 +77,7 @@ const RegisterForm = () => {
               error={Boolean(errors.name)}
               helperText={errors.name?.message}
               register={register('name')}
+              required
             />
             <CustomInputField
               label={t('auth.email')}
@@ -82,6 +85,7 @@ const RegisterForm = () => {
               error={Boolean(errors.email)}
               helperText={errors.email?.message}
               register={register('email')}
+              required
             />
             <CustomInputField
               type='password'
@@ -90,6 +94,7 @@ const RegisterForm = () => {
               error={Boolean(errors.password)}
               helperText={errors.password?.message}
               register={register('password')}
+              required
             />
             <CustomInputField
               type='password'
@@ -98,6 +103,7 @@ const RegisterForm = () => {
               error={Boolean(errors.confirmPassword)}
               helperText={errors.confirmPassword?.message}
               register={register('confirmPassword')}
+              required
             />
           </Box>
           <Button variant='contained' type='submit' sx={{ width: '100%', borderRadius: '6px' }}>

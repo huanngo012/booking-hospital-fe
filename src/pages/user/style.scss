@@ -1,0 +1,96 @@
+.user_page {
+  background: var(--white);
+  padding-bottom: 30px;
+  .user_tabs {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    margin-right: 24px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 2px;
+      background-color: var(--divider-color);
+    }
+    .user_tab {
+      display: flex;
+      align-items: center;
+      position: relative;
+      gap: 20px;
+      width: 100%;
+      padding: 8px 24px 8px 10px;
+      border-radius: 8px;
+      border-left: 3px solid transparent;
+      color: var(--text-primary);
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 2px;
+        z-index: 1;
+        background-color: var(--primary);
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.3s ease;
+      }
+      &.active {
+        border-color: var(--primary);
+        color: var(--primary);
+        &:after {
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+}
+
+.password-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .password-tab_header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .password-tab_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+    .password-tab_fields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+  }
+}
+.profile-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  .profile-tab_header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .profile-tab_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 32px;
+    .profile-tab_fields {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+  }
+}

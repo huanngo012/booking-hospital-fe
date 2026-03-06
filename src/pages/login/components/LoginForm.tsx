@@ -60,6 +60,7 @@ const LoginForm = () => {
               error={Boolean(errors.email)}
               helperText={errors.email?.message}
               register={register('email')}
+              required
             />
             <CustomInputField
               type='password'
@@ -68,6 +69,7 @@ const LoginForm = () => {
               error={Boolean(errors.password)}
               helperText={errors.password?.message}
               register={register('password')}
+              required
             />
             {/* <Box className='login_options'>
               <Link to={`${PATHS.LOGIN}?state=forgetPassword`}>

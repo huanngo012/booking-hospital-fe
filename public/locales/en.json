@@ -6,6 +6,9 @@
     "website": "Website",
     "email": "Email",
     "all": "All",
+    "change": "Change",
+    "save": "Save",
+    "cancel": "Cancel",
     "view_more": "See more",
     "view_detail": "See details",
     "map": "Map",
@@ -17,41 +20,6 @@
     "download_app_description": "A fast appointment booking app at more than 300 leading hospitals in Vietnam",
     "consultation_booking": "Consultation / Appointment",
     "hotline": "1900 2115"
-  },
-  "footer": {
-    "address": "97 Tran Quang Dieu Street, Ward 14, District 3, Ho Chi Minh City",
-    "link_web": "https://pkh.vn",
-    "email": "cskh@medpro.vn",
-    "phone": "(028) 710 78098",
-    "menu": [
-      {
-        "title": "Medical Services",
-        "sub_menu": [
-          "Book appointment at medical facility",
-          "Book appointment with doctor",
-          "Online medical consultation",
-          "Laboratory test booking",
-          "Home healthcare services",
-          "Hospital fee payment"
-        ]
-      },
-      {
-        "title": "Medical Facilities",
-        "sub_menu": ["Public hospitals", "Private hospitals", "Clinics", "Doctor's offices", "Laboratories"]
-      },
-      {
-        "title": "Guides",
-        "sub_menu": ["Install the application", "Book an appointment", "Refund process", "Frequently asked questions"]
-      },
-      {
-        "title": "News",
-        "sub_menu": ["Service news", "Medical news", "General medical knowledge"]
-      },
-      {
-        "title": "About Us",
-        "sub_menu": ["Introduction", "Terms of service", "Privacy policy", "Usage regulations"]
-      }
-    ]
   },
   "languages": {
     "vi": "Vietnamese",
@@ -69,156 +37,57 @@
     "login": "Login",
     "signup": "Sign up",
     "logout": "Logout",
+    "change_password": "Change Password",
     "email": "Email",
     "email_invalid_format": "Invalid email format",
     "email_placeholder": "Enter your email",
     "password": "Password",
-    "password_required": "Please enter password",
-    "password_length_required": "Password must be at least 8 characters",
+    "password_required": "Please enter your password",
+    "password_length_required": "Password must be at least 6 characters",
     "password_placeholder": "Enter your password",
     "password_not_match": "Passwords do not match",
+    "new_password_not_match": "New passwords do not match",
     "confirm_password": "Confirm password",
     "confirm_password_placeholder": "Re-enter your password",
+    "old_password": "Current password",
+    "old_password_placeholder": "Enter your current password",
+    "new_password": "New password",
+    "new_password_placeholder": "Enter your new password",
+    "confirm_new_password": "Confirm new password",
+    "confirm_new_password_placeholder": "Re-enter your new password",
     "name": "Full name",
     "name_placeholder": "Enter your full name",
-    "name_required": "Please enter your name"
+    "name_required": "Please enter your full name",
+    "address": "Address",
+    "address_placeholder": "Enter your address",
+    "address_required": "Please enter your address",
+    "change_password_success": "Password changed successfully",
+    "update_profile_success": "Profile updated successfully"
   },
   "user": {
     "profile": "Profile",
-    "change_password": "Change password",
-    "patient_records": "Patient records",
-    "appointments": "Appointments"
+    "change_password": "Change Password",
+    "records": "Patient Records",
+    "bookings": "Appointments"
   },
   "pages": {
-    "home": {
-      "title_seo": "Medpro - Fast appointment booking at 100+ hospitals and 1000+ clinics",
-      "description_seo": "A digital healthcare platform trusted by 4 million users, 100+ hospitals and 1000+ clinics. Comprehensive appointment booking via hotline 19002115, web, app and social networks.",
-      "title": "Home",
-      "intro_section": {
-        "title": "Connecting people with healthcare facilities and services",
-        "sub_title": "Technology platform",
-        "description": "Quick booking - Online queue number - Remote health consultation",
-        "services": [
-          "Book appointment at medical facility",
-          "Book appointment with doctor",
-          "Online medical consultation",
-          "Laboratory test booking",
-          "Corporate health checkups",
-          "Health check packages",
-          "Vaccination booking",
-          "Hospital fee payment"
-        ]
+    "user": {
+      "profile": {
+        "title_seo": "Personal Information | Medpro - Online Medical Appointment Booking",
+        "title": "Personal Information",
+        "description": "Manage and update your personal information to keep your profile accurate."
       },
-      "blog_section": {
-        "title": "Quick appointment booking",
-        "description": "Provides online healthcare appointment booking services at leading hospitals in Vietnam such as University Medical Center HCMC, Cho Ray Hospital, and Children's Hospital, allowing users to choose services and doctors based on their needs.",
-        "blogs": [
-          {
-            "title": "Because your time is valuable",
-            "description": "Patients can proactively choose appointment information (date and time)"
-          },
-          {
-            "title": "Caring for every family's health",
-            "description": "Patients will receive an online medical ticket directly on the application"
-          },
-          {
-            "title": "Bringing healthcare closer",
-            "description": "Users can select and make payments directly on the platform"
-          }
-        ]
+      "change_password": {
+        "title_seo": "Change Password | Medpro - Online Medical Appointment Booking",
+        "title": "Change Password",
+        "description": "Please enter a new password for your account."
       },
-      "medical_facilities_section": {
-        "title": "Featured hospitals",
-        "description": "Book appointments with more than {{count}} medical facilities nationwide"
+      "records": {
+        "title_seo": "Patient Records | Medpro - Medical Appointment Booking"
       },
-      "statistic_section": {
-        "title": "Statistics",
-        "items": ["Visits", "Hospitals", "Medical facilities", "Doctors", "Monthly visits", "Daily visits"]
-      },
-      "hero_section": {
-        "title": "Quick booking - Get queue number online",
-        "description": "Patients can proactively choose appointment information (date, time, and medical facility). Patients will receive their queue number directly on the platform.",
-        "button": "Book now"
-      },
-      "download_section": {
-        "title": "Download the appointment booking app",
-        "items": [
-          {
-            "title": "Get queue numbers online quickly",
-            "description": "Register for medical checkups / follow-ups by date.<br />Register by medical specialty.<br />Follow-up appointments"
-          },
-          {
-            "title": "Remote medical consultation",
-            "description": "Online healthcare consultation with video calls from doctors"
-          },
-          {
-            "title": "Check laboratory results",
-            "description": "Easily check test results online"
-          },
-          {
-            "title": "Hospital fee payment",
-            "description": "Multiple online payment methods. Supports popular e-wallets"
-          },
-          {
-            "title": "Home healthcare services",
-            "description": "Professional home healthcare services (nursing, testing) to meet common home health needs"
-          },
-          {
-            "title": "Partner healthcare network",
-            "description": "Network connecting hospitals, clinics, and medical facilities nationwide"
-          }
-        ]
+      "bookings": {
+        "title_seo": "Appointments | Medpro - Medical Appointment Booking"
       }
-    },
-    "medical_facilities": {
-      "title_seo": "Medical Facilities | Medpro - Medical Appointment Booking",
-      "description_seo": "Search and book appointments at more than 100 hospitals and 1000+ reputable clinics nationwide. Medpro helps you book quickly and conveniently.",
-      "title": "BOOK APPOINTMENT AT FACILITY",
-      "description": "Quick booking, save time, safe and convenient",
-      "not_found": "Medical facility not found"
-    },
-    "news": {
-      "title_seo": "Latest medical news - Updated continuously from Medpro",
-      "description_seo": "Follow the latest medical news and useful information from Medpro. Continuous updates on services, medical trends, and healthcare knowledge.",
-      "title": "News",
-      "button": "See more"
-    },
-    "about": {
-      "title_seo": "About Medpro - The most widely used healthcare application",
-      "description_seo": "Learn about Medpro, a pioneering application connecting users with healthcare services. Simplifying access to medical care and health consultations.",
-      "title": "About",
-      "description": "This application helps patients and their relatives register for hospital appointments online anytime, anywhere without needing to visit the hospital directly.",
-      "items": [
-        {
-          "title": "Register and choose",
-          "description": "appointment date and time"
-        },
-        {
-          "title": "Pay medical fees",
-          "description": "without cash"
-        },
-        {
-          "title": "Manage appointments",
-          "description": "for checkups and follow-ups"
-        },
-        {
-          "title": "Manage patient",
-          "description": "information and data"
-        }
-      ],
-      "prominent": "Featured hospitals"
-    },
-    "login": {
-      "title_seo": "Login | Medpro - Online medical appointment booking",
-      "description_seo": "Log in to Medpro to quickly book appointments at 100+ hospitals and reputable clinics. Easily manage appointments and medical records.",
-      "remember_me": "Remember me",
-      "forgot_password": "Forgot password?",
-      "no_account": "Don't have an account?",
-      "have_account": "Already have an account?",
-      "login_success": "Login successful",
-      "login_failed": "Login failed",
-      "signup_success": "Registration successful",
-      "signup_failed": "Registration failed"
     },
     "not_found": {
       "title_seo": "Page not found | Medpro - Online medical appointment platform",

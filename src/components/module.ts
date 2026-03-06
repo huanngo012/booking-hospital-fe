@@ -18,6 +18,9 @@ export interface CustomInputFieldProps {
   label: string
   type?: 'text' | 'password'
   placeholder?: string
+  defaultValue?: string
+  required?: boolean
+  disabled?: boolean
   error?: boolean
   helperText?: string
   register?: UseFormRegisterReturn
@@ -47,7 +50,7 @@ export interface MedicalFacilityCardProps {
 
 export interface SEOProps {
   title: string
-  description: string
+  description?: string
 }
 
 export const TOAST_TYPE = {

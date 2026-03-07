@@ -1,4 +1,4 @@
-import { Box, Container } from '@mui/material'
+import { Box, Container, Stack } from '@mui/material'
 import './style.scss'
 import { BreadscrumbCustom, Loading, SEO } from '~/components'
 import { useTranslation } from 'react-i18next'
@@ -7,6 +7,7 @@ import { useMedicalFacility } from '~/modules/medical-facility/medical-facility.
 import NotFoundPage from '../not-found'
 import { PATHS } from '~/utils/constant'
 import MedicalFacilityDetailHeader from './components/MedicalFacilityDetailHeader'
+import MedicalFacilityDetailBody from './components/MedicalFacilityDetailBody'
 
 const MedicalFacilityDetail = () => {
   const { t } = useTranslation()
@@ -27,7 +28,10 @@ const MedicalFacilityDetail = () => {
         <BreadscrumbCustom
           data={[{ title: t('navigation.medical_facilities'), link: PATHS.MEDICALFACILITIES }, { title: data.name }]}
         />
-        <MedicalFacilityDetailHeader medicalFacility={data} />
+        <Stack gap={2.5}>
+          <MedicalFacilityDetailHeader medicalFacility={data} />
+          <MedicalFacilityDetailBody medicalFacility={data} />
+        </Stack>
       </Container>
     </Box>
   )

@@ -1,3 +1,4 @@
+import type { TextFieldProps } from '@mui/material'
 import type { UseFormRegisterReturn } from 'react-hook-form'
 import type { MedicalFacility } from '~/types/medical-facility'
 
@@ -15,7 +16,7 @@ export interface BreadcrumbCustomProps {
 }
 
 export interface CustomInputFieldProps {
-  label: string
+  label?: string
   type?: 'text' | 'password'
   placeholder?: string
   defaultValue?: string
@@ -24,6 +25,12 @@ export interface CustomInputFieldProps {
   error?: boolean
   helperText?: string
   register?: UseFormRegisterReturn
+  value?: string
+  onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
+  onClick?: React.MouseEventHandler<HTMLDivElement>
+  InputProps?: TextFieldProps['InputProps']
+  sx?: TextFieldProps['sx']
+  autoComplete?: React.InputHTMLAttributes<HTMLInputElement>['autoComplete']
 }
 
 export interface EmptyStateProps {

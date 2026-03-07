@@ -42,6 +42,11 @@ export const PATHS = {
   NOT_FOUND: '*'
 }
 
+export const SEARCH_PLACEHOLDER = [
+  'pages.home.intro_section.search_placeholder.0',
+  'pages.home.intro_section.search_placeholder.1'
+]
+
 export const DAYS = ['Chủ nhật', 'Thứ 2', 'Thứ 3', 'Thứ 4', 'Thứ 5', 'Thứ 6', 'Thứ 7']
 
 export const TIME_SLOT_CODE = {

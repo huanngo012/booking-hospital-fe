@@ -6,22 +6,61 @@
     "website": "Website",
     "email": "Email",
     "all": "All",
+    "description": "Description",
     "change": "Change",
     "save": "Save",
     "cancel": "Cancel",
-    "view_more": "See more",
-    "view_detail": "See details",
-    "book_now": "Book your appointment now",
+    "view_more": "View more",
+    "view_detail": "View detail",
+    "view_all": "View all",
+    "book_now": "Book now",
     "map": "Map",
     "scroll_to_top": "Scroll to top",
-    "images": "Images"
+    "images": "Images",
+    "medical_facility": "Medical facility",
+    "doctor": "Doctor"
   },
   "header": {
     "hi": "Hello",
     "download_app": "Download App",
-    "download_app_description": "A fast appointment booking app at more than 300 leading hospitals in Vietnam",
-    "consultation_booking": "Consultation / Appointment",
+    "download_app_description": "Fast medical booking app for more than 300 leading hospitals in Vietnam",
+    "consultation_booking": "Consultation / Booking",
     "hotline": "1900 2115"
+  },
+  "footer": {
+    "address": "97 Tran Quang Dieu, Ward 14, District 3, Ho Chi Minh City",
+    "link_web": "https://pkh.vn",
+    "email": "cskh@medpro.vn",
+    "phone": "(028) 710 78098",
+    "menu": [
+      {
+        "title": "Medical Services",
+        "sub_menu": [
+          "Book at medical facility",
+          "Book by doctor",
+          "Online medical consultation",
+          "Book laboratory tests",
+          "Home healthcare services",
+          "Hospital fee payment"
+        ]
+      },
+      {
+        "title": "Medical Facilities",
+        "sub_menu": ["Public hospitals", "Private hospitals", "Clinics", "Private practices", "Laboratories"]
+      },
+      {
+        "title": "Guides",
+        "sub_menu": ["Install application", "Book an appointment", "Refund process", "Frequently asked questions"]
+      },
+      {
+        "title": "News",
+        "sub_menu": ["Service news", "Medical news", "Medical knowledge"]
+      },
+      {
+        "title": "About us",
+        "sub_menu": ["Introduction", "Terms of service", "Privacy policy", "Usage regulations"]
+      }
+    ]
   },
   "languages": {
     "vi": "Vietnamese",
@@ -29,17 +68,17 @@
   },
   "navigation": {
     "home": "Home",
-    "medical_facilities": "Medical Facilities",
+    "medical_facilities": "Medical facilities",
     "doctors": "Doctors",
     "news": "News",
-    "about_us": "About Us"
+    "about_us": "About us"
   },
   "auth": {
     "account": "Account",
     "login": "Login",
     "signup": "Sign up",
     "logout": "Logout",
-    "change_password": "Change Password",
+    "change_password": "Change password",
     "email": "Email",
     "email_invalid_format": "Invalid email format",
     "email_placeholder": "Enter your email",
@@ -51,15 +90,15 @@
     "new_password_not_match": "New passwords do not match",
     "confirm_password": "Confirm password",
     "confirm_password_placeholder": "Re-enter your password",
-    "old_password": "Current password",
-    "old_password_placeholder": "Enter your current password",
+    "old_password": "Old password",
+    "old_password_placeholder": "Enter old password",
     "new_password": "New password",
-    "new_password_placeholder": "Enter your new password",
+    "new_password_placeholder": "Enter new password",
     "confirm_new_password": "Confirm new password",
     "confirm_new_password_placeholder": "Re-enter your new password",
     "name": "Full name",
     "name_placeholder": "Enter your full name",
-    "name_required": "Please enter your full name",
+    "name_required": "Please enter your name",
     "address": "Address",
     "address_placeholder": "Enter your address",
     "address_required": "Please enter your address",
@@ -68,8 +107,8 @@
   },
   "user": {
     "profile": "Profile",
-    "change_password": "Change Password",
-    "records": "Patient Records",
+    "change_password": "Change password",
+    "records": "Patient records",
     "bookings": "Appointments"
   },
   "patient": {
@@ -79,32 +118,163 @@
     "gender": "Gender",
     "ethnicity": "Ethnicity",
     "address": "Address",
-    "update": "Edit profile",
-    "delete": "Delete profile"
+    "update": "Edit record",
+    "delete": "Delete record"
   },
   "pages": {
+    "home": {
+      "title_seo": "Medpro - Quick booking at 100+ hospitals and 1000+ clinics",
+      "description_seo": "A digital healthcare platform trusted by 4 million users, 100+ hospitals, and 1000+ clinics. Comprehensive booking solutions via hotline 19002115, web, app, and social networks.",
+      "title": "Home",
+      "intro_section": {
+        "title": "Connecting people with Healthcare Services",
+        "sub_title": "Technology platform",
+        "description": "Fast booking - Online queue number - Remote health consultation",
+        "search_placeholder": ["Search for medical facilities", "Search for doctors"],
+        "services": [
+          "Book at medical facility",
+          "Book by doctor",
+          "Online medical consultation",
+          "Book laboratory tests",
+          "Corporate health checkups",
+          "Health checkup packages",
+          "Vaccination booking",
+          "Hospital fee payment"
+        ]
+      },
+      "blog_section": {
+        "title": "Quick medical booking",
+        "description": "Providing online healthcare appointment booking services at leading hospitals in Vietnam such as University Medical Center HCMC, Cho Ray Hospital, and Children's Hospital, allowing users to choose services and doctors according to their needs.",
+        "blogs": [
+          {
+            "title": "Because your time is priceless",
+            "description": "Patients can proactively select booking information (date and time)"
+          },
+          {
+            "title": "Caring for every family's health",
+            "description": "Patients will receive online appointment tickets directly on the application"
+          },
+          {
+            "title": "Bringing healthcare closer to everyone",
+            "description": "Users can choose and make payments directly on the application"
+          }
+        ]
+      },
+      "medical_facilities_section": {
+        "title": "Featured hospitals",
+        "description": "Book appointments with more than {{count}} medical facilities nationwide"
+      },
+      "statistic_section": {
+        "title": "Statistics",
+        "items": ["Visits", "Hospitals", "Medical facilities", "Doctors", "Monthly visits", "Daily visits"]
+      },
+      "hero_section": {
+        "title": "Quick booking - Get queue number online",
+        "description": "Patients can proactively select booking information (date, time, and medical facility). Patients will receive an online queue number directly on the system.",
+        "button": "Book now"
+      },
+      "download_section": {
+        "title": "Download the Quick Booking App",
+        "items": [
+          {
+            "title": "Get queue numbers quickly online",
+            "description": "Register for medical visits / follow-up by date.<br />Register by specialty.<br />Follow-up according to appointment schedule"
+          },
+          {
+            "title": "Remote medical consultation",
+            "description": "Online healthcare consultation and video calls with doctors"
+          },
+          {
+            "title": "Check laboratory results",
+            "description": "Easily access laboratory test results online"
+          },
+          {
+            "title": "Hospital fee payment",
+            "description": "Diverse online payment systems. Supports popular e-wallets"
+          },
+          {
+            "title": "Home healthcare services",
+            "description": "Professional home healthcare services (nursing, testing) to meet common healthcare needs at home"
+          },
+          {
+            "title": "Partner medical network",
+            "description": "Network connecting hospitals, clinics, and medical facilities nationwide"
+          }
+        ]
+      }
+    },
+    "medical_facilities": {
+      "title_seo": "Medical facilities | Medpro - Book medical appointments",
+      "description_seo": "Search and book appointments at more than 100 hospitals and 1000+ reputable clinics nationwide. Medpro helps you book quickly, conveniently, and save time.",
+      "title": "BOOK AT MEDICAL FACILITIES",
+      "description": "Fast booking, time-saving, safe and convenient",
+      "not_found": "Medical facility not found"
+    },
+    "news": {
+      "title_seo": "Latest medical news - Updated continuously from Medpro",
+      "description_seo": "Follow the latest healthcare news and useful information from Medpro. Continuous updates about services, medical trends, and healthcare knowledge.",
+      "title": "News",
+      "button": "View more"
+    },
+    "about": {
+      "title_seo": "About Medpro - The most widely used healthcare application",
+      "description_seo": "Learn about Medpro, a pioneering application connecting users with healthcare services. Simplifying access to healthcare, treatment, and medical consultation.",
+      "title": "About us",
+      "description": "This application allows patients and their families to register for hospital appointments online anytime and anywhere without needing to visit the hospital directly.",
+      "items": [
+        {
+          "title": "Register and choose",
+          "description": "appointment date and time"
+        },
+        {
+          "title": "Pay medical fees",
+          "description": "without cash"
+        },
+        {
+          "title": "Manage appointments",
+          "description": "and follow-up visits"
+        },
+        {
+          "title": "Manage patient",
+          "description": "information and records"
+        }
+      ],
+      "prominent": "Featured hospitals"
+    },
+    "login": {
+      "title_seo": "Login | Medpro - Online medical booking",
+      "description_seo": "Login to Medpro to quickly book appointments at more than 100 hospitals and reputable clinics. Easily manage appointments and medical records.",
+      "remember_me": "Remember me",
+      "forgot_password": "Forgot password?",
+      "no_account": "Don't have an account?",
+      "have_account": "Already have an account?",
+      "login_success": "Login successful",
+      "login_failed": "Login failed",
+      "signup_success": "Signup successful",
+      "signup_failed": "Signup failed"
+    },
     "user": {
       "profile": {
-        "title_seo": "Personal Information | Medpro - Online Medical Appointment Booking",
-        "title": "Personal Information",
-        "description": "Manage and update your personal information to keep your profile accurate."
+        "title_seo": "Profile | Medpro - Online medical booking",
+        "title": "Profile",
+        "description": "Manage and update your personal information to ensure your records are always accurate."
       },
       "change_password": {
-        "title_seo": "Change Password | Medpro - Online Medical Appointment Booking",
-        "title": "Change Password",
-        "description": "Please enter a new password for your account."
+        "title_seo": "Change password | Medpro - Online medical booking",
+        "title": "Change password",
+        "description": "Please enter a new password for your account"
       },
       "records": {
-        "title_seo": "Patient Records | Medpro - Medical Appointment Booking",
-        "title": "List of patient records"
+        "title_seo": "Patient records | Medpro - Medical booking",
+        "title": "Patient record list"
       },
       "bookings": {
-        "title_seo": "Appointments | Medpro - Medical Appointment Booking"
+        "title_seo": "Appointments | Medpro - Medical booking"
       }
     },
     "not_found": {
-      "title_seo": "Page not found | Medpro - Online medical appointment platform",
-      "description_seo": "The page you are looking for does not exist or has been moved. Discover Medpro - an online medical appointment platform at 100+ hospitals and 1000+ clinics nationwide.",
+      "title_seo": "Page not found | Medpro - Online medical booking platform",
+      "description_seo": "The page you are looking for does not exist or has been moved. Explore Medpro - an online medical booking platform with 100+ hospitals and 1000+ clinics nationwide.",
       "title": "The page you are looking for does not exist!",
       "button": "Back to home"
     }

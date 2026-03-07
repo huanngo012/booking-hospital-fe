@@ -1,12 +1,15 @@
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, type UseQueryOptions } from '@tanstack/react-query'
 import { getMedicalFacilities, getMedicalFacilityBySlug } from './medical-facility.api'
 import { type MedicalFacilityQueryParams, type MedicalFacility } from '~/types/medical-facility'
 import type { PaginatedResponse } from '~/types/common'
 
-export const useMedicalFacilities = (params?: MedicalFacilityQueryParams) => {
+type MedicalFacilitiesQueryOptions = Omit<UseQueryOptions<PaginatedResponse<MedicalFacility>>, 'queryKey' | 'queryFn'>
+
+export const useMedicalFacilities = (params?: MedicalFacilityQueryParams, options?: MedicalFacilitiesQueryOptions) => {
   return useQuery<PaginatedResponse<MedicalFacility>>({
     queryKey: ['medical-facilities', params],
-    queryFn: () => getMedicalFacilities(params)
+    queryFn: () => getMedicalFacilities(params),
+    ...options
   })
 }
 

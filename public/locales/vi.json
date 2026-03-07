@@ -6,15 +6,19 @@
     "website": "Trang web",
     "email": "Email",
     "all": "Tất cả",
+    "description": "Mô tả",
     "change": "Thay đổi",
     "save": "Lưu",
     "cancel": "Huỷ",
     "view_more": "Xem tiếp",
-    "view_detail": "Xem chi  tiết",
+    "view_detail": "Xem chi tiết",
+    "view_all": "Xem tất cả",
     "book_now": "Đặt khám ngay",
     "map": "Bản đồ",
     "scroll_to_top": "Cuộn lên đầu trang",
-    "images": "Hình ảnh"
+    "images": "Hình ảnh",
+    "medical_facility": "Cơ sở y tế",
+    "doctor": "Bác sĩ"
   },
   "header": {
     "hi": "Xin chào",
@@ -126,6 +130,7 @@
         "title": "Kết nối người dân với Cơ sở - Dịch vụ Y tế",
         "sub_title": "Nền tảng công nghệ",
         "description": "Đặt khám nhanh - Lấy số thứ tự trực tuyến - Tư vấn sức khỏe từ xa",
+        "search_placeholder": ["Tìm kiếm cơ sở y tế", "Tìm kiếm bác sĩ"],
         "services": [
           "Đặt khám tại cơ sở",
           "Đặt khám theo bác sĩ",

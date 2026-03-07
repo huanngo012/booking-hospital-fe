@@ -5,43 +5,67 @@ import { useState } from 'react'
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5'
 
 const CustomInputField = (props: CustomInputFieldProps) => {
-  const { label, placeholder, type = 'text', helperText, error, register, defaultValue, required, disabled } = props
+  const {
+    label,
+    placeholder,
+    type = 'text',
+    helperText,
+    error,
+    register,
+    defaultValue,
+    required,
+    disabled,
+    value,
+    onChange,
+    onClick,
+    InputProps,
+    sx,
+    autoComplete = 'on'
+  } = props
+
   const [isPasswordShowed, setIsPasswordShowed] = useState(false)
+
   const fieldName = register?.name ?? label
 
   return (
     <Box className='form-field'>
-      <Box component='label' className='form-label' htmlFor={fieldName}>
-        <Typography variant='label2'>{label}</Typography>
-        {required && (
-          <Typography variant='label2' color='var(--alert)'>
-            *
-          </Typography>
-        )}
-      </Box>
+      {label && (
+        <Box component='label' className='form-label' htmlFor={fieldName}>
+          <Typography variant='label2'>{label}</Typography>
+          {required && (
+            <Typography variant='label2' color='var(--alert)'>
+              *
+            </Typography>
+          )}
+        </Box>
+      )}
+
       <TextField
-        defaultValue={defaultValue}
         id={fieldName}
-        type={type === 'password' ? (isPasswordShowed ? 'text' : 'password') : 'text'}
+        value={value}
+        defaultValue={defaultValue}
+        type={type === 'password' ? (isPasswordShowed ? 'text' : 'password') : type}
         placeholder={placeholder}
         disabled={disabled}
         error={error}
         helperText={helperText}
+        onChange={onChange}
+        onClick={onClick}
+        sx={sx}
         InputProps={{
-          endAdornment: type === 'password' && (
-            <InputAdornment position='end'>
-              <IconButton
-                aria-label='toggle password visibility'
-                onClick={() => setIsPasswordShowed((prev) => !prev)}
-                edge='end'
-                sx={{ marginRight: '2px' }}
-              >
-                {isPasswordShowed ? <IoEyeOutline size={20} /> : <IoEyeOffOutline size={20} />}
-              </IconButton>
-            </InputAdornment>
-          )
+          ...InputProps,
+          endAdornment:
+            type === 'password' ? (
+              <InputAdornment position='end'>
+                <IconButton onClick={() => setIsPasswordShowed((prev) => !prev)}>
+                  {isPasswordShowed ? <IoEyeOutline size={20} /> : <IoEyeOffOutline size={20} />}
+                </IconButton>
+              </InputAdornment>
+            ) : (
+              InputProps?.endAdornment
+            )
         }}
-        autoComplete={type === 'password' ? 'current-password' : fieldName}
+        autoComplete={autoComplete}
         {...register}
       />
     </Box>

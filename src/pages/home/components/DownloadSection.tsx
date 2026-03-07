@@ -32,14 +32,13 @@ const DownloadSection = () => {
             alignItems={'center'}
             width={'100%'}
             position={'relative'}
+            gap={5}
           >
             <Stack
               alignItems={'center'}
               justifyContent={'space-around'}
               gap={'56px'}
               flex={'4'}
-              position={'relative'}
-              right={'4%'}
               className='animate animate--fade-left'
             >
               {BENEFIT_DOWNLOAD_LEFT.map((item, index) => (
@@ -93,8 +92,6 @@ const DownloadSection = () => {
               justifyContent={'space-around'}
               gap={'56px'}
               flex={'4'}
-              position={'relative'}
-              left={'4%'}
               className='animate animate--fade-right'
             >
               {BENEFIT_DOWNLOAD_RIGHT.map((item, index) => (

@@ -22,7 +22,7 @@ const BlogSection = () => {
                 <Typography variant={'h5'}>{t('pages.home.blog_section.title')}</Typography>
               </Stack>
               <Stack direction={'row'} gap={'4px'} flex={'8'} className='animate animate--fade-right'>
-                <Typography variant={'body3'}>
+                <Typography variant={'body2'}>
                   <b>Medpro </b>
                   {t('pages.home.blog_section.description')}
                 </Typography>

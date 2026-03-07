@@ -304,8 +304,7 @@ export const theme = createTheme({
               },
               overflow: 'hidden',
               fontSize: 16,
-              padding: '8px 16px',
-              height: '24px'
+              padding: '8px 16px'
             },
             '& fieldset': {
               border: '1px solid',

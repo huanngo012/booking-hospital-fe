@@ -4,15 +4,21 @@ import { GrLocation } from 'react-icons/gr'
 import type { MedicalFacility } from '~/types/medical-facility'
 import { formatAddress, formatWorkingTimes, renderStartFromNumber } from '~/utils/helper'
 import { useTranslation } from 'react-i18next'
+import Thumbnails from 'yet-another-react-lightbox/plugins/thumbnails'
+import Lightbox from 'yet-another-react-lightbox'
+import { useState } from 'react'
 
 const MedicalFacilityDetailHeader = ({ medicalFacility }: { medicalFacility: MedicalFacility }) => {
   const { t } = useTranslation()
   const { logo, images, name, workingTimes, address, totalRatings } = medicalFacility
 
+  const [open, setOpen] = useState(false)
+  const [index, setIndex] = useState(0)
+
   return (
     <Box className='medical-facility-detail-header'>
       <Grid container spacing={2.5}>
-        <Grid size={{ mobile: 12, tablet: 3.5 }}>
+        <Grid size={{ mobile: 12, desktop: 3.5 }}>
           <Box className='medical-facility-detail-header_card'>
             <Box className='medical-facility-detail-header_logo'>
               <Box component={'img'} src={logo} />
@@ -49,14 +55,22 @@ const MedicalFacilityDetailHeader = ({ medicalFacility }: { medicalFacility: Med
             </Button>
           </Box>
         </Grid>
-        <Grid size={{ mobile: 12, tablet: 8.5 }}>
+        <Grid size={{ mobile: 12, desktop: 8.5 }}>
           <ImageList cols={4} gap={10} className='medical-facility-detail-header_gallery'>
-            {images.slice(0, 8).map((item, index) => (
-              <ImageListItem key={item} cols={index === 0 ? 3 : 1} rows={index === 0 ? 3 : 1}>
-                {images.length > 8 && index === 7 && (
+            {images.slice(0, 4).map((item, index) => (
+              <ImageListItem
+                key={item}
+                cols={index === 0 ? 3 : 1}
+                rows={index === 0 ? 3 : 1}
+                onClick={() => {
+                  setIndex(index)
+                  setOpen(true)
+                }}
+              >
+                {images.length > 4 && index === 3 && (
                   <Box className='gallery-overlay'>
-                    <Typography variant='label2'>
-                      +{images.length - 8} {t('common.images')}
+                    <Typography variant='body2' color='var(--white)'>
+                      +{images.length - 4} {t('common.images')}
                     </Typography>
                   </Box>
                 )}
@@ -64,6 +78,13 @@ const MedicalFacilityDetailHeader = ({ medicalFacility }: { medicalFacility: Med
               </ImageListItem>
             ))}
           </ImageList>
+          <Lightbox
+            open={open}
+            index={index}
+            close={() => setOpen(false)}
+            plugins={[Thumbnails]}
+            slides={images.map((img) => ({ src: img }))}
+          />
         </Grid>
       </Grid>
     </Box>

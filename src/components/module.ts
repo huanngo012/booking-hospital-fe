@@ -3,7 +3,12 @@ import type { UseFormRegisterReturn } from 'react-hook-form'
 import type { MedicalFacility } from '~/types/medical-facility'
 
 export interface CustomSkeletonProps {
-  variant: 'card-medical-facility' | 'card-medical-facility-02' | 'card-medical-facility-detail' | 'card-category'
+  variant:
+    | 'card-medical-facility'
+    | 'card-medical-facility-02'
+    | 'card-medical-facility-detail'
+    | 'card-category'
+    | 'card-search'
 }
 
 export interface BreadcrumbItem {
@@ -74,4 +79,28 @@ export interface ToastProps {
   message: string
   type?: ToastType
   onClose: () => void
+}
+
+export interface SearchItem {
+  _id: string
+  title: string
+  image?: string
+  meta?: string
+  url: string
+}
+
+export interface SearchInputProps {
+  value: string
+  onChange: (value: string) => void
+  onFocus: () => void
+}
+
+export interface SearchGroupProps {
+  title: string
+  items: SearchItem[]
+  viewAllUrl?: string
+}
+
+export interface SearchCardProps {
+  item: SearchItem
 }

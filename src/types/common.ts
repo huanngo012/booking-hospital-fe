@@ -1,4 +1,4 @@
-import type { TIME_SLOT_CODE } from '~/utils/constant'
+import type { GENDER, TIME_SLOT_CODE } from '~/utils/constant'
 
 export interface QueryParams {
   sort?: string
@@ -19,6 +19,7 @@ export interface PaginatedResponse<T> {
 }
 
 export type TimeSlotCode = (typeof TIME_SLOT_CODE)[keyof typeof TIME_SLOT_CODE]
+export type Gender = (typeof GENDER)[keyof typeof GENDER]
 
 export interface FacilityWorkingTime {
   dayOfWeek: number

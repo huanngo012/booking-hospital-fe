@@ -12,7 +12,7 @@ import MedicalFacilityCategoryFilter from './MedicalFacilityCategoryFilter'
 const MedicalFacilitiesBody = () => {
   const { t } = useTranslation()
 
-  const [selectedCategoryId, setSelectedCategoryId] = useState<number>(0)
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string>('')
   const [medicalFacility, setMedicalFacility] = useState<MedicalFacility | null>(null)
   const [page, setPage] = useState<number>(1)
 
@@ -21,10 +21,10 @@ const MedicalFacilitiesBody = () => {
 
   const { data: medicalFacilitiesResponse, isLoading: isMedicalFacilitiesLoading } = useMedicalFacilities({
     page,
-    categoryID: selectedCategoryId === 0 ? undefined : selectedCategoryId
+    categoryID: selectedCategoryId === '' ? undefined : selectedCategoryId
   })
 
-  const handleSelectCategory = (categoryId: number) => {
+  const handleSelectCategory = (categoryId: string) => {
     setSelectedCategoryId(categoryId)
     setPage(1)
     setMedicalFacility(null)

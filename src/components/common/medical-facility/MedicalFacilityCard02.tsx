@@ -1,5 +1,5 @@
 import { Box, Button, Stack, Typography } from '@mui/material'
-import { renderStartFromNumber } from '~/utils/helper'
+import { formatAddress, renderStartFromNumber } from '~/utils/helper'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { IoLocationOutline } from 'react-icons/io5'
@@ -39,9 +39,7 @@ const MedicalFacilityCard02 = ({ facility }: MedicalFacilityCardProps) => {
               <IoLocationOutline color='var(--text-secondary)' />
             </Box>
             <Typography variant='body2' color='var(--text-secondary)' className='truncate_2 card_address'>
-              {address?.detail ? `${address?.detail},` : ''} {address?.ward ? `${address?.ward},` : ''}{' '}
-              {address?.district ? `${address?.district},` : ''}
-              {address?.province}
+              {formatAddress(address)}
             </Typography>
           </Stack>
           <Stack direction={'row'} gap={0.5}>

@@ -1,5 +1,5 @@
-import type { CustomSkeletonProps } from '~/components/module'
 import './style.scss'
+import type { CustomSkeletonProps } from '~/components/module'
 import { Box, Skeleton, Stack } from '@mui/material'
 
 const CustomSkeleton = ({ variant }: CustomSkeletonProps) => {
@@ -12,6 +12,8 @@ const CustomSkeleton = ({ variant }: CustomSkeletonProps) => {
       return <CardMedicalFacility02Skeleton />
     case 'card-medical-facility-detail':
       return <CardMedicalFacilityDetailSkeleton />
+    case 'card-search':
+      return <CardSearchSkeleton />
     default:
       return null
   }
@@ -102,6 +104,18 @@ const CardCategorySkeleton = () => {
           borderRadius: '30px'
         }}
       />
+    </Box>
+  )
+}
+
+const CardSearchSkeleton = () => {
+  return (
+    <Box className='card_search'>
+      <Skeleton animation='wave' variant='circular' className='card_image' />
+      <Stack gap={0.5} width={'100%'}>
+        <Skeleton animation='wave' variant='rectangular' height={24} width='100%' />
+        <Skeleton animation='wave' variant='rectangular' height={20} width='100%' />
+      </Stack>
     </Box>
   )
 }

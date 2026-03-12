@@ -19,6 +19,8 @@ import bg_datkham from './img/bg_datkham.webp'
 import about_us from './img/about_us.webp'
 import medical_facilities_banner from './img/medical_facilities_banner.png'
 import login_banner from './img/login_banner.avif'
+import doctormale from './img/doctormale.jpg'
+import doctorfemale from './img/doctorfemale.jpg'
 
 //svg
 import home_icon from './svg/home-icon.svg'
@@ -63,5 +65,7 @@ export const images = {
   record_icon,
   profile_icon,
   password_icon,
-  schedule_icon
+  schedule_icon,
+  doctormale,
+  doctorfemale
 }

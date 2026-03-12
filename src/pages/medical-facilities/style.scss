@@ -47,10 +47,10 @@
       height: 100%;
       overflow-y: auto;
       .medical_facilities_detail {
-        box-shadow: 0 4px 30px rgba(116, 157, 206, 0.2);
         border-radius: 20px;
         background: #fff;
         padding: 30px 26px;
+        overflow: hidden;
         .medical_facilities_detail_header {
           padding-bottom: 16px;
           margin-bottom: 16px;

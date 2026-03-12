@@ -6,8 +6,8 @@ import type { Category } from '~/types/category'
 
 interface MedicalFacilityCategoryFilterProps {
   categories: Category[]
-  selectedCategoryId: number
-  onSelect: (categoryId: number) => void
+  selectedCategoryId: string
+  onSelect: (categoryId: string) => void
   isLoading?: boolean
 }
 
@@ -35,7 +35,7 @@ const MedicalFacilityCategoryFilter = ({
         {!isLoading ? (
           <>
             <SwiperSlide>
-              <Button variant={selectedCategoryId === 0 ? 'contained' : 'outlined'} onClick={() => onSelect(0)}>
+              <Button variant={selectedCategoryId === '' ? 'contained' : 'outlined'} onClick={() => onSelect('')}>
                 <Typography variant='label2'>{t('common.all')}</Typography>
               </Button>
             </SwiperSlide>

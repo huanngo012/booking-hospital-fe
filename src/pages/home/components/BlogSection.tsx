@@ -33,9 +33,9 @@ const BlogSection = () => {
             {BLOGS.map((item, index) => (
               <Grid size={{ mobile: 12, tablet: 4 }} key={index} className='blog_card'>
                 <Stack gap={'16px'}>
-                  <Box component='img' borderRadius={'16px'} src={item.img} alt={item.title} />
+                  <Box component='img' borderRadius={2} src={item.img} alt={item.title} />
                   <Typography variant={'h6'}>{t(item.title)}</Typography>
-                  <Typography variant={'body3'}>{t(item.des)}</Typography>
+                  <Typography variant={'body2'}>{t(item.des)}</Typography>
                 </Stack>
                 <Button variant='outlined' color='primary'>
                   <Typography variant='button2'>{t('common.view_more')}</Typography>

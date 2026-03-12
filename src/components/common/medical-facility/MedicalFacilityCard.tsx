@@ -37,7 +37,7 @@ const MedicalFacilityCard = ({ facility }: MedicalFacilityCardProps) => {
               </Box>
             ))}
           </Stack>
-          <Link to={slug}>
+          <Link to={`${PATHS.MEDICALFACILITIES}/${slug}`}>
             <Typography variant='label2' className='truncate_2'>
               {name}
             </Typography>

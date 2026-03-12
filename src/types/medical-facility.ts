@@ -21,14 +21,3 @@ export interface MedicalFacility {
   totalRatings: number
   workingTimes: FacilityWorkingTime[]
 }
-export interface MedicalFacilityResponse {
-  status: number
-  success: boolean
-  data: MedicalFacility[]
-  pagination: {
-    total: number
-    page: number
-    limit: number
-    totalPages: number
-  }
-}

@@ -5,6 +5,6 @@ export interface CategoryQueryParams extends QueryParams {
 }
 
 export interface Category {
-  _id: number
+  _id: string
   tag: string
 }

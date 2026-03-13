@@ -2,7 +2,7 @@ import './style.scss'
 import { Link } from 'react-router-dom'
 import { Box, Stack, Typography } from '@mui/material'
 import { GoDotFill } from 'react-icons/go'
-import type { ArticleCardProps } from '~/components/module'
+import type { ArticleCardProps } from '~/components/type'
 
 const ArticleCard = ({ article, style = '01' }: ArticleCardProps) => {
   const { title, description, url, image, blog } = article

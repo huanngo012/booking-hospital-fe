@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Toast } from '~/components'
 import { ToastContext } from './ToastContext'
-import { TOAST_TYPE, type ToastType } from '~/components/module'
+import { TOAST_TYPE, type ToastType } from '~/components/type'
 
 const ToastProvider = ({ children }: { children: React.ReactNode }) => {
   const [open, setOpen] = useState(false)

@@ -1,6 +1,6 @@
 import './style.scss'
 import { Box, IconButton, InputAdornment, TextField, Typography } from '@mui/material'
-import type { CustomInputFieldProps } from '../../module'
+import type { CustomInputFieldProps } from '../../type'
 import { useState } from 'react'
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5'
 
@@ -18,6 +18,7 @@ const CustomInputField = (props: CustomInputFieldProps) => {
     value,
     onChange,
     onClick,
+    onFocus,
     InputProps,
     sx,
     autoComplete = 'on'
@@ -51,19 +52,22 @@ const CustomInputField = (props: CustomInputFieldProps) => {
         helperText={helperText}
         onChange={onChange}
         onClick={onClick}
+        onFocus={onFocus}
         sx={sx}
-        InputProps={{
-          ...InputProps,
-          endAdornment:
-            type === 'password' ? (
-              <InputAdornment position='end'>
-                <IconButton onClick={() => setIsPasswordShowed((prev) => !prev)}>
-                  {isPasswordShowed ? <IoEyeOutline size={20} /> : <IoEyeOffOutline size={20} />}
-                </IconButton>
-              </InputAdornment>
-            ) : (
-              InputProps?.endAdornment
-            )
+        slotProps={{
+          input: {
+            ...InputProps,
+            endAdornment:
+              type === 'password' ? (
+                <InputAdornment position='end'>
+                  <IconButton onClick={() => setIsPasswordShowed((prev) => !prev)}>
+                    {isPasswordShowed ? <IoEyeOutline size={20} /> : <IoEyeOffOutline size={20} />}
+                  </IconButton>
+                </InputAdornment>
+              ) : (
+                InputProps?.endAdornment
+              )
+          }
         }}
         autoComplete={autoComplete}
         {...register}

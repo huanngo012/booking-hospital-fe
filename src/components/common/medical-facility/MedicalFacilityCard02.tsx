@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { IoLocationOutline } from 'react-icons/io5'
 import { PATHS } from '~/utils/constant'
-import type { MedicalFacilityCardProps } from '~/components/module'
+import type { MedicalFacilityCardProps } from '~/components/type'
 import { useQueryClient } from '@tanstack/react-query'
 import { getMedicalFacilityBySlug } from '~/modules/medical-facility/medical-facility.api'
 
@@ -28,7 +28,7 @@ const MedicalFacilityCard02 = ({ facility }: MedicalFacilityCardProps) => {
     <Box className='medical_facility_card_02' onMouseEnter={() => handlePrefetch(slug)}>
       <Box className='card_wrapper'>
         <Box className='card_image'>
-          <Box component={'img'} alt={name} src={logo ? logo : '/svgs/logo.svg'} />
+          <Box component={'img'} alt={name} src={logo ? logo : '/logo.svg'} />
         </Box>
         <Box className='card_content'>
           <Typography variant='h5' className='truncate_2' color='var(--secondary)'>

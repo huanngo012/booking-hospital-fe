@@ -3,10 +3,11 @@ import { useCallback, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import Header from '~/components/layout/header/Header'
 import Footer from '~/components/layout/footer/Footer'
-import { useTranslation } from 'react-i18next'
+import { icons } from '~/assets'
+
+const { ScrollToTopIcon } = icons
 
 const Layout = ({ children }: { children: ReactNode }) => {
-  const { t } = useTranslation()
   const [showScrollButton, setShowScrollButton] = useState(false)
 
   const handleScroll = useCallback(() => {
@@ -38,23 +39,22 @@ const Layout = ({ children }: { children: ReactNode }) => {
 
       {showScrollButton && (
         <Box
-          component={'img'}
-          src='/svgs/scroll_to_top.svg'
-          alt={t('common.scroll_to_top')}
+          className='svg-wrapper'
           position={'fixed'}
-          bottom={'56px'}
+          bottom={56}
           right={{
-            mobile: '28px',
-            desktop: '56px'
+            mobile: 28,
+            desktop: 56
           }}
           width={40}
           sx={{
-            fill: 'var(--primary)',
             cursor: 'pointer'
           }}
           zIndex={1000}
           onClick={scrollToTop}
-        />
+        >
+          <ScrollToTopIcon />
+        </Box>
       )}
     </Stack>
   )

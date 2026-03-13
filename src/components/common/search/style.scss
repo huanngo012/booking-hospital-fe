@@ -1,5 +1,6 @@
 .search-recommend-result {
-  gap: 4px;
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: calc(100% + 5px);
   right: 0;
@@ -10,7 +11,7 @@
   border: 1px solid var(--border-color);
   box-shadow: 0 2px 12px #1e20201f;
   overflow-y: auto;
-  z-index: 1000;
+  z-index: 99;
   &::-webkit-scrollbar {
     width: 6px;
   }

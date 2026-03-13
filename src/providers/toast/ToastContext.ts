@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import type { ToastType } from '~/components/module'
+import type { ToastType } from '~/components/type'
 
 interface ToastContextType {
   showToast: (message: string, type?: ToastType) => void

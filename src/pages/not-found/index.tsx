@@ -1,17 +1,27 @@
 import { Box, Button, Container, Stack, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { icons } from '~/assets'
 import { SEO } from '~/components'
 import { PATHS } from '~/utils/constant'
+
+const { NotFoundIcon } = icons
 
 const NotFoundPage = () => {
   const { t } = useTranslation()
   return (
     <Box paddingBlock={'40px'}>
-      <SEO title={t('pages.not_found.title_seo')} description={t('pages.not_found.description_seo')} />
+      <SEO
+        title={t('pages.not_found.title_seo', {
+          brand: t('seo.brand')
+        })}
+        description={t('pages.not_found.description_seo')}
+      />
       <Container>
         <Stack justifyContent={'center'} alignItems={'center'} gap={'20px'} textAlign={'center'}>
-          <Box component={'img'} src='/svgs/404.svg' width={'100%'} maxWidth={500}></Box>
+          <Box maxWidth={500} width={'100%'}>
+            <NotFoundIcon width={'100%'} height={'100%'} />
+          </Box>
           <Typography variant='label1' color='var(--secondary)'>
             {t('pages.not_found.title')}
           </Typography>

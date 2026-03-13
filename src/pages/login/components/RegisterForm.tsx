@@ -9,7 +9,7 @@ import { PATHS } from '~/utils/constant'
 import { useMemo } from 'react'
 import { useToast } from '~/hooks/useToast'
 import { useRegister } from '~/modules/auth/auth.mutation'
-import { TOAST_TYPE } from '~/components/module'
+import { TOAST_TYPE } from '~/components/type'
 
 export interface RegisterValues {
   name: string

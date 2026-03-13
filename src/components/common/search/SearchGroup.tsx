@@ -1,7 +1,7 @@
 import { Stack, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import type { SearchGroupProps } from '~/components/module'
+import type { SearchGroupProps } from '~/components/type'
 import SearchCard from './SearchCard'
 import EmptyState from '../empty-state'
 
@@ -17,7 +17,7 @@ const SearchGroup = ({ title, items, viewAllUrl }: SearchGroupProps) => {
         sx={{ backgroundColor: '#e6f2ff' }}
       >
         <Typography variant='label2' color='var(--secondary)'>
-          {title}
+          {t(title)}
         </Typography>
         {items.length > 0 && viewAllUrl && (
           <Link to={viewAllUrl}>

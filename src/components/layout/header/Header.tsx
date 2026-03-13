@@ -11,6 +11,9 @@ import { DISPLAY } from '~/utils/responsive'
 import { useUser } from '~/modules/auth/auth.query'
 import ProfilePopup from './ProfilePopup'
 import MenuMobile from './MenuMobile'
+import { icons } from '~/assets'
+
+const { ContactIcon } = icons
 
 const Header = () => {
   const { t } = useTranslation()
@@ -49,16 +52,16 @@ const Header = () => {
       component={'header'}
       className={`header header--${className}`}
       paddingBlock={{
-        mobile: '12px',
-        desktop: '0'
+        mobile: 1.5,
+        desktop: 0
       }}
     >
       <Container>
-        <Stack direction={'row'} alignItems={'center'} gap={'30px'} width={'100%'}>
+        <Stack direction={'row'} alignItems={'center'} gap={3.75} width={'100%'}>
           <Link to={PATHS.HOME}>
             <Box
               component='img'
-              src={'/svgs/logo.svg'}
+              src={'/logo.svg'}
               alt={t('common.brand_name')}
               width={{ mobile: '120px', desktop: '150px' }}
             />
@@ -104,8 +107,17 @@ const Header = () => {
             </Box>
 
             <Stack direction={'row'} alignItems={'center'} width={'100%'} paddingLeft={'12px'}>
-              <Stack display={DISPLAY.DESKTOP_ONLY} direction={'row'} flexShrink={'0'} gap={'12px'} minWidth={'180px'}>
-                <Box component='img' src={'/svgs/contact.svg'} alt='' width={40} />
+              <Stack
+                display={DISPLAY.DESKTOP_ONLY}
+                direction={'row'}
+                alignItems={'center'}
+                flexShrink={'0'}
+                gap={1.5}
+                minWidth={'180px'}
+              >
+                <Box>
+                  <ContactIcon />
+                </Box>
                 <Stack>
                   <Typography variant='label2'>{t('header.consultation_booking')}</Typography>
                   <Typography variant='h5' color='var(--orange-400)'>
@@ -116,7 +128,7 @@ const Header = () => {
               <Stack
                 display={DISPLAY.DESKTOP_ONLY}
                 direction={'row'}
-                gap={'12px'}
+                gap={1.5}
                 width={'100%'}
                 justifyContent={'flex-end'}
                 alignItems={'center'}

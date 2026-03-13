@@ -3,6 +3,7 @@ import type { FacilityWorkingTime, QueryParams } from './common'
 export interface MedicalFacilityQueryParams extends QueryParams {
   name?: string
   categoryID?: string | number
+  province?: string
 }
 
 export interface MedicalFacility {

@@ -18,7 +18,7 @@ const BlogSection = () => {
               gap={'16px'}
             >
               <Stack flex={'4'} className='animate animate--fade-left'>
-                <Box component='img' src='/svgs/logo.svg' alt={t('common.brand_name')} width={'170px'} />
+                <Box component='img' src='/logo.svg' alt={t('common.brand_name')} width={'170px'} />
                 <Typography variant={'h5'}>{t('pages.home.blog_section.title')}</Typography>
               </Stack>
               <Stack direction={'row'} gap={'4px'} flex={'8'} className='animate animate--fade-right'>

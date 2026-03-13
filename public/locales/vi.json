@@ -121,6 +121,9 @@
     "update": "Sửa hồ sơ",
     "delete": "Xóa hồ sơ"
   },
+  "seo": {
+    "brand": "Medpro - Nền tảng đặt lịch khám trực tuyến"
+  },
   "pages": {
     "home": {
       "title_seo": "Medpro - Đặt khám nhanh 100+ bệnh viện, 1000+ phòng khám, phòng mạch",
@@ -204,20 +207,22 @@
       }
     },
     "medical_facilities": {
-      "title_seo": "Cơ sở y tế | Medpro - Đặt lịch khám bệnh",
+      "title_seo": "Cơ sở y tế | {{brand}}",
       "description_seo": "Tìm kiếm và đặt lịch khám tại hơn 100 bệnh viện, 1000+ phòng khám và phòng mạch uy tín trên toàn quốc. Medpro giúp bạn đặt khám nhanh chóng, thuận tiện và tiết kiệm thời gian.",
       "title": "ĐẶT KHÁM TẠI CƠ SỞ",
       "description": "Đặt khám nhanh chóng, tiết kiệm thời gian, an toàn tiện lợi",
-      "not_found": "Không tìm thấy cơ sở y tế"
+      "not_found": "Không tìm thấy cơ sở y tế",
+      "search_placeholder": "Tìm kiếm cơ sở y tế",
+      "search_placeholder_address": "Tất cả địa chỉ"
     },
     "news": {
-      "title_seo": "Tin tức y tế mới nhất - Cập nhập liên tục từ Medpro",
+      "title_seo": "Tin tức y tế mới nhất - Cập nhập liên tục từ Medpro | {{brand}}",
       "description_seo": "Theo dõi tin tức y tế mới nhất và thông tin hữu ích từ Medpro. Cập nhật liên tục về các dịch vụ, xu hướng y học và kiến thức chăm sóc sức khỏe",
       "title": "Tin tức",
       "button": "Xem tiếp"
     },
     "about": {
-      "title_seo": "Giới thiệu Medpro - Ứng dụng y tế được sử dụng nhiều nhất",
+      "title_seo": "Giới thiệu Medpro - Ứng dụng y tế được sử dụng nhiều nhất | {{brand}}",
       "description_seo": "Tìm hiểu về Medpro, ứng dụng tiên phong trong việc kết nối người dùng với dịch vụ y tế. Đơn giản hóa quá trình tiếp cận, khám, chữa bệnh và tư vấn sức khoẻ",
       "title": "Giới thiệu",
       "description": "Ứng dụng này giúp người bệnh và thân nhân người bệnh có thể thực hiện trực tuyến quá trình đăng ký khám bệnh tại bệnh viện ở mọi lúc mọi nơi mà không cần phải đến trực tiếp bệnh viện",
@@ -242,7 +247,7 @@
       "prominent": "Bệnh viện tiêu biểu"
     },
     "login": {
-      "title_seo": "Đăng nhập | Medpro - Đặt lịch khám trực tuyến",
+      "title_seo": "Đăng nhập | {{brand}}",
       "description_seo": "Đăng nhập vào Medpro để đặt lịch khám nhanh chóng tại hơn 100+ bệnh viện và phòng khám uy tín. Quản lý lịch hẹn và hồ sơ khám bệnh dễ dàng.",
       "remember_me": "Nhớ mật khẩu",
       "forgot_password": "Quên mật khẩu?",
@@ -255,25 +260,25 @@
     },
     "user": {
       "profile": {
-        "title_seo": "Thông  tin cá nhân | Medpro - Đặt lịch khám trực tuyến",
+        "title_seo": "Thông  tin cá nhân | {{brand}}",
         "title": "Thông tin cá nhân",
         "description": "Quản lý và cập nhật thông tin cá nhân của bạn để đảm bảo hồ sơ luôn chính xác."
       },
       "change_password": {
-        "title_seo": "Đổi mật khẩu | Medpro - Đặt lịch khám trực tuyến",
+        "title_seo": "Đổi mật khẩu | {{brand}}",
         "title": "Thay đổi mật khẩu",
         "description": "Vui lòng nhập mật khẩu mới cho tài khoản của bạn"
       },
       "records": {
-        "title_seo": "Hồ sơ bệnh nhân | Medpro - Đặt lịch khám bệnh",
+        "title_seo": "Hồ sơ bệnh nhân | {{brand}}",
         "title": "Danh sách hồ sơ bệnh nhân"
       },
       "bookings": {
-        "title_seo": "Lịch khám | Medpro - Đặt lịch khám bệnh"
+        "title_seo": "Lịch khám | {{brand}}"
       }
     },
     "not_found": {
-      "title_seo": "Trang không tồn tại | Medpro - Nền tảng đặt lịch khám trực tuyến",
+      "title_seo": "Trang không tồn tại | {{brand}}",
       "description_seo": "Trang bạn đang tìm kiếm không tồn tại hoặc đã được di chuyển. Khám phá Medpro - nền tảng đặt lịch khám trực tuyến tại 100+ bệnh viện và 1000+ phòng khám trên toàn quốc.",
       "title": "Trang bạn tìm kiếm không đúng hoặc không tồn tại !",
       "button": "Trở về trang chủ"

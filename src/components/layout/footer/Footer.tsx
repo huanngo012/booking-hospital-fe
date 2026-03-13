@@ -1,7 +1,10 @@
 import { Box, Container, Grid, Stack, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
+import { icons } from '~/assets'
 import { IMAGE_FOOTER, INFO_FOOTER, MENU_FOOTER } from '~/utils/constant'
+
+const { LogoFooterIcon } = icons
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -25,17 +28,17 @@ const Footer = () => {
           paddingTop={'32px'}
           paddingBottom={'16px'}
         >
-          <Stack direction={'column'} gap={'10px'}>
+          <Stack direction={'column'} gap={1.25}>
             <Box
-              component='img'
-              src={'/svgs/logo_footer.svg'}
-              alt={t('common.brand_name')}
+              className='svg-wrapper'
               width={{
-                mobile: '120px',
-                desktop: '220px'
+                mobile: 120,
+                desktop: 220
               }}
-              marginBottom={'10px'}
-            />
+              marginBottom={1.25}
+            >
+              <LogoFooterIcon />
+            </Box>
             {INFO_FOOTER.map((item, index) => (
               <Typography key={index} variant='label2' minWidth={'60px'}>
                 {t(item.title)}:{' '}
@@ -48,7 +51,7 @@ const Footer = () => {
 
           <Grid container spacing={3}>
             {MENU_FOOTER.map((item, index) => (
-              <Grid size={{ mobile: 6, tablet: 4 }} key={index} display={'flex'} flexDirection={'column'} gap={'6px'}>
+              <Grid size={{ mobile: 6, tablet: 4 }} key={index} display={'flex'} flexDirection={'column'} gap={0.75}>
                 <Typography variant='label2'>{t(item.title)} </Typography>
                 {item.sub_menu.map((sub_item, index_sub) => (
                   <Link key={index_sub} to={sub_item.sub_link}>
@@ -60,9 +63,17 @@ const Footer = () => {
 
             <Grid size={{ mobile: 6, tablet: 4 }}>
               <Stack direction={'row'} flexWrap={'wrap'} gap={'13px 16px'} width={'100%'}>
-                {IMAGE_FOOTER.map((item, index) => (
-                  <Box key={index} width='100px' component='img' src={item} alt='' />
-                ))}
+                {IMAGE_FOOTER.map((item, index) => {
+                  if (item.component === 'img') {
+                    return <Box key={index} component='img' src={item.src} width={100} />
+                  }
+                  const Icon = item.component
+                  return (
+                    <Box key={index} className='svg-wrapper' width={100} height={30}>
+                      <Icon />
+                    </Box>
+                  )
+                })}
               </Stack>
             </Grid>
           </Grid>

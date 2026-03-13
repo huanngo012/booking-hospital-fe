@@ -8,7 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { PATHS } from '~/utils/constant'
 import { useLogin } from '~/modules/auth/auth.mutation'
 import { useToast } from '~/hooks/useToast'
-import { TOAST_TYPE } from '~/components/module'
+import { TOAST_TYPE } from '~/components/type'
 
 export interface LoginValues {
   email: string

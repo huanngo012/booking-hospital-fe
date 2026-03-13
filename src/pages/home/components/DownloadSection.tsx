@@ -4,6 +4,10 @@ import { useTranslation } from 'react-i18next'
 import { BENEFIT_DOWNLOAD_LEFT, BENEFIT_DOWNLOAD_RIGHT } from '~/utils/constant'
 import { theme } from '~/themes'
 import { DISPLAY } from '~/utils/responsive'
+import { icons, images } from '~/assets'
+
+const { ellipse_image, mobile_app_image } = images
+const { AppStoreIcon, CHPlayIcon } = icons
 
 const DownloadSection = () => {
   const { t } = useTranslation()
@@ -21,8 +25,12 @@ const DownloadSection = () => {
               </Typography>
             </Typography>
             <Stack direction={'row'} justifyContent={'center'} alignItems={'center'} gap={'16px'}>
-              <Box component='img' width={'100px'} src='/svgs/app_store.svg' alt='App store' />
-              <Box component='img' width={'100px'} src='/svgs/ch_play.svg' alt='CH play' />
+              <Box className='svg-wrapper' width={152}>
+                <AppStoreIcon />
+              </Box>
+              <Box className='svg-wrapper' width={152}>
+                <CHPlayIcon />
+              </Box>
             </Stack>
           </Stack>
           <Stack
@@ -68,7 +76,7 @@ const DownloadSection = () => {
             </Stack>
             <Box
               component='img'
-              src='/images/ellipse.webp'
+              src={ellipse_image}
               alt=''
               sx={{
                 position: 'absolute',
@@ -81,7 +89,7 @@ const DownloadSection = () => {
             />
             <Box
               component='img'
-              src='/images/mobile_app.webp'
+              src={mobile_app_image}
               alt=''
               position={'relative'}
               flex={'3'}

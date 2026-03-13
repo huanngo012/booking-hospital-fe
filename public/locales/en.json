@@ -121,6 +121,9 @@
     "update": "Edit record",
     "delete": "Delete record"
   },
+  "seo": {
+    "brand": "Medpro - Online medical booking platform"
+  },
   "pages": {
     "home": {
       "title_seo": "Medpro - Quick booking at 100+ hospitals and 1000+ clinics",
@@ -204,20 +207,22 @@
       }
     },
     "medical_facilities": {
-      "title_seo": "Medical facilities | Medpro - Book medical appointments",
+      "title_seo": "Medical facilities | {{brand}}",
       "description_seo": "Search and book appointments at more than 100 hospitals and 1000+ reputable clinics nationwide. Medpro helps you book quickly, conveniently, and save time.",
       "title": "BOOK AT MEDICAL FACILITIES",
       "description": "Fast booking, time-saving, safe and convenient",
-      "not_found": "Medical facility not found"
+      "not_found": "Medical facility not found",
+      "search_placeholder": "Search for medical facilities",
+      "search_placeholder_address": "All locations"
     },
     "news": {
-      "title_seo": "Latest medical news - Updated continuously from Medpro",
+      "title_seo": "Latest medical news - Updated continuously from Medpro | {{brand}}",
       "description_seo": "Follow the latest healthcare news and useful information from Medpro. Continuous updates about services, medical trends, and healthcare knowledge.",
       "title": "News",
       "button": "View more"
     },
     "about": {
-      "title_seo": "About Medpro - The most widely used healthcare application",
+      "title_seo": "About Medpro - The most widely used healthcare application | {{brand}}",
       "description_seo": "Learn about Medpro, a pioneering application connecting users with healthcare services. Simplifying access to healthcare, treatment, and medical consultation.",
       "title": "About us",
       "description": "This application allows patients and their families to register for hospital appointments online anytime and anywhere without needing to visit the hospital directly.",
@@ -242,7 +247,7 @@
       "prominent": "Featured hospitals"
     },
     "login": {
-      "title_seo": "Login | Medpro - Online medical booking",
+      "title_seo": "Login | {{brand}}",
       "description_seo": "Login to Medpro to quickly book appointments at more than 100 hospitals and reputable clinics. Easily manage appointments and medical records.",
       "remember_me": "Remember me",
       "forgot_password": "Forgot password?",
@@ -255,25 +260,25 @@
     },
     "user": {
       "profile": {
-        "title_seo": "Profile | Medpro - Online medical booking",
+        "title_seo": "Profile | {{brand}}",
         "title": "Profile",
         "description": "Manage and update your personal information to ensure your records are always accurate."
       },
       "change_password": {
-        "title_seo": "Change password | Medpro - Online medical booking",
+        "title_seo": "Change password | {{brand}}",
         "title": "Change password",
         "description": "Please enter a new password for your account"
       },
       "records": {
-        "title_seo": "Patient records | Medpro - Medical booking",
+        "title_seo": "Patient records | {{brand}}",
         "title": "Patient record list"
       },
       "bookings": {
-        "title_seo": "Appointments | Medpro - Medical booking"
+        "title_seo": "Appointments | {{brand}}"
       }
     },
     "not_found": {
-      "title_seo": "Page not found | Medpro - Online medical booking platform",
+      "title_seo": "Page not found | {{brand}}",
       "description_seo": "The page you are looking for does not exist or has been moved. Explore Medpro - an online medical booking platform with 100+ hospitals and 1000+ clinics nationwide.",
       "title": "The page you are looking for does not exist!",
       "button": "Back to home"

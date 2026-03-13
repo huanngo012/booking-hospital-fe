@@ -1,6 +1,6 @@
 import './style.scss'
 import { Box, ClickAwayListener, MenuItem, MenuList, Paper, Popper, Typography } from '@mui/material'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useState, type ReactElement } from 'react'
 import { useTranslation } from 'react-i18next'
 import { PiCaretDown } from 'react-icons/pi'
 import { LANGUAGES } from '~/utils/constant'
@@ -15,7 +15,7 @@ const LanguagePopUp = () => {
   const currentLanguage = i18n.language as LanguageKey
 
   const languagesArray = useMemo(
-    () => Object.entries(LANGUAGES) as [LanguageKey, { title: string; icon: string }][],
+    () => Object.entries(LANGUAGES) as [LanguageKey, { title: string; icon: ReactElement }][],
     []
   )
 
@@ -42,7 +42,7 @@ const LanguagePopUp = () => {
   return (
     <Box onClick={handleOpen} className='language-selector'>
       <Box className='language-selector__trigger'>
-        <Box component='img' src={LANGUAGES[currentLanguage]?.icon} className='language-selector__flag' />
+        <Box className='language-selector__flag svg-wrapper'>{LANGUAGES[currentLanguage].icon}</Box>
         <PiCaretDown size={16} />
       </Box>
 
@@ -58,7 +58,7 @@ const LanguagePopUp = () => {
                   className='language-selector__option'
                 >
                   <Box className='language-selector__item'>
-                    <Box component='img' src={icon} alt={t(title)} className='language-selector__flag' />
+                    <Box className='language-selector__flag svg-wrapper'>{icon}</Box>
                     <Typography variant={'label2'}>{t(title)}</Typography>
                   </Box>
                 </MenuItem>

@@ -11,7 +11,9 @@ const MedicalFacilitiesPage = () => {
   return (
     <Box className='medical_facilities_page'>
       <SEO
-        title={t('pages.medical_facilities.title_seo')}
+        title={t('pages.medical_facilities.title_seo', {
+          brand: t('seo.brand')
+        })}
         description={t('pages.medical_facilities.description_seo')}
       />
       <MedicalFacilitiesHeader />

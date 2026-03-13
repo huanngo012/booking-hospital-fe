@@ -8,10 +8,18 @@ import MedicalFacilityList from './MedicalFacilityList'
 import MedicalFacilityDetail from './MedicalFacilityDetail'
 import { EmptyState } from '~/components'
 import MedicalFacilityCategoryFilter from './MedicalFacilityCategoryFilter'
+import MedicalFacilitySearch from './MedicalFacilitySearch'
+import useDebounce from '~/hooks/useDebounce'
+import { useSearchParams } from 'react-router-dom'
+import MedicalFacilityLocationFilter from './MedicalFacilityLocationFilter'
 
 const MedicalFacilitiesBody = () => {
   const { t } = useTranslation()
+  const [searchParams, setSearchParams] = useSearchParams()
+  const param = searchParams.get('name')
 
+  const [search, setSearch] = useState(param ?? '')
+  const [province, setProvince] = useState('')
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>('')
   const [medicalFacility, setMedicalFacility] = useState<MedicalFacility | null>(null)
   const [page, setPage] = useState<number>(1)
@@ -19,15 +27,40 @@ const MedicalFacilitiesBody = () => {
   const { data: categoriesResponse, isLoading: isCategoriesLoading } = useCategories()
   const categories = categoriesResponse?.items ?? []
 
-  const { data: medicalFacilitiesResponse, isLoading: isMedicalFacilitiesLoading } = useMedicalFacilities({
-    page,
-    categoryID: selectedCategoryId === '' ? undefined : selectedCategoryId
-  })
+  const debouncedSearch = useDebounce(search, 500)
+  const isReady = search === debouncedSearch
+
+  const { data: medicalFacilitiesResponse, isLoading: isMedicalFacilitiesLoading } = useMedicalFacilities(
+    {
+      page,
+      categoryID: selectedCategoryId === '' ? undefined : selectedCategoryId,
+      name: debouncedSearch,
+      province: province
+    },
+    {
+      enabled: isReady
+    }
+  )
 
   const handleSelectCategory = (categoryId: string) => {
     setSelectedCategoryId(categoryId)
     setPage(1)
     setMedicalFacility(null)
+  }
+
+  const handleSearch = (value: string) => {
+    setSearch(value)
+    setPage(1)
+
+    const params = new URLSearchParams(searchParams)
+
+    if (value) {
+      params.set('name', value)
+    } else {
+      params.delete('name')
+    }
+
+    setSearchParams(params)
   }
 
   const medicalFacilities = medicalFacilitiesResponse?.items ?? []
@@ -45,6 +78,15 @@ const MedicalFacilitiesBody = () => {
           onSelect={handleSelectCategory}
           isLoading={isCategoriesLoading}
         />
+
+        <Grid container>
+          <Grid size={{ mobile: 12, tablet: 7, desktop: 8 }}>
+            <MedicalFacilitySearch value={search} onChange={handleSearch} />
+          </Grid>
+          <Grid size={{ mobile: 12, tablet: 5, desktop: 4 }}>
+            <MedicalFacilityLocationFilter value={province} onClick={setProvince} />
+          </Grid>
+        </Grid>
 
         {isMedicalFacilitiesLoading ? (
           <Grid container spacing={3}>

@@ -51,6 +51,18 @@ iframe {
   background-color: var(--white);
 }
 
+.svg-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.svg-wrapper svg {
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+}
+
 .truncate_1 {
   overflow: hidden;
   text-overflow: ellipsis;

@@ -61,7 +61,7 @@ const MenuMobile = () => {
                 gap={'10px'}
                 width={'100%'}
               >
-                <Box component='img' src={'/svgs/logo.svg'} alt={t('common.brand_name')} width={'120px'} />
+                <Box component='img' src={'/logo.svg'} alt={t('common.brand_name')} width={'120px'} />
                 <IconButton onClick={toggleMenu}>
                   <FiX size={24} color='var(--secondary)' />
                 </IconButton>

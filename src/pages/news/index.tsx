@@ -11,7 +11,12 @@ const NewsPage = () => {
   const isDesktop = useMediaQuery(theme.breakpoints.up('desktop'))
   return (
     <Box className='news_page'>
-      <SEO title={t('pages.news.title_seo')} description={t('pages.news.description_seo')} />
+      <SEO
+        title={t('pages.news.title_seo', {
+          brand: t('seo.brand')
+        })}
+        description={t('pages.news.description_seo')}
+      />
       <Container>
         {<BreadscrumbCustom data={[{ title: t('navigation.news') }]} />}
         <Stack gap={4}>

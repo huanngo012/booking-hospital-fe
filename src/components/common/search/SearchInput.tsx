@@ -3,7 +3,7 @@ import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { HiMagnifyingGlass } from 'react-icons/hi2'
 import { IoMdClose } from 'react-icons/io'
-import type { SearchInputProps } from '~/components/module'
+import type { SearchInputProps } from '~/components/type'
 import CustomInputField from '~/components/ui/input/CustomInputField'
 import { useTypingPlaceholder } from '~/hooks/useTypingPlaceholder'
 import { SEARCH_PLACEHOLDER } from '~/utils/constant'
@@ -19,7 +19,7 @@ const SearchInput = ({ value, onChange, onFocus }: SearchInputProps) => {
     <CustomInputField
       value={value}
       onChange={(e) => onChange(e.target.value)}
-      onClick={onFocus}
+      onFocus={onFocus}
       placeholder={placeholder}
       autoComplete='off'
       InputProps={{

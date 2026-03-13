@@ -33,6 +33,7 @@ export interface CustomInputFieldProps {
   value?: string
   onChange?: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>
   onClick?: React.MouseEventHandler<HTMLDivElement>
+  onFocus?: React.FocusEventHandler<HTMLInputElement>
   InputProps?: TextFieldProps['InputProps']
   sx?: TextFieldProps['sx']
   autoComplete?: React.InputHTMLAttributes<HTMLInputElement>['autoComplete']
@@ -92,7 +93,12 @@ export interface SearchItem {
 export interface SearchInputProps {
   value: string
   onChange: (value: string) => void
-  onFocus: () => void
+  onFocus: React.FocusEventHandler<HTMLInputElement>
+}
+
+export interface SearchResultProps {
+  loading: boolean
+  groups: SearchGroupProps[]
 }
 
 export interface SearchGroupProps {

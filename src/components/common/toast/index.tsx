@@ -1,5 +1,5 @@
 import { Snackbar, Alert } from '@mui/material'
-import { TOAST_TYPE, type ToastProps } from '~/components/module'
+import { TOAST_TYPE, type ToastProps } from '~/components/type'
 
 const Toast = ({ open, message, type = TOAST_TYPE.SUCCESS, onClose }: ToastProps) => {
   return (

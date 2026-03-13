@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
-import type { SearchCardProps } from '~/components/module'
+import type { SearchCardProps } from '~/components/type'
 
 const SearchCard = ({ item }: SearchCardProps) => {
   return (

@@ -18,7 +18,11 @@ const UserPage = () => {
 
   return (
     <Box className='user_page'>
-      <SEO title={t(`pages.user.${param}.title_seo`)} />
+      <SEO
+        title={t(`pages.user.${param}.title_seo`, {
+          brand: t('seo.brand')
+        })}
+      />
       <Container>
         {<BreadscrumbCustom data={[{ title: t(`user.${param}`) }]} />}
         <Grid container>

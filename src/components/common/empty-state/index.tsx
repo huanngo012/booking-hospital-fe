@@ -1,6 +1,6 @@
 import { Box, Container, Stack, Typography } from '@mui/material'
 import { images } from '~/assets'
-import type { EmptyStateProps } from '~/components/module'
+import type { EmptyStateProps } from '~/components/type'
 
 const { emptyIcon } = images
 

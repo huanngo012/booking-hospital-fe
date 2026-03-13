@@ -1,7 +1,7 @@
 import { Box, Breadcrumbs, Typography } from '@mui/material'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import type { BreadcrumbCustomProps, BreadcrumbItem } from '~/components/module'
+import type { BreadcrumbCustomProps, BreadcrumbItem } from '~/components/type'
 
 const BreadscrumbCustom = ({ data }: BreadcrumbCustomProps) => {
   const { t } = useTranslation()

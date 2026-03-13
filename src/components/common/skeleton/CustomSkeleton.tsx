@@ -1,5 +1,5 @@
 import './style.scss'
-import type { CustomSkeletonProps } from '~/components/module'
+import type { CustomSkeletonProps } from '~/components/type'
 import { Box, Skeleton, Stack } from '@mui/material'
 
 const CustomSkeleton = ({ variant }: CustomSkeletonProps) => {

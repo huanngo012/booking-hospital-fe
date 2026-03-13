@@ -15,7 +15,12 @@ const AboutPage = () => {
 
   return (
     <Box className='about_page'>
-      <SEO title={t('pages.about.title_seo')} description={t('pages.about.description_seo')} />
+      <SEO
+        title={t('pages.about.title_seo', {
+          brand: t('seo.brand')
+        })}
+        description={t('pages.about.description_seo')}
+      />
       <Container>
         {<BreadscrumbCustom data={[{ title: t('navigation.about_us') }]} />}
         <Grid container spacing={2}>

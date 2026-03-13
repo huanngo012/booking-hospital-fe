@@ -3,14 +3,14 @@ import { useTranslation } from 'react-i18next'
 import { images } from '~/assets'
 import { theme } from '~/themes'
 
-const { bg_datkham } = images
+const { bg_datkham_image, doctors_image } = images
 const HeroSection = () => {
   const { t } = useTranslation()
   const isTablet = useMediaQuery(theme.breakpoints.up('tablet'))
 
   return (
     <Box component={'section'} className='hero_section'>
-      <Box className='hero_inner' sx={{ background: `url(${bg_datkham})` }}>
+      <Box className='hero_inner' sx={{ background: `url(${bg_datkham_image})` }}>
         <Container>
           <Stack
             direction={{
@@ -31,7 +31,7 @@ const HeroSection = () => {
                 <Typography variant={isTablet ? 'label1' : 'label2'}>{t('pages.home.hero_section.button')}</Typography>
               </Button>
             </Stack>
-            <Box component='img' width={'50%'} src='/images/image_1.webp' alt='' />
+            <Box component='img' width={'50%'} src={doctors_image} alt='' />
           </Stack>
         </Container>
         <Box className='hero_rectangle'></Box>

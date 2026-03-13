@@ -3,7 +3,7 @@ import { FaBirthdayCake, FaPhone, FaUserAlt, FaUserCircle, FaVenusMars } from 'r
 import { IoMdCalendar } from 'react-icons/io'
 import { SiFacebook, SiTiktok, SiYoutube } from 'react-icons/si'
 import { LuFileUser } from 'react-icons/lu'
-import { images } from '~/assets'
+import { icons, images } from '~/assets'
 import { PiPasswordBold } from 'react-icons/pi'
 import TabChangePassword from '~/pages/user/components/TabChangePassword'
 import TabProfile from '~/pages/user/components/TabProfile'
@@ -26,8 +26,15 @@ const {
   record_icon,
   profile_icon,
   password_icon,
-  schedule_icon
+  schedule_icon,
+  dadangky_image,
+  bocongthuong_image,
+  blog_1_image,
+  blog_2_image,
+  blog_3_image
 } = images
+
+const { ViFlagIcon, EnFlagIcon, AppStoreIcon, CHPlayIcon } = icons
 
 export const PATHS = {
   HOME: '/',
@@ -220,11 +227,11 @@ export const NETWORKS = [
 export const LANGUAGES = {
   vi: {
     title: 'languages.vi',
-    icon: '/svgs/vi.svg'
+    icon: <ViFlagIcon />
   },
   en: {
     title: 'languages.en',
-    icon: '/svgs/en.svg'
+    icon: <EnFlagIcon />
   }
 }
 
@@ -418,27 +425,37 @@ export const MENU_FOOTER = [
   }
 ]
 export const IMAGE_FOOTER = [
-  '/images/dadangky.webp',
-  '/images/bocongthuong.webp',
-  '/svgs/app_store.svg',
-  '/svgs/ch_play.svg'
+  {
+    component: 'img',
+    src: dadangky_image
+  },
+  {
+    component: 'img',
+    src: bocongthuong_image
+  },
+  {
+    component: AppStoreIcon
+  },
+  {
+    component: CHPlayIcon
+  }
 ]
 
 export const BLOGS = [
   {
     title: 'pages.home.blog_section.blogs.0.title',
     des: 'pages.home.blog_section.blogs.0.description',
-    img: '/images/blog_1.webp'
+    img: blog_1_image
   },
   {
     title: 'pages.home.blog_section.blogs.1.title',
     des: 'pages.home.blog_section.blogs.1.description',
-    img: '/images/blog_2.webp'
+    img: blog_2_image
   },
   {
     title: 'pages.home.blog_section.blogs.2.title',
     des: 'pages.home.blog_section.blogs.2.description',
-    img: '/images/blog_3.webp'
+    img: blog_3_image
   }
 ]
 
@@ -596,4 +613,109 @@ export const PATIENT_FIELDS: {
   },
   { key: 'phone', label: 'patient.phone', icon: <FaPhone size={16} /> },
   { key: 'gender', label: 'patient.gender', icon: <FaVenusMars size={16} /> }
+]
+
+export const ADDRESS = [
+  {
+    name: 'Thành phố Hà Nội'
+  },
+  {
+    name: 'Tỉnh Cao Bằng'
+  },
+  {
+    name: 'Tỉnh Tuyên Quang'
+  },
+  {
+    name: 'Tỉnh Điện Biên'
+  },
+  {
+    name: 'Tỉnh Lai Châu'
+  },
+  {
+    name: 'Tỉnh Sơn La'
+  },
+  {
+    name: 'Tỉnh Lào Cai'
+  },
+  {
+    name: 'Tỉnh Thái Nguyên'
+  },
+  {
+    name: 'Tỉnh Lạng Sơn'
+  },
+  {
+    name: 'Tỉnh Quảng Ninh'
+  },
+  {
+    name: 'Tỉnh Bắc Ninh'
+  },
+  {
+    name: 'Tỉnh Phú Thọ'
+  },
+  {
+    name: 'Thành phố Hải Phòng'
+  },
+  {
+    name: 'Tỉnh Hưng Yên'
+  },
+  {
+    name: 'Tỉnh Ninh Bình'
+  },
+  {
+    name: 'Tỉnh Thanh Hóa'
+  },
+  {
+    name: 'Tỉnh Nghệ An'
+  },
+  {
+    name: 'Tỉnh Hà Tĩnh'
+  },
+  {
+    name: 'Tỉnh Quảng Trị'
+  },
+  {
+    name: 'Thành phố Huế'
+  },
+  {
+    name: 'Thành phố Đà Nẵng'
+  },
+  {
+    name: 'Tỉnh Quảng Ngãi'
+  },
+  {
+    name: 'Tỉnh Gia Lai'
+  },
+  {
+    name: 'Tỉnh Khánh Hòa'
+  },
+  {
+    name: 'Tỉnh Đắk Lắk'
+  },
+  {
+    name: 'Tỉnh Lâm Đồng'
+  },
+  {
+    name: 'Tỉnh Đồng Nai'
+  },
+  {
+    name: 'Thành phố Hồ Chí Minh'
+  },
+  {
+    name: 'Tỉnh Tây Ninh'
+  },
+  {
+    name: 'Tỉnh Đồng Tháp'
+  },
+  {
+    name: 'Tỉnh Vĩnh Long'
+  },
+  {
+    name: 'Tỉnh An Giang'
+  },
+  {
+    name: 'Thành phố Cần Thơ'
+  },
+  {
+    name: 'Tỉnh Cà Mau'
+  }
 ]

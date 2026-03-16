@@ -31,7 +31,7 @@ const MedicalFacilityList = ({
               className={item._id}
               sx={{
                 '& .medical_facility_card_02': {
-                  border: item._id === selectedId ? '2px solid var(--primary)' : undefined
+                  border: item._id === selectedId ? '1px solid var(--primary)' : undefined
                 }
               }}
             >

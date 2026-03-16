@@ -124,6 +124,13 @@
   "seo": {
     "brand": "Medpro - Online medical booking platform"
   },
+  "review": {
+    "title": "Reviews",
+    "rating_and_comment": "Rating & Comments",
+    "you_rated": "You rated this hospital",
+    "rating": "Rating",
+    "comment": "Comment"
+  },
   "pages": {
     "home": {
       "title_seo": "Medpro - Quick booking at 100+ hospitals and 1000+ clinics",
@@ -134,6 +141,7 @@
         "sub_title": "Technology platform",
         "description": "Fast booking - Online queue number - Remote health consultation",
         "search_placeholder": ["Search for medical facilities", "Search for doctors"],
+        "not_found": "No results found",
         "services": [
           "Book at medical facility",
           "Book by doctor",
@@ -214,6 +222,15 @@
       "not_found": "Medical facility not found",
       "search_placeholder": "Search for medical facilities",
       "search_placeholder_address": "All locations"
+    },
+    "doctors": {
+      "title_seo": "Doctors | {{brand}}",
+      "description_seo": "Find trusted doctors and medical specialists. View professional profiles, check schedules, and book medical appointments quickly.",
+      "title": "BOOK AN APPOINTMENT WITH DOCTORS",
+      "description": "Search for doctors by specialty, view schedules, and book appointments quickly and conveniently.",
+      "not_found": "Doctors not found",
+      "search_placeholder": "Search for doctors",
+      "search_placeholder_specialty": "All specialties"
     },
     "news": {
       "title_seo": "Latest medical news - Updated continuously from Medpro | {{brand}}",

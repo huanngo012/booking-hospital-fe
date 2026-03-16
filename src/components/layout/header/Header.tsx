@@ -28,22 +28,39 @@ const Header = () => {
   const headerRef = useRef<HTMLDivElement>(null)
   const [className, setClassName] = useState<'scroll-up' | 'scroll-down'>('scroll-up')
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight
 
-      if (currentScrollY > lastScrollY.current) {
-        setClassName('scroll-down')
-        document.documentElement.style.setProperty('--header-height', `${headerRef.current?.offsetHeight}px`)
-      } else if (currentScrollY < lastScrollY.current) {
-        setClassName('scroll-up')
-        document.documentElement.style.setProperty('--header-height', `${headerRef.current?.offsetHeight}px`)
-      }
-
-      lastScrollY.current = currentScrollY
+    if (currentScrollY >= maxScroll) {
+      setClassName('scroll-down')
+      return
     }
+    if (currentScrollY > lastScrollY.current) {
+      setClassName('scroll-down')
+    } else if (currentScrollY < lastScrollY.current) {
+      setClassName('scroll-up')
+    }
+    lastScrollY.current = currentScrollY
+  }
+
+  useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    const element = headerRef.current
+    if (!element) return
+
+    const resizeObserver = new ResizeObserver(() => {
+      const height = element.offsetHeight
+      document.documentElement.style.setProperty('--header-height', `${height}px`)
+    })
+
+    resizeObserver.observe(element)
+
+    return () => resizeObserver.disconnect()
   }, [])
 
   return (

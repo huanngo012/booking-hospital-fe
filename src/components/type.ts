@@ -1,5 +1,7 @@
 import type { TextFieldProps } from '@mui/material'
 import type { UseFormRegisterReturn } from 'react-hook-form'
+import type { Rating } from '~/types/common'
+import type { Doctor } from '~/types/doctor'
 import type { MedicalFacility } from '~/types/medical-facility'
 
 export interface CustomSkeletonProps {
@@ -8,6 +10,7 @@ export interface CustomSkeletonProps {
     | 'card-medical-facility-02'
     | 'card-medical-facility-detail'
     | 'card-category'
+    | 'card-doctor'
     | 'card-search'
 }
 
@@ -60,6 +63,9 @@ export interface ArticleCardProps {
 export interface MedicalFacilityCardProps {
   facility: MedicalFacility
 }
+export interface DoctorCardProps {
+  doctor: Doctor
+}
 
 export interface SEOProps {
   title: string
@@ -109,4 +115,11 @@ export interface SearchGroupProps {
 
 export interface SearchCardProps {
   item: SearchItem
+}
+
+export interface CommentProps {
+  ratings?: Rating[]
+  totalRatings: number
+  // clinicID?: any
+  // popUpComment?: ReactNode
 }

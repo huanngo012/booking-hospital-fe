@@ -1,41 +1,62 @@
 import { Box, ClickAwayListener, InputAdornment, MenuItem, Stack, Typography } from '@mui/material'
 import { t } from 'i18next'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { GrLocation } from 'react-icons/gr'
 import { IoMdClose } from 'react-icons/io'
 import { CustomInputField } from '~/components'
-import { ADDRESS } from '~/utils/constant'
+import { useSpecialties } from '~/modules/specialty/specialty.query'
+import type { Specialty } from '~/types/specialty'
 import { removeVietnameseTones } from '~/utils/helper'
 
-interface MedicalFacilityLocationFilterProps {
+interface DoctorsSpecialtyFilterProps {
+  defaultData?: Specialty[]
   value: string
   onClick: (value: string) => void
 }
 
-const MedicalFacilityLocationFilter = ({ value, onClick }: MedicalFacilityLocationFilterProps) => {
+const DoctorsSpecialtyFilter = ({ defaultData, value, onClick }: DoctorsSpecialtyFilterProps) => {
   const [search, setSearch] = useState(value)
   const [open, setOpen] = useState(false)
 
   const handleOpen = () => setOpen(true)
-  const handleClose = () => setOpen(false)
+  const handleClose = () => {
+    setOpen(false)
+    setSearch(value)
+  }
+
+  useEffect(() => {
+    setSearch(value)
+  }, [value])
+
+  const { data } = useSpecialties(
+    { limit: 100 },
+    {
+      enabled: !defaultData?.length
+    }
+  )
+
+  const specialties = useMemo(() => {
+    if (defaultData?.length) return defaultData
+    return data?.items ?? []
+  }, [defaultData, data])
 
   const searchedResultList = useMemo(() => {
-    if (!search) return ADDRESS
+    if (!search) return specialties
 
-    return ADDRESS.filter((item) =>
-      removeVietnameseTones(item.name.toLowerCase()).includes(removeVietnameseTones(search.toLowerCase()))
-    )
-  }, [search])
+    const keyword = removeVietnameseTones(search.toLowerCase())
+
+    return specialties.filter((item) => removeVietnameseTones(item.name.toLowerCase()).includes(keyword))
+  }, [search, specialties])
 
   return (
-    <Box className='medical_facilities_location_filter'>
+    <Box className='doctors_specialty_filter'>
       <ClickAwayListener onClickAway={handleClose}>
         <Box>
           <CustomInputField
             value={search}
             onFocus={handleOpen}
             onChange={(e) => setSearch(e.target.value)}
-            placeholder={t('pages.medical_facilities.search_placeholder_address')}
+            placeholder={t('pages.doctors.search_placeholder_specialty')}
             autoComplete='off'
             InputProps={{
               startAdornment: (
@@ -80,4 +101,4 @@ const MedicalFacilityLocationFilter = ({ value, onClick }: MedicalFacilityLocati
   )
 }
 
-export default MedicalFacilityLocationFilter
+export default DoctorsSpecialtyFilter

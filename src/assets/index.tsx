@@ -16,7 +16,6 @@ import emptyIcon from './images/empty-icon.webp'
 import defaultAvt from '../assets/images/default-avt.png'
 import homepage_banner from './images/homepage_banner.webp'
 import about_us from './images/about_us.webp'
-import medical_facilities_banner from './images/medical_facilities_banner.png'
 import login_banner from './images/login_banner.avif'
 import doctormale from './images/doctormale.jpg'
 import doctorfemale from './images/doctorfemale.jpg'
@@ -29,6 +28,9 @@ import bg_datkham_image from './images/bg_datkham.webp'
 import doctors_image from './images/doctors.webp'
 import ellipse_image from './images/ellipse.webp'
 import mobile_app_image from './images/mobile_app.webp'
+import background_banner from './images/background_banner.png'
+import doctors_banner from './images/doctors_banner.webp'
+import medical_facilities_banner from './images/medical_facilities_banner.webp'
 
 //svg
 import home_icon from './svg/home-icon.svg'
@@ -70,7 +72,6 @@ export const images = {
   business_examination,
   homepage_banner,
   about_us,
-  medical_facilities_banner,
   login_banner,
   home_icon,
   doctor_icon,
@@ -92,7 +93,10 @@ export const images = {
   bg_datkham_image,
   doctors_image,
   ellipse_image,
-  mobile_app_image
+  mobile_app_image,
+  background_banner,
+  doctors_banner,
+  medical_facilities_banner
 }
 
 export const icons = {

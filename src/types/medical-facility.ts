@@ -1,4 +1,5 @@
-import type { FacilityWorkingTime, QueryParams } from './common'
+import type { FacilityWorkingTime, QueryParams, Rating } from './common'
+import type { Specialty } from './specialty'
 
 export interface MedicalFacilityQueryParams extends QueryParams {
   name?: string
@@ -19,6 +20,8 @@ export interface MedicalFacility {
   }
   images: string[]
   description?: string
+  ratings?: Rating[]
   totalRatings: number
   workingTimes: FacilityWorkingTime[]
+  specialtyID?: Specialty[]
 }

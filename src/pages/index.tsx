@@ -1,6 +1,7 @@
 export { default as HomePage } from '~/pages/home'
 export { default as MedicalFacilitiesPage } from '~/pages/medical-facilities'
-export { default as MedicalFacilityDetail } from '~/pages/detail-medical-facility'
+export { default as MedicalFacilityDetailPage } from '~/pages/detail-medical-facility'
+export { default as DoctorsPage } from '~/pages/doctors'
 export { default as NewsPage } from '~/pages/news'
 export { default as AboutPage } from '~/pages/about'
 export { default as LoginPage } from '~/pages/login'

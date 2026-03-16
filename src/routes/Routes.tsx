@@ -1,9 +1,10 @@
 import {
   AboutPage,
+  DoctorsPage,
   HomePage,
   LoginPage,
   MedicalFacilitiesPage,
-  MedicalFacilityDetail,
+  MedicalFacilityDetailPage,
   NewsPage,
   NotFoundPage,
   UserPage
@@ -34,7 +35,12 @@ const publicRoutes: AppRoute[] = [
   },
   {
     path: PATHS.MEDICALFACILITY_DETAIL,
-    component: MedicalFacilityDetail,
+    component: MedicalFacilityDetailPage,
+    layout: true
+  },
+  {
+    path: PATHS.DOCTORS,
+    component: DoctorsPage,
     layout: true
   },
   {

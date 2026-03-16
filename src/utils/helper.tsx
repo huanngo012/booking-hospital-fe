@@ -13,6 +13,15 @@ export const getBase64 = (file: File) => {
   })
 }
 
+export const removeVietnameseTones = (text: string = '') =>
+  text
+    .trim()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'D')
+    .toLowerCase()
+
 export const formatMoney = (number: number) => Number(Number(number)?.toFixed(1)).toLocaleString()
 
 export const renderStartFromNumber = (number: number, size: number) => {

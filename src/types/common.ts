@@ -30,3 +30,10 @@ export interface FacilityWorkingTime {
     end: TimeSlotCode
   }[]
 }
+
+export interface Rating {
+  star: number
+  postedBy: string
+  comment?: string
+  updatedAt: Date
+}

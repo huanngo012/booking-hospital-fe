@@ -12,6 +12,8 @@ const CustomSkeleton = ({ variant }: CustomSkeletonProps) => {
       return <CardMedicalFacility02Skeleton />
     case 'card-medical-facility-detail':
       return <CardMedicalFacilityDetailSkeleton />
+    case 'card-doctor':
+      return <CardDoctor />
     case 'card-search':
       return <CardSearchSkeleton />
     default:
@@ -116,6 +118,42 @@ const CardSearchSkeleton = () => {
         <Skeleton animation='wave' variant='rectangular' height={24} width='100%' />
         <Skeleton animation='wave' variant='rectangular' height={20} width='100%' />
       </Stack>
+    </Box>
+  )
+}
+
+const CardDoctor = () => {
+  return (
+    <Box className='doctor_card'>
+      <Box className='card_wrapper'>
+        <Box className='card_image'>
+          <Skeleton animation='wave' variant='circular' height={100} width={100} />
+        </Box>
+        <Box className='card_content'>
+          <Stack
+            direction={'row'}
+            gap={0.5}
+            borderBottom={'1px solid var(--border-color)'}
+            marginBottom={1}
+            paddingBottom={1}
+            width={'100%'}
+          >
+            <Skeleton animation='wave' variant='rectangular' height={24} width='100%' />
+          </Stack>
+          <Skeleton animation='wave' variant='rectangular' height={28} width='100%' />
+          <Stack direction={'row'} gap={0.5} marginBottom={1} width={'100%'}>
+            <Skeleton animation='wave' variant='rectangular' height={28} width='100%' />
+          </Stack>
+          <Stack direction={'row'} gap={0.5} marginBottom={1}>
+            <Stack direction='row' gap={0.5}>
+              {[...Array(5)].map((_, i) => (
+                <Skeleton key={i} animation='wave' variant='rectangular' width={18} height={18} />
+              ))}
+            </Stack>
+          </Stack>
+          <Skeleton animation='wave' variant='rectangular' height={42} width={100} sx={{ borderRadius: '30px' }} />
+        </Box>
+      </Box>
     </Box>
   )
 }

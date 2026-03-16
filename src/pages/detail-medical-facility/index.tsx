@@ -1,6 +1,6 @@
 import { Box, Container, Stack } from '@mui/material'
 import './style.scss'
-import { BreadscrumbCustom, Loading, SEO } from '~/components'
+import { BreadscrumbCustom, Comment, Loading, SEO } from '~/components'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 import { useMedicalFacility } from '~/modules/medical-facility/medical-facility.query'
@@ -9,7 +9,7 @@ import { PATHS } from '~/utils/constant'
 import MedicalFacilityDetailHeader from './components/MedicalFacilityDetailHeader'
 import MedicalFacilityDetailBody from './components/MedicalFacilityDetailBody'
 
-const MedicalFacilityDetail = () => {
+const MedicalFacilityDetailPage = () => {
   const { t } = useTranslation()
   const { slug } = useParams()
 
@@ -31,10 +31,11 @@ const MedicalFacilityDetail = () => {
         <Stack gap={2.5}>
           <MedicalFacilityDetailHeader medicalFacility={data} />
           <MedicalFacilityDetailBody medicalFacility={data} />
+          <Comment ratings={data?.ratings} totalRatings={data?.totalRatings} />
         </Stack>
       </Container>
     </Box>
   )
 }
 
-export default MedicalFacilityDetail
+export default MedicalFacilityDetailPage

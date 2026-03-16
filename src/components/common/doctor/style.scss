@@ -1,0 +1,39 @@
+.doctor_card {
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(149, 179, 207, 0.2);
+  border-radius: 20px;
+  width: 100%;
+  background: #fff;
+  border: 1px solid transparent;
+  transition: all 0.23s ease;
+  &:hover {
+    border-color: var(--primary);
+    box-shadow: none;
+  }
+  .card_wrapper {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    .card_image {
+      img {
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 16px;
+        max-width: 100px;
+        max-height: 100px;
+        height: 100%;
+        margin: auto;
+        transition: all 0.3s ease-in;
+      }
+    }
+    .card_content {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      flex: 1;
+    }
+  }
+}

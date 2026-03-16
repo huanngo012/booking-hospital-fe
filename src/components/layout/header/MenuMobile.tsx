@@ -79,7 +79,7 @@ const MenuMobile = () => {
                       fullWidth
                       sx={{ borderRadius: '8px' }}
                     >
-                      <Typography variant='button2'>{t('login_page.login')}</Typography>
+                      <Typography variant='button2'>{t('auth.login')}</Typography>
                     </Button>
                     <Button
                       component={Link}
@@ -89,7 +89,7 @@ const MenuMobile = () => {
                       fullWidth
                       sx={{ borderRadius: '8px' }}
                     >
-                      <Typography variant='button2'>{t('login_page.signup')}</Typography>
+                      <Typography variant='button2'>{t('auth.signup')}</Typography>
                     </Button>
                   </>
                 ) : (

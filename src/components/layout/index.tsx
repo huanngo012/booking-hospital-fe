@@ -28,15 +28,8 @@ const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <Stack minHeight={'100vh'} height={'100%'} sx={{ background: 'var(--background)' }}>
       <Header />
-      <Box
-        marginTop={{
-          mobile: '60px',
-          desktop: '135px'
-        }}
-      ></Box>
       <Box component={'main'}>{children}</Box>
       <Footer />
-
       {showScrollButton && (
         <Box
           className='svg-wrapper'

@@ -27,7 +27,7 @@ export const useSearch = (search: string) => {
     const medicalFacilities = medicalFacilitiesResponse?.items ?? []
     const doctors = doctorsResponse?.items ?? []
 
-    return [
+    const result = [
       {
         title: 'common.medical_facility',
         items: medicalFacilities.map((item) => ({
@@ -43,14 +43,15 @@ export const useSearch = (search: string) => {
         title: 'common.doctor',
         items: doctors.map((item) => ({
           _id: item._id,
-          title: item.user.name,
-          meta: item.position || item.medical_facility?.name,
+          title: `${item.position}. ${item.user.name}`,
+          meta: item.medical_facility.name,
           image: item.user.avatar || (item.gender === GENDER.MALE ? doctormale : doctorfemale),
           url: `${PATHS.DOCTORS}/${item.slug}`
         })),
         viewAllUrl: `${PATHS.DOCTORS}?name=${debouncedSearch}`
       }
     ]
+    return result.filter((group) => group.items.length > 0)
   }, [medicalFacilitiesResponse, doctorsResponse, debouncedSearch])
 
   return { groups, isLoading }

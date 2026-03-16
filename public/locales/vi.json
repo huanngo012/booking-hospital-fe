@@ -124,6 +124,14 @@
   "seo": {
     "brand": "Medpro - Nền tảng đặt lịch khám trực tuyến"
   },
+  "review": {
+    "title": "Đánh giá",
+    "rating_and_comment": "Đánh giá & Nhận xét",
+    "you_rated": "Bạn đã đánh giá bệnh viện này",
+    "rating": "Đánh giá",
+    "comment": "Nhận xét",
+    "button": "Đánh giá ngay!"
+  },
   "pages": {
     "home": {
       "title_seo": "Medpro - Đặt khám nhanh 100+ bệnh viện, 1000+ phòng khám, phòng mạch",
@@ -134,6 +142,7 @@
         "sub_title": "Nền tảng công nghệ",
         "description": "Đặt khám nhanh - Lấy số thứ tự trực tuyến - Tư vấn sức khỏe từ xa",
         "search_placeholder": ["Tìm kiếm cơ sở y tế", "Tìm kiếm bác sĩ"],
+        "not_found": "Không tìm thấy dữ liệu",
         "services": [
           "Đặt khám tại cơ sở",
           "Đặt khám theo bác sĩ",
@@ -214,6 +223,15 @@
       "not_found": "Không tìm thấy cơ sở y tế",
       "search_placeholder": "Tìm kiếm cơ sở y tế",
       "search_placeholder_address": "Tất cả địa chỉ"
+    },
+    "doctors": {
+      "title_seo": "Bác sĩ | {{brand}}",
+      "description_seo": "Tìm kiếm bác sĩ và chuyên gia y tế uy tín. Xem thông tin chuyên môn, lịch khám và đặt lịch khám nhanh chóng",
+      "title": "ĐẶT LỊCH KHÁM VỚI BÁC SĨ",
+      "description": "Khám phá đội ngũ bác sĩ theo chuyên khoa, xem lịch khám và đặt lịch nhanh chóng, tiết kiệm thời gian.",
+      "not_found": "Không tìm thấy bác sĩ",
+      "search_placeholder": "Tìm kiếm bác sĩ",
+      "search_placeholder_specialty": "Tất cả chuyên khoa"
     },
     "news": {
       "title_seo": "Tin tức y tế mới nhất - Cập nhập liên tục từ Medpro | {{brand}}",

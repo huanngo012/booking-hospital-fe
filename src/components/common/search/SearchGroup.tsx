@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import type { SearchGroupProps } from '~/components/type'
 import SearchCard from './SearchCard'
-import EmptyState from '../empty-state'
 
 const SearchGroup = ({ title, items, viewAllUrl }: SearchGroupProps) => {
   const { t } = useTranslation()
@@ -27,7 +26,9 @@ const SearchGroup = ({ title, items, viewAllUrl }: SearchGroupProps) => {
           </Link>
         )}
       </Stack>
-      {items.length > 0 ? items.map((item) => <SearchCard key={item._id} item={item} />) : <EmptyState />}
+      {items.map((item) => (
+        <SearchCard key={item._id} item={item} />
+      ))}
     </Stack>
   )
 }

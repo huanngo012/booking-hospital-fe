@@ -4,33 +4,33 @@ import { images } from '~/assets'
 import { BreadscrumbCustom } from '~/components'
 import { theme } from '~/themes'
 
-const { background_banner, medical_facilities_banner } = images
+const { background_banner, doctors_banner } = images
 
-const MedicalFacilitiesHeader = () => {
+const DoctorsHeader = () => {
   const { t } = useTranslation()
   const isDesktop = useMediaQuery(theme.breakpoints.up('desktop'))
   const variant1 = isDesktop ? 'h4' : 'h5'
 
   return (
-    <Box className='medical_facilities_header' sx={{ background: `url(${background_banner})` }}>
+    <Box className='doctors_header' sx={{ background: `url(${background_banner})` }}>
       <Container>
         <Grid container spacing={1} height={'100%'}>
           <Grid size={{ mobile: 12, desktop: 6 }}>
-            <Box className='medical_facilities_header-inner'>
-              {<BreadscrumbCustom data={[{ title: t('navigation.medical_facilities') }]} />}
-              <Box className='medical_facilities_header-text'>
+            <Box className='doctors_header-inner'>
+              {<BreadscrumbCustom data={[{ title: t('navigation.doctors') }]} />}
+              <Box className='doctors_header-text'>
                 <Typography variant={variant1} color='var(--primary)' className='medical-facilities__title'>
-                  {t('pages.medical_facilities.title')}
+                  {t('pages.doctors.title')}
                 </Typography>
 
                 <Typography variant={'label1'} color='var(--secondary)' className='medical-facilities__description'>
-                  {t('pages.medical_facilities.description')}
+                  {t('pages.doctors.description')}
                 </Typography>
               </Box>
             </Box>
           </Grid>
           <Grid size={{ mobile: 12, desktop: 6 }}>
-            <Box component={'img'} src={medical_facilities_banner} />
+            <Box component={'img'} src={doctors_banner} />
           </Grid>
         </Grid>
       </Container>
@@ -38,4 +38,4 @@ const MedicalFacilitiesHeader = () => {
   )
 }
 
-export default MedicalFacilitiesHeader
+export default DoctorsHeader

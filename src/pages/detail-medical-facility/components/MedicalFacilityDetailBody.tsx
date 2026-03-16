@@ -2,11 +2,12 @@ import { Box, Grid, Stack, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 import type { MedicalFacility } from '~/types/medical-facility'
 import { getGoogleMapEmbedUrl } from '~/utils/helper'
+import DoctorsBody from '~/pages/doctors/components/DoctorsBody'
 
 const MedicalFacilityDetailBody = ({ medicalFacility }: { medicalFacility: MedicalFacility }) => {
   const { t } = useTranslation()
 
-  const { description, address } = medicalFacility
+  const { _id, description, address, specialtyID } = medicalFacility
 
   return (
     <Box className='medical-facility-detail-body'>
@@ -42,9 +43,7 @@ const MedicalFacilityDetailBody = ({ medicalFacility }: { medicalFacility: Medic
           </Box>
         </Grid>
         <Grid size={{ mobile: 12, desktop: 8.5 }}>
-          <Box className='medical-facility-detail-body_map'>
-            <Box className='medical-facility-detail-body_content'>Huan</Box>
-          </Box>
+          <DoctorsBody medicalFacilityID={_id} specialtyID={specialtyID} />
         </Grid>
       </Grid>
     </Box>

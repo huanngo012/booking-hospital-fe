@@ -1,5 +1,5 @@
-import { Box, Container, Stack } from '@mui/material'
 import './style.scss'
+import { Box, Container, Stack } from '@mui/material'
 import { BreadscrumbCustom, Comment, Loading, SEO } from '~/components'
 import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
@@ -31,7 +31,7 @@ const MedicalFacilityDetailPage = () => {
         <Stack gap={2.5}>
           <MedicalFacilityDetailHeader medicalFacility={data} />
           <MedicalFacilityDetailBody medicalFacility={data} />
-          <Comment ratings={data?.ratings} totalRatings={data?.totalRatings} />
+          <Comment medicalFacility={data} />
         </Stack>
       </Container>
     </Box>

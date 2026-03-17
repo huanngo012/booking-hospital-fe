@@ -19,8 +19,8 @@ export interface MedicalFacility {
     detail: string
   }
   images: string[]
-  description?: string
-  ratings?: Rating[]
+  description: string
+  ratings: Rating[]
   totalRatings: number
   workingTimes: FacilityWorkingTime[]
   specialtyID?: Specialty[]

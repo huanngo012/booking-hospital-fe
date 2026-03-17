@@ -12,48 +12,53 @@ import {
 } from '@mui/material'
 import { useState } from 'react'
 import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
-import { IoMdClose } from 'react-icons/io'
 import { useTranslation } from 'react-i18next'
-import { useAddRatingMedicalFacility } from '~/modules/medical-facility/medical-facility.mutation'
+import { useEditRatingMedicalFacility } from '~/modules/medical-facility/medical-facility.mutation'
+import type { Rating } from '~/types/common'
+import { IoMdClose } from 'react-icons/io'
 
-const PopupCreateComment = ({ id, slug }: { id: string; slug: string }) => {
+interface PopupEditCommentProps {
+  id: string
+  slug: string
+  rating: Rating
+}
+
+const PopupEditComment = ({ id, slug, rating }: PopupEditCommentProps) => {
   const { t } = useTranslation()
+
   const [open, setOpen] = useState(false)
   const [hoverStar, setHoverStar] = useState(0)
+
   const [payload, setPayload] = useState({
-    star: 0,
-    comment: ''
+    star: rating.star,
+    comment: rating.comment
   })
 
-  const { mutate } = useAddRatingMedicalFacility(slug)
-
-  const handleClickOpen = () => setOpen(true)
-  const handleClose = () => setOpen(false)
+  const { mutate } = useEditRatingMedicalFacility(slug)
 
   const handleSubmit = () => {
     mutate(
       {
-        id: id,
+        id,
         data: payload
       },
       {
         onSuccess: () => {
           setOpen(false)
-          setPayload({
-            star: 0,
-            comment: ''
-          })
         }
       }
     )
   }
 
+  const handleClose = () => setOpen(false)
+
   return (
     <>
-      <Button variant='contained' color='primary' onClick={handleClickOpen}>
-        <Typography variant='label1'>{t('review.button')}</Typography>
+      <Button variant='outlined' color='tertiary' onClick={() => setOpen(true)}>
+        <Typography variant='body3'>{t('common.edit')}</Typography>
       </Button>
-      <Dialog open={open} onClose={handleClose} maxWidth={'tablet'} fullWidth>
+
+      <Dialog open={open} onClose={() => setOpen(false)} maxWidth='tablet' fullWidth>
         <DialogContent sx={{ padding: '0', height: '70vh' }}>
           <Box className='popup__content'>
             <Box className='popup__header'>
@@ -132,7 +137,7 @@ const PopupCreateComment = ({ id, slug }: { id: string; slug: string }) => {
   )
 }
 
-export default PopupCreateComment
+export default PopupEditComment
 
 const StyledTextarea = styled(TextareaAutosize)({
   fontFamily: 'inherit',

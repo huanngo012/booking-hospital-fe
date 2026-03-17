@@ -9,7 +9,11 @@
     "description": "Mô tả",
     "change": "Thay đổi",
     "save": "Lưu",
+    "edit": "Chỉnh sửa",
+    "confirm": "Xác nhận",
+    "delete": "Xóa",
     "cancel": "Huỷ",
+    "comment": "Bình luận",
     "view_more": "Xem tiếp",
     "view_detail": "Xem chi tiết",
     "view_all": "Xem tất cả",
@@ -127,10 +131,14 @@
   "review": {
     "title": "Đánh giá",
     "rating_and_comment": "Đánh giá & Nhận xét",
-    "you_rated": "Bạn đã đánh giá bệnh viện này",
+    "already_rated": "Bạn đã đánh giá cơ sở y tế này",
     "rating": "Đánh giá",
     "comment": "Nhận xét",
     "button": "Đánh giá ngay!"
+  },
+  "popup": {
+    "delete-title": "Xóa",
+    "delete-confirm": "Bạn có chắc muốn xóa?"
   },
   "pages": {
     "home": {

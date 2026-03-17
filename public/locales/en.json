@@ -9,7 +9,11 @@
     "description": "Description",
     "change": "Change",
     "save": "Save",
+    "edit": "Edit",
+    "confirm": "Confirm",
+    "delete": "Delete",
     "cancel": "Cancel",
+    "comment": "Comment",
     "view_more": "View more",
     "view_detail": "View detail",
     "view_all": "View all",
@@ -127,9 +131,13 @@
   "review": {
     "title": "Reviews",
     "rating_and_comment": "Rating & Comments",
-    "you_rated": "You rated this hospital",
+    "already_rated": "You rated this medical facility",
     "rating": "Rating",
     "comment": "Comment"
+  },
+  "popup": {
+    "delete-title": "Delete",
+    "delete-confirm": "Are you sure delete?"
   },
   "pages": {
     "home": {

@@ -11,6 +11,12 @@ import './index.css'
 import App from './App.tsx'
 import './i18n'
 import Providers from './providers'
+import dayjs from 'dayjs'
+import relativeTime from 'dayjs/plugin/relativeTime'
+import 'dayjs/locale/vi'
+import 'dayjs/locale/en'
+
+dayjs.extend(relativeTime)
 
 createRoot(document.getElementById('root')!).render(
   <Providers>

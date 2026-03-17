@@ -1,4 +1,5 @@
 import type { GENDER, TIME_SLOT_CODE } from '~/utils/constant'
+import type { User } from './auth'
 
 export interface QueryParams {
   sort?: string
@@ -33,7 +34,12 @@ export interface FacilityWorkingTime {
 
 export interface Rating {
   star: number
-  postedBy: string
+  postedBy: User
   comment?: string
   updatedAt: Date
+}
+
+export interface RatingBody {
+  star: number
+  comment?: string
 }

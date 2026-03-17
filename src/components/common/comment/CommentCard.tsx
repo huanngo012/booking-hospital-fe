@@ -1,84 +1,77 @@
-import { Box, Stack, Typography, useMediaQuery } from '@mui/material'
-import { useSelector } from 'react-redux'
+import { Box, Stack, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
-import { theme } from '~/themes/Theme'
-import moment from 'moment'
+import dayjs from 'dayjs'
+import { images } from '~/assets'
+import type { CommentCardProps } from '~/components/type'
 import { renderStartFromNumber } from '~/utils/helper'
-import ActionMenu from '../action-menu/ActionMenu'
-import PopupEditComment from './PopupEditComment'
+import { useUser } from '~/modules/auth/auth.query'
+import ActionMenu from '../action-menu'
 import PopupDeleteComment from './PopupDeleteComment'
+import PopupEditComment from './PopupEditComment'
 
-const CommentCard = ({ data }: { data?: any }) => {
+const { defaultAvt } = images
+
+const CommentCard = ({ id, slug, rating }: CommentCardProps) => {
   const { t } = useTranslation()
-  const isTablet = useMediaQuery(theme.breakpoints.up('tablet'))
 
-  const { current } = useSelector((state: any) => state.auth)
+  const { data: user } = useUser()
+
+  const { star, postedBy, comment, updatedAt } = rating
+  const { name, avatar } = postedBy
 
   return (
-    <Stack flexDirection='row' gap='16px'>
-      <Box width='35px'>
-        <Box
-          component='img'
-          src={
-            data?.postedBy?.avatar
-              ? data?.postedBy?.avatar
-              : 'https://medpro.vn/_next/image?url=https%3A%2F%2Fbo-api.medpro.com.vn%2Fstatic%2Fimages%2Fumc2%2Fweb%2Flogo.png&w=1920&q=75'
-          }
-          alt='avatar'
-          width='35px'
-          height='35px'
-          borderRadius='50%'
-        />
-      </Box>
-      <Stack flexDirection='column' flex='1'>
-        <Stack flexDirection='row' justifyContent='space-between' alignItems='center'>
-          <Typography variant='label1'>{data?.postedBy?.fullName}</Typography>
+    <Stack direction={'row'} gap={2}>
+      <Box
+        component={'img'}
+        src={avatar ? avatar : defaultAvt}
+        alt='avatar'
+        width={35}
+        height={35}
+        borderRadius={'50%'}
+      />
+      <Stack flex='1'>
+        <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
+          <Typography variant='label1'>{name}</Typography>
           <Typography variant='body3'>
-            <i> {moment(data?.updatedAt)?.fromNow()}</i>
+            <Box component={'i'}>{dayjs(updatedAt).fromNow()}</Box>
           </Typography>
         </Stack>
         <Stack
-          flexDirection='row'
-          justifyContent='space-between'
-          alignItems={isTablet ? 'center' : 'flex-start'}
-          gap='8px'
-          padding='8px 16px'
-          marginTop='8px'
-          sx={{
-            border: ' 1px solid var(--divider-color)',
-            background: 'var(--divider-color)',
-            borderRadius: '8px'
-          }}
+          direction={'row'}
+          justifyContent={'space-between'}
+          alignItems={'center'}
+          gap={1}
+          paddingBlock={1}
+          paddingInline={2}
+          marginTop={1}
+          borderRadius={2}
+          bgcolor={'var(--divider-color)'}
         >
-          <Stack flexDirection='column' gap='8px'>
-            <Stack flexDirection='row' alignItems='center' gap='4px'>
-              <Typography variant='label2' minWidth='80px'>
-                {t('healthcare facilities.review')}:
-              </Typography>
-              <Typography>
-                {renderStartFromNumber(data?.star, 16)?.map((el, index) => (
-                  <Typography component='span' key={index}>
-                    {el}
-                  </Typography>
+          <Stack gap={1}>
+            <Stack direction={'row'} alignItems={'center'} gap={0.5}>
+              <Typography variant='label2'>{t('review.rating')}:</Typography>
+              <Stack direction={'row'}>
+                {renderStartFromNumber(star, 16)?.map((item, index) => (
+                  <Box key={index} lineHeight={0}>
+                    {item}
+                  </Box>
                 ))}
-              </Typography>
+              </Stack>
             </Stack>
-            <Stack flexDirection='row' alignItems='flex-start' gap='4px'>
-              <Typography variant='label2' minWidth='80px'>
-                {t('healthcare facilities.comment')}:
-              </Typography>
+            <Stack flexDirection={'row'} gap={0.5}>
+              <Typography variant='label2'>{t('review.comment')}:</Typography>
               <Typography variant='body2' sx={{ wordBreak: 'break-all' }}>
-                {data?.comment}
+                {comment}
               </Typography>
             </Stack>
           </Stack>
-          {data?.postedBy?._id === current?._id && (
+          {rating.postedBy._id === user._id && (
             <Box minWidth='30px'>
               <ActionMenu
                 actionList={
                   <>
-                    <PopupEditComment data={data} />
-                    <PopupDeleteComment id={data?.clinicID} />
+                    <PopupEditComment id={id} slug={slug} rating={rating} />
+                    <PopupDeleteComment id={id} slug={slug} />
                   </>
                 }
               />

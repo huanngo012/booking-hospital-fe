@@ -118,8 +118,19 @@ export interface SearchCardProps {
 }
 
 export interface CommentProps {
-  ratings?: Rating[]
+  medicalFacility: MedicalFacility
+}
+export interface RatingOverviewProps {
+  ratings: Rating[]
   totalRatings: number
-  // clinicID?: any
-  // popUpComment?: ReactNode
+}
+export interface RatingBarProps {
+  number: number
+  ratingCount: number
+  ratingTotal: number
+}
+export interface CommentCardProps {
+  id: string
+  slug: string
+  rating: Rating
 }

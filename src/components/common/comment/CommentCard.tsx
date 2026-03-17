@@ -65,7 +65,7 @@ const CommentCard = ({ id, slug, rating }: CommentCardProps) => {
               </Typography>
             </Stack>
           </Stack>
-          {rating.postedBy._id === user._id && (
+          {user && rating.postedBy._id === user._id && (
             <Box minWidth='30px'>
               <ActionMenu
                 actionList={

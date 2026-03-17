@@ -4,7 +4,7 @@ import { refreshToken } from './modules/auth/auth.api'
 import { useQueryClient } from '@tanstack/react-query'
 import { PATHS } from './utils/constant'
 const instance = axios.create({
-  baseURL: 'http://localhost:5000/api/v1',
+  baseURL: 'https://booking-hospital-be.vercel.app/api/v1',
   withCredentials: true
 })
 

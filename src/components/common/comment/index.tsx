@@ -24,7 +24,13 @@ const Comment = ({ medicalFacility }: CommentProps) => {
       <RatingOverview ratings={ratings} totalRatings={totalRatings} />
       <Stack alignItems='center'>
         {!user ? (
-          <Button component={Link} to={PATHS.LOGIN} variant='contained' color='primary'>
+          <Button
+            component={Link}
+            to={PATHS.LOGIN}
+            variant='contained'
+            color='primary'
+            sx={{ color: 'var(--white)!important' }}
+          >
             <Typography variant='label1'>{t('review.button')}</Typography>
           </Button>
         ) : hasRated ? (

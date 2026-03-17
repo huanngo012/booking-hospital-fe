@@ -1,14 +1,12 @@
-import { Button, Typography, useMediaQuery } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { theme } from '~/themes'
 import PopupDelete from '../popup/PopupDelete'
 import { useDeleteRatingMedicalFacility } from '~/modules/medical-facility/medical-facility.mutation'
 
 const PopupDeleteComment = ({ id, slug }: { id: string; slug: string }) => {
   const { t } = useTranslation()
-  const isTablet = useMediaQuery(theme.breakpoints.up('tablet'))
 
   const [openPopUp, setOpenPopUp] = useState(false)
 

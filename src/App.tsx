@@ -1,7 +1,7 @@
 import './App.scss'
 import { Suspense } from 'react'
 import { BrowserRouter, Routes } from 'react-router-dom'
-import { Loading } from '~/components'
+import { Loading, ScrollToTop } from '~/components'
 import { privateRoutes, publicRoutes } from './routes/Routes'
 import renderRoutes from './routes/RenderRoutes'
 import { useTranslation } from 'react-i18next'
@@ -13,6 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Suspense fallback={<Loading />}>
         <Routes>
           {renderRoutes(publicRoutes)}

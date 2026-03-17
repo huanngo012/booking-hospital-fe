@@ -12,6 +12,7 @@ export { default as EmptyState } from '~/components/common/empty-state'
 export { default as Toast } from '~/components/common/toast'
 export { default as Search } from '~/components/common/search'
 export { default as Comment } from '~/components/common/comment'
+export { default as ScrollToTop } from '~/components/common/scroll-to-top'
 
 //UI
 export { default as CustomInputField } from '~/components/ui/input/CustomInputField'
